@@ -1,4 +1,17 @@
 ------------------------------------------------------------
+User: burnett  Fri Dec 31 19:47:37 PST 2004
+map_tools/src/image
+
+Removed Files:
+	Attr.h FitsImgIO.cxx Fits_IO.cxx Fits_IO.h Header.cxx Header.h 
+	IOElement.cxx IOElement.h Image.cxx Image.h VirtualIO.cxx 
+	VirtualIO.h 
+Log Message:
+restore, and extend changes to implemnt change from the astroroot interface from FITS to ROOT to tip.
+due to misunderstandings and differences in philosphy, this is an interim step: the package in this form is not
+functional, and will not be tagged as such.
+    *
+------------------------------------------------------------
 User: burnett  Fri Dec 31 19:47:36 PST 2004
 map_tools/src/test
 
