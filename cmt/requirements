@@ -1,15 +1,16 @@
 package map_tools
 
-version v5r9	
+version v5r9p1	
 
 author T. Burnett <tburnett@u.washington.edu>
-# $Id: requirements,v 1.45 2005/01/01 23:54:04 burnett Exp $
+# $Id: requirements,v 1.46 2005/01/20 22:42:12 burnett Exp $
 
 use STpolicy *
 use astro v1*
 use hoops * 
 use tip  *
 use st_app *
+use st_stream *
 use irfInterface * irfs
 use dc1Response * irfs 
 use cfitsio * IExternal 

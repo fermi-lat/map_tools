@@ -1,7 +1,7 @@
 /** @file test_main.cxx
 @brief test various classes
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/test/test_main.cxx,v 1.24 2005/01/01 22:27:22 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/test/test_main.cxx,v 1.25 2005/01/20 22:42:12 burnett Exp $
 
 */
 #include "map_tools/Exposure.h"
@@ -78,7 +78,6 @@ int main(int argc, char** argv ){
         }
 
         // Write out the cube...delete any existing file first.
-        // THB: this does not delete files: std::remove(par.inputFile().c_str());
         ExposureHyperCube cube(e, par.inputFile());
         cube.save();
 
@@ -92,7 +91,7 @@ int main(int argc, char** argv ){
         // create an image to access cells
         SkyImage exp3(par.inputFile(),"");
         double tt = exp3.pixelValue(astro::SkyDir(0,0));
-        assert(tt=36.0); 
+        if( tt!=36.0) throw std::runtime_error("Fail pixelvalue test!"); 
 
 
     }catch( const std::exception& e){

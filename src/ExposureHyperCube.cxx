@@ -2,20 +2,26 @@
 * @file ExposureHyperCube.cxx
 @brief Implement ExposureHyperCube methods
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/ExposureHyperCube.cxx,v 1.8 2005/01/01 22:27:22 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/ExposureHyperCube.cxx,v 1.9 2005/01/04 21:20:08 burnett Exp $
 */
 #include "map_tools/ExposureHyperCube.h"
 
 #include "tip/Image.h"
 #include "tip/IFileSvc.h"
 
+#include <errno.h>
+
+
 using namespace map_tools;
 namespace {
     //! @brief add a string or double key or whatever to the image 
     tip::Header* header;
     template <typename T>
-        void setKey(std::string name, T value, std::string /*unit*/="", std::string /*comment*/=""){
-            (*header)[name].set( value); }
+        void setKey(std::string name, T value, std::string unit="", std::string comment=""){
+            (*header)[name].set( value); 
+            (*header)[name].setUnit(unit);
+            (*header)[name].setComment(comment);
+        }
 }
 ExposureHyperCube::ExposureHyperCube( const Exposure& exp, 
                                      std::string outfile, bool clobber) : m_image(0)
@@ -26,12 +32,13 @@ ExposureHyperCube::ExposureHyperCube( const Exposure& exp,
     naxes[2] =Exposure::Index::cosfactor;
  
     if(clobber ){
-        // the new way to rewrite a file
-        tip::IFileSvc::instance().createFile(outfile);
+        int rc =std::remove(outfile.c_str());
+        if( rc==-1 && errno ==EACCES ) throw std::runtime_error(
+            std::string("ExposureHyperCUbe: could  not remove file ")+outfile);
     }
  
-    tip::IFileSvc::instance().createImage(outfile, "exposure", naxes);
-    m_image = tip::IFileSvc::instance().editImage(outfile, "exposure");
+    tip::IFileSvc::instance().appendImage(outfile, "", naxes);
+    m_image = tip::IFileSvc::instance().editImage(outfile, "");
     header = &m_image->getHeader();// set up the anonymous convenience functions
 
 
