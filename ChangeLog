@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Wed Mar 31 04:54:08 PST 2004
+map_tools/src
+
+Modified Files:
+	Parameters.cxx 
+Log Message:
+switch to managing a hoops rather than inheriting
+    *
+------------------------------------------------------------
+User: burnett  Wed Mar 31 04:54:08 PST 2004
 map_tools/map_tools
 
 Modified Files:
