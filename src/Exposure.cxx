@@ -1,7 +1,7 @@
 /** @file Exposure.cxx
     @brief Implementation of class Exposure
 
-   $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Exposure.cxx,v 1.6 2004/03/02 17:46:54 jchiang Exp $
+   $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Exposure.cxx,v 1.7 2004/03/03 21:38:27 jchiang Exp $
 */
 #include "map_tools/Exposure.h"
 #include "astro/SkyDir.h"
@@ -81,6 +81,7 @@ Exposure::Exposure(const std::string& fits_file)
     Index::costhetabinsize = cdelt3;  // applying getValue directly here gives 
                                       // a bad cast for some reason.
     cube.getValue("CRVAL3", Index::cosmin);
+    cube.getValue("TOTAL", m_total);
 
     unsigned int size= Index::ra_factor * Index::dec_factor * Index::cosfactor;
 
