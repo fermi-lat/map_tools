@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Tue Mar  9 06:10:23 PST 2004
+map_tools/src
+
+Modified Files:
+	MapParameters.cxx 
+Log Message:
+clean-up after refactoring out pil code to hoopsUtil::ParametersBase
+    *
+------------------------------------------------------------
+User: burnett  Tue Mar  9 06:10:23 PST 2004
 map_tools/map_tools
 
 Modified Files:
