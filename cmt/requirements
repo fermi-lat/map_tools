@@ -3,7 +3,7 @@ package map_tools
 version v3r1p2
 
 author T. Burnett <tburnett@u.washington.edu>
-# $Id: requirements,v 1.15 2004/03/06 15:16:49 burnett Exp $
+# $Id: requirements,v 1.17 2004/03/09 01:43:08 burnett Exp $
 
 use GlastPolicy *
 use tuple *
@@ -15,6 +15,9 @@ use facilities *
 set INFILES  "$(MAP_TOOLSROOT)/data"
 set PFILES   "$(MAP_TOOLSROOT)/pfiles"
 set OUTFILES "$(MAP_TOOLSROOT)/output"
+
+#suppress annoying warnings: "illegal conversion" and "forcing value to bool" 
+macro_append cppflags "" WIN32 " /wd4800 /wd4927 "
 
 #internal library for FITS image I/O and keyword handling (from astroroot)
 library image -no_share -s=image $(source)

@@ -4,7 +4,7 @@
      @author Toby Burnett
      Code orginally written by Riener Rohlfs
 
-     $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/image/Image.h,v 1.2 2004/02/28 21:04:55 burnett Exp $
+     $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/image/Image.h,v 1.3 2004/03/03 15:42:13 burnett Exp $
 */
 
 #ifndef ROOT_TFImage_H
@@ -64,7 +64,7 @@ public:
 
     /** @brief create a memory-only image 
         @param name name
-        @paam axes description of axis dimensions
+        @param axes description of axis dimensions
         */
     Image(const std::string & name, const std::vector<long>& axes) 
         : BaseImage(name, axes)                   
