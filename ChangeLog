@@ -1,4 +1,59 @@
 ------------------------------------------------------------
+User: burnett  Sat Feb 21 13:47:27 PST 2004
+map_tools
+
+Log Message:
+Inital import of utilities for count and exposure maps.
+
+Status:
+
+Vendor Tag:	GLAST
+Release Tags:	v1
+		
+N map_tools/.cvsignore
+N map_tools/ChangeLog
+N map_tools/cmt/.cvsignore
+N map_tools/cmt/cleanup.bat
+N map_tools/cmt/NMake
+N map_tools/cmt/requirements
+N map_tools/cmt/setup.bat
+N map_tools/doc/release.notes
+N map_tools/map_tools/Exposure.h
+N map_tools/map_tools/ExposureHyperCube.h
+N map_tools/map_tools/MapParameters.h
+N map_tools/map_tools/Parameters.h
+N map_tools/map_tools/SkyImage.h
+N map_tools/pfiles/count_map.par
+N map_tools/pfiles/exposure_cube.par
+N map_tools/pfiles/exposure_map.par
+N map_tools/src/Exposure.cxx
+N map_tools/src/mainpage.h
+N map_tools/src/MapParameters.cxx
+N map_tools/src/Parameters.cxx
+N map_tools/src/SkyImage.cxx
+N map_tools/src/count_map/count_map.cxx
+N map_tools/src/exposure_cube/exposure_cube.cxx
+N map_tools/src/exposure_map/exposure_map.cxx
+N map_tools/src/table/Constants.h
+N map_tools/src/table/Exception.h
+N map_tools/src/table/FitsService.cxx
+N map_tools/src/table/FitsService.h
+N map_tools/src/table/KeyData.h
+N map_tools/src/table/KeyUtil.cxx
+N map_tools/src/table/KeyUtil.h
+N map_tools/src/table/Keyword.cxx
+N map_tools/src/table/Keyword.h
+N map_tools/src/table/KeywordT.h
+N map_tools/src/table/Primary.cxx
+N map_tools/src/table/Primary.h
+N map_tools/src/table/PrimaryHDU.h
+N map_tools/Templates/CountMap
+N map_tools/Templates/ExposureCube.txt
+
+No conflicts created by this import
+
+    *
+------------------------------------------------------------
 User: burnett  Sat Feb 21 11:33:46 PST 2004
 users/burnett/map_tools/src/table
 
