@@ -2,7 +2,7 @@
 * @file MapParameters.h
 * @brief Map Parameter Reader
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/MapParameters.h,v 1.2 2004/02/23 02:44:36 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/MapParameters.h,v 1.3 2004/03/02 17:16:19 burnett Exp $
 */
 
 #ifndef MAPPARAMETERS_H
@@ -22,7 +22,7 @@ namespace map_tools {
 * href="http://www-glast.slac.stanford.edu/sciencetools/userInterface/doc/pil.pdf">PIL user
 * manual</a>.
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/MapParameters.h,v 1.2 2004/02/23 02:44:36 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/MapParameters.h,v 1.3 2004/03/02 17:16:19 burnett Exp $
 */
 
 class MapParameters : public Parameters
@@ -34,6 +34,7 @@ public:
     int npix() const                   { return m_npix; }
     int npixX() const                   { return m_npix; }
     int npixY() const                   { return m_npix_y; }
+    int npixZ() const                   { return m_npix_z; }
     int imgSize() const                { return m_imgSizeX; }
     int imgSizeX() const                { return m_imgSizeX; }
     int imgSizeY() const                { return m_imgSizeY; }
@@ -49,7 +50,7 @@ public:
 
 private:
 
-    int             m_npix, m_npix_y;
+    int             m_npix, m_npix_y, m_npix_z;
     int             m_imgSizeX, m_imgSizeY;
     float           m_xref;
     float           m_yref;
