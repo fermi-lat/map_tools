@@ -4,7 +4,7 @@
 @author Toby Burnett
 Code orginally written by Riener Rohlfs
 
-    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/image/Fits_IO.cxx,v 1.15 2004/03/11 02:06:58 jchiang Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/image/Fits_IO.cxx,v 1.16 2004/03/12 00:03:01 jchiang Exp $
 */
 
 #include "Fits_IO.h"
@@ -311,13 +311,7 @@ void Fits_IO::readFitsHeader()
     fitsfile* fptr = reinterpret_cast<fitsfile*>(m_fptr);
     IOElement* element = m_element;
 
-
     char name[30], value[100], comment[100], unit[40];
-
-// Read HISTORY and COMMENT keywords....need to do this before looping
-// through the others.
-    readFitsCards("COMMENT");
-    readFitsCards("HISTORY");
 
     int nkeys;
     fits_get_hdrspace(fptr, &nkeys, NULL, &status);
@@ -339,6 +333,8 @@ void Fits_IO::readFitsHeader()
             strcmp (name, "BSCALE") == 0    ||
             strcmp (name, "BZERO") == 0     ||
             strcmp (name, "CHECKSUM") == 0  ||
+            strcmp (name, "HISTORY") == 0  ||
+            strcmp (name, "COMMENT") == 0  ||
             strcmp (name, "DATASUM") == 0      )
             continue;
 
@@ -373,9 +369,12 @@ void Fits_IO::readFitsHeader()
            element->addAttribute(DoubleAttr(name, val, unit, comment), false);
         } else 
            element->addAttribute(IntAttr(name, atoi(value), unit, comment), false);
-
         report_error(status);
     }
+
+// Read HISTORY and COMMENT keywords.
+    readFitsCards("COMMENT");
+    readFitsCards("HISTORY");
 
 }
 
