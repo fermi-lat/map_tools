@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Tue Mar  2 09:16:20 PST 2004
+map_tools/src/exposure_map
+
+Modified Files:
+	exposure_map.cxx 
+Log Message:
+some refactoring; put into namespace
+    *
+------------------------------------------------------------
+User: burnett  Tue Mar  2 09:16:20 PST 2004
 map_tools/src/exposure_cube
 
 Modified Files:
