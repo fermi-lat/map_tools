@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Fri Jan 21 19:16:46 PST 2005
+map_tools/src/map_stats
+
+Modified Files:
+	map_stats.cxx 
+Log Message:
+adjust to new tip, adopt a few J. Chiang suggestions.
+    *
+------------------------------------------------------------
+User: burnett  Fri Jan 21 19:16:46 PST 2005
 map_tools/src/exposure_cube
 
 Modified Files:
