@@ -1,5 +1,17 @@
 ------------------------------------------------------------
 User: burnett  Sat Feb 28 06:20:23 PST 2004
+map_tools/src/table
+
+Removed Files:
+	Constants.h Exception.h FitsService.cxx FitsService.h 
+	KeyData.h KeyUtil.cxx KeyUtil.h Keyword.cxx Keyword.h 
+	KeywordT.h Primary.cxx Primary.h PrimaryHDU.h 
+Log Message:
+New interface to reading and writing image fits files, adapted from astroroot.
+about to tag v2r0
+    *
+------------------------------------------------------------
+User: burnett  Sat Feb 28 06:20:23 PST 2004
 map_tools/src/image
 
 Modified Files:
