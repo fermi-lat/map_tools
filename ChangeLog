@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sat Mar 13 06:54:05 PST 2004
+map_tools/src
+
+Modified Files:
+	MapParameters.cxx SkyImage.cxx 
+Log Message:
+add convenient bracket operator for pixel access
+    *
+------------------------------------------------------------
 User: jchiang  Thu Mar 11 16:03:02 PST 2004
 map_tools/src/test
 
