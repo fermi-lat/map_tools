@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Fri Nov 12 14:47:44 PST 2004
+map_tools/pfiles
+
+Modified Files:
+	exposure_cube.par 
+Log Message:
+fix unix error, some warnings.
+    *
+------------------------------------------------------------
 User: burnett  Thu Nov 11 19:50:43 PST 2004
 map_tools/src/exposure_map
 
