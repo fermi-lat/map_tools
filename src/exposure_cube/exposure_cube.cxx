@@ -2,7 +2,7 @@
 @brief build the exposure_cube application
 
 @author Toby Burnett
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.4 2004/02/28 21:04:55 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.5 2004/03/02 17:16:20 burnett Exp $
 */
 #include "tuple/ITable.h"
 
@@ -29,6 +29,7 @@ namespace ecube{
     };
 }
 //--------------------------------------------------------------------------
+#if 0 // development example, @todo: use if requested 
 class LoadExposureFromEgret
 {
 public:
@@ -47,14 +48,14 @@ public:
         const double & livetime = tup.selectColumn("livetime");
 
         for( tuple::Iterator it=tup.begin(); it!=tup.end(); ++it){
-#if 0
             if( start < elapsed_time ) continue;
             if( stop!=0 && stop > elapsed_time ) break;
-#endif
             exp.add( astro::SkyDir(ra, dec), livetime); 
         }
     }
-};//--------------------------------------------------------------------------
+};
+#endif
+//--------------------------------------------------------------------------
 class LoadExposureFromGlast
 {
 public:
