@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Sat Mar  6 03:00:16 PST 2004
+map_tools/src/test
+
+Modified Files:
+	test_main.cxx 
+Log Message:
+fix test program, gcc warnings
+    *
+------------------------------------------------------------
+User: burnett  Sat Mar  6 03:00:16 PST 2004
 map_tools/src/image
 
 Modified Files:
