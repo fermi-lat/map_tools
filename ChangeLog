@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Aug 26 14:21:00 PDT 2004
+map_tools/src
+
+Modified Files:
+	SkyImage.cxx 
+Log Message:
+back to naming the extension, add indlude of stdexcept for linux
+    *
+------------------------------------------------------------
 User: burnett  Thu Aug 26 13:14:07 PDT 2004
 map_tools/cmt
 
