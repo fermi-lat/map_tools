@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: burnett  Sun Feb 22 18:44:36 PST 2004
+map_tools/map_tools
+
+Modified Files:
+	Exposure.h ExposureHyperCube.h MapParameters.h Parameters.h 
+	SkyImage.h 
+Log Message:
+clean up a bit more
+    *
+------------------------------------------------------------
+User: burnett  Sun Feb 22 18:44:36 PST 2004
 map_tools/Templates
 
 Modified Files:
