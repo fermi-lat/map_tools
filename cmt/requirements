@@ -1,9 +1,9 @@
 package map_tools
 
-version v5r6p1
+version v5r7
 
 author T. Burnett <tburnett@u.washington.edu>
-# $Id: requirements,v 1.39 2004/11/12 03:50:42 burnett Exp $
+# $Id: requirements,v 1.40 2004/11/12 22:52:11 burnett Exp $
 
 use STpolicy *
 use astro v1*
@@ -38,3 +38,4 @@ apply_pattern ST_app name=count_map
 apply_pattern ST_app name=exposure_cube
 apply_pattern ST_app name=exposure_map
 apply_pattern ST_app name=read_map
+apply_pattern ST_app name=map_stats
