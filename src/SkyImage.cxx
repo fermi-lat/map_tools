@@ -1,7 +1,7 @@
 /** @file SkyImage.cxx
 
 @brief implement the class SkyImage
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/SkyImage.cxx,v 1.31 2005/01/01 18:56:30 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/SkyImage.cxx,v 1.32 2005/01/01 22:27:22 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -48,8 +48,8 @@ SkyImage::SkyImage(const map_tools::MapParameters& pars)
         int ysize[] =       {180, 180,  163,  230}; 
         for( unsigned int i = 0; i< sizeof(types)/sizeof(std::string); ++i){
             if( ptype == types[i]) {
-                m_naxis1 = xsize[i]/pixelsize;
-                m_naxis2 = ysize[i]/pixelsize;
+                m_naxis1 = static_cast<int>(xsize[i]/pixelsize);
+                m_naxis2 = static_cast<int>(ysize[i]/pixelsize);
                 break;
             }
         }
@@ -120,8 +120,8 @@ SkyImage::SkyImage(const map_tools::MapParameters& pars)
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 SkyImage::SkyImage(const std::string& fits_file, const std::string& extension)
 :  m_save(false)
-, m_wcs(0)
 , m_layer(0)
+, m_wcs(0)
 {
     m_image = const_cast<tip::Image*>(tip::IFileSvc::instance().readImage(fits_file, extension));
     tip::Header& header = m_image->getHeader();
