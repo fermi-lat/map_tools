@@ -3,7 +3,7 @@
 
      @author Toby Burnett
 
-     $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/map_stats/map_stats.cxx,v 1.1 2005/01/01 18:56:31 burnett Exp $
+     $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/map_stats/map_stats.cxx,v 1.2 2005/01/01 23:54:04 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -48,7 +48,7 @@ public:
         // pass the image to the SkyStat guy
         astro::SkyStat ss(image, 8); 
         m_f.out() 
-#ifdef WIN32
+#if 0 //def WIN32
             << std::setw(12) << "average: " << ss.ave() << std::endl
             << std::setw(12) <<   "sigma: " << ss.sigma() << std::endl
             << std::setw(12) << "minimum: " << ss.min() << std::endl
