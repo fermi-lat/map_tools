@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sat Jan  1 10:56:30 PST 2005
+map_tools/map_tools
+
+Modified Files:
+	Exposure.h ExposureHyperCube.h 
+Log Message:
+understand some of tip image stuff, basic test works now.
+    *
+------------------------------------------------------------
 User: burnett  Sat Jan  1 10:54:00 PST 2005
 map_tools/src/map_stats
 
