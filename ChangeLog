@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Tue Mar  2 09:46:54 PST 2004
+map_tools/pfiles
+
+Modified Files:
+	count_map.par test_map_tools.par 
+Log Message:
+use paths given at runtime; apply some casts
+    *
+------------------------------------------------------------
 User: burnett  Tue Mar  2 09:16:20 PST 2004
 map_tools/src/test
 
