@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Mar 18 13:34:20 PST 2004
+map_tools/src
+
+Modified Files:
+	Parameters.cxx 
+Log Message:
+patch to make hoops happy with both vcc and gcc - yay!
+    *
+------------------------------------------------------------
 User: burnett  Thu Mar 18 11:31:55 PST 2004
 map_tools/doc
 
