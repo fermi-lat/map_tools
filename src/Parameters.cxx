@@ -3,7 +3,7 @@
 * @brief Implementation for class that reads parameters needed for tools
 * @author Toby Burnett
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Parameters.cxx,v 1.14 2004/04/03 15:05:18 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Parameters.cxx,v 1.15 2004/04/25 23:45:13 burnett Exp $
 */
 
 #include <sstream>
@@ -38,8 +38,8 @@ void Parameters::setup()
 {
       // Prompt for all parameters in the order in the par file:
 
-    dynamic_cast<hoops::ParPromptGroup&>(m_par).Prompt();
-     dynamic_cast<hoops::ParPromptGroup&>(m_par).Save();
+  dynamic_cast<hoops::ParPromptGroup&>(m_par).Prompt();
+   dynamic_cast<hoops::ParPromptGroup&>(m_par).Save();
     m_chatter = m_par["chatter"];
 
     m_clobber = m_par["clobber"];

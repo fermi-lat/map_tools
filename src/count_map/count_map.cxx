@@ -1,7 +1,7 @@
 /** @file count_map.cxx
 @brief build the count_map application
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/count_map/count_map.cxx,v 1.11 2004/04/21 19:53:30 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/count_map/count_map.cxx,v 1.12 2004/04/25 23:45:13 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -25,50 +25,45 @@ using namespace map_tools;
 class CountMap : public st_app::StApp {
 public:
 
+    /** @brief ctor sets up parameter object
+
+    Note that Parameters will prompt and save when created
+    */
     CountMap()
         : st_app::StApp()
-        , m_par_group(st_app::StApp::getParGroup("count_map")) 
-    {
-        // Prompt for all parameters.
-        m_par_group.Prompt();
-
-        // Save the values just prompted for.
-        m_par_group.Save();
-    }
-
+        , m_pars( st_app::StApp::getParGroup("count_map")) 
+    { }
 
     void run(){
         using tip::Table;
-        // read in, or prompt for, all necessary parameters
-        MapParameters pars( m_par_group );
 
         // connect to  input data, specifying filter
-        const Table & table = *tip::IFileSvc::instance().readTable(pars.inputFile(), pars.table_name(), pars.filter() );
-        if( pars.chatter()>0) {
-            std::cout << "Reading file " << pars.inputFile() ;
-            if( ! pars.filter().empty() ) std::cout << "\n\tfiltered by " << pars.filter() ;
+        const Table & table = *tip::IFileSvc::instance().readTable(m_pars.inputFile(), m_pars.table_name(), m_pars.filter() );
+        if( m_pars.chatter()>0) {
+            std::cout << "Reading file " << m_pars.inputFile() ;
+            if( ! m_pars.filter().empty() ) std::cout << "\n\tfiltered by " << m_pars.filter() ;
             std::cout<< std::endl;
         }
 
         // create the image object
-        SkyImage image(pars);
+        SkyImage image(m_pars);
 
         for (Table::ConstIterator it = table.begin(); it != table.end(); ++it) {
 
             // Create local reference to the record to which the iterator refers:
             const Table::Record & record = *it;
             // Get the current values
-            double ra = record[pars.raName()].get(), 
-                dec=record[pars.decName()].get();
+            double ra = record[m_pars.raName()].get(), 
+                dec=record[m_pars.decName()].get();
 
             image.addPoint(astro::SkyDir(ra, dec) );
         }
-        if( pars.chatter()>0) {
+        if( m_pars.chatter()>0) {
             std::cout << "Total added to image: " << image.total() 
-                <<" at file\n\t" << pars.outputFile() << std::endl; }
+                <<" at file\n\t" << m_pars.outputFile() << std::endl; }
     }
 private:
-    st_app::AppParGroup & m_par_group;
+    MapParameters m_pars;
 };
 
 st_app::StAppFactory<CountMap> g_factory;
