@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Wed Mar 10 14:01:09 PST 2004
+map_tools/src
+
+Modified Files:
+	SkyImage.cxx 
+Log Message:
+fix center coords.
+    *
+------------------------------------------------------------
 User: burnett  Wed Mar 10 12:43:47 PST 2004
 map_tools/src/image
 
