@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Mar  3 22:05:42 PST 2005
+map_tools/map_tools
+
+Modified Files:
+	Exposure.h 
+Log Message:
+fix gcc warning
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r10p4, operation: add
 Package: map_tools
