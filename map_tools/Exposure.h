@@ -2,7 +2,7 @@
     @brief definition of the class Exposure
 
     @author T.Burnett
-    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Exposure.h,v 1.3 2004/02/28 14:20:22 burnett Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Exposure.h,v 1.4 2004/03/02 17:16:19 burnett Exp $
 */
 #ifndef MAP_TOOLS_EXPOSURE_H
 #define MAP_TOOLS_EXPOSURE_H
@@ -99,7 +99,7 @@ public:
 
     /** @brief add a segment of the exposure history
        @param dirz the direction of the spacecraft z-axis
-       @deltat the time (presumeably seconds)
+       @param deltat the time (presumeably seconds)
        */
     void add(const astro::SkyDir& dirz, double deltat);
 
