@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Thu Mar 25 04:44:51 PST 2004
+map_tools/src/exposure_map
+
+Modified Files:
+	exposure_map.cxx 
+Log Message:
+moved SkyFunciton to astro
+    *
+------------------------------------------------------------
+User: burnett  Thu Mar 25 04:44:51 PST 2004
 map_tools/src
 
 Modified Files:
