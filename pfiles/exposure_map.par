@@ -1,4 +1,4 @@
-# $Header: /nfs/slac/g/glast/ground/cvs/map_tools/pfiles/exposure_map.par,v 1.4 2004/04/25 23:58:44 burnett Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/map_tools/pfiles/exposure_map.par,v 1.5 2004/11/12 03:50:43 burnett Exp $
 #---------------------------------------------------------------------------------------
 clobber,  b, h, "YES", , , "Overwrite existing output files with new output files"
 chatter,  i, h,   2,0,4 , , "Chattiness of output"
@@ -9,7 +9,7 @@ mode,     s, h,  "h",   , ,""
 #
 #---------------------------------------------------------------------------------------
 #
-infile,f,a,"$(OUTFILES)/expcube_Gleam42.fits",,,"Name of the exposure cube input file:"
+infile,f,a,"$(OUTFILES)/expcube_Gleam42_1day_withSAA.fits",,,"Name of the exposure cube input file:"
 table,s,a,,,,"name of the extension or ROOT tree"
 filter,s,h,,,,"filter expression:"
 outfile,f,a,"simple.fits",,,"output file name"
