@@ -1,4 +1,22 @@
 ------------------------------------------------------------
+User: burnett  Mon Feb 23 07:33:11 PST 2004
+map_tools/src/test
+
+Modified Files:
+	test_main.cxx 
+Log Message:
+quash warnigns
+    *
+------------------------------------------------------------
+User: burnett  Mon Feb 23 07:33:09 PST 2004
+map_tools/src/table
+
+Modified Files:
+	Primary.cxx 
+Log Message:
+quash warnigns
+    *
+------------------------------------------------------------
 User: burnett  Mon Feb 23 04:58:48 PST 2004
 map_tools/cmt
 
