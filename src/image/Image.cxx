@@ -4,24 +4,24 @@
      @author Toby Burnett
      Code orginally written by Riener Rohlfs
 
-     $Header$
+     $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/image/Image.cxx,v 1.2 2004/02/28 21:04:55 burnett Exp $
 */
 #include "Image.h"
 
 //_____________________________________________________________________________
 
 BaseImage *  BaseImage::readImage(const std::string & file_Name, const std::string & name,  
-                        unsigned int cycle, VirtualIO::FMode mode)
+                                  unsigned int cycle, VirtualIO::FMode mode)
 {
-// reads an image from a file 
+    // reads an image from a file 
 
     IOElement * element = IOElement::readIOElement(file_Name, name, cycle, mode ); 
 
-   BaseImage * image = dynamic_cast<BaseImage *>(element);
-   if (image == 0)
-      delete element;
+    BaseImage * image = dynamic_cast<BaseImage *>(element);
+    if (image == 0)
+        delete element;
 
-   return image;
+    return image;
 }
 
 //_____________________________________________________________________________
