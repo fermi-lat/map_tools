@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/mainpage.h,v 1.4 2004/02/28 21:04:55 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/mainpage.h,v 1.5 2004/03/06 15:14:33 burnett Exp $
 // Mainpage for doxygen
 
 /*! \mainpage package map_tools
@@ -31,8 +31,7 @@
     It does not support tables, or any IO except for FITS. Base classes are BaseAttr, VirtualIO and Header.
     
     The interface is not made public, since it will be eventually replaced by James Peachy's table package.
-    
-
+  
   \section notes release notes
   release.notes
   \section requirements requirements

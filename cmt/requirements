@@ -1,9 +1,9 @@
 package map_tools
 
-version v3r1p2
+version v4r0
 
 author T. Burnett <tburnett@u.washington.edu>
-# $Id: requirements,v 1.18 2004/03/10 20:43:47 burnett Exp $
+# $Id: requirements,v 1.19 2004/03/11 14:53:54 burnett Exp $
 
 
 use astro *
