@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Wed Feb 25 11:10:31 PST 2004
+map_tools/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+test for proper reading of pil file.
+    *
+------------------------------------------------------------
 User: burnett  Mon Feb 23 12:59:07 PST 2004
 map_tools/src
 
