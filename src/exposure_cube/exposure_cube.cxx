@@ -2,7 +2,7 @@
 @brief build the exposure_cube application
 
 @author Toby Burnett
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.8 2004/03/09 01:43:09 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.9 2004/03/09 14:10:23 burnett Exp $
 */
 #include "tuple/ITable.h"
 
@@ -91,7 +91,7 @@ int main(int argc, char * argv[]) {
         ExposureMapParameters pars(argc, argv);
 
         // create the exposure, and fill it from the history file
-        Exposure ex( pars["skybinsize"], pars["costhetabinsize"]);
+        Exposure ex( pars["pixelsize"], pars["costhetabinsize"]);
 
         LoadExposureFromGlast(  pars, ex); 
 

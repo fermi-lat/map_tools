@@ -1,7 +1,7 @@
 /** @file test_main.cxx
 @brief test various classes
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/test/test_main.cxx,v 1.19 2004/03/12 00:03:02 jchiang Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/test/test_main.cxx,v 1.20 2004/03/13 22:05:41 jchiang Exp $
 
 */
 #include "facilities/Util.h"
@@ -31,7 +31,7 @@ public:
 class TestPar : public Parameters {
 public:
     TestPar(int argc, char** argv): Parameters(argc, argv){
-        getValue<double>("xref");
+     //   getValue<double>("xref");
     }
 };
 
@@ -42,7 +42,8 @@ int main(int argc, char** argv ){
     try{
         // read a pil file--and make sure that a few simple things work
         TestPar par(argc, argv);
-        if( par["xref"] != 0) {
+        double xref = par["xref"] ;
+        if(  xref !=0 ) {
             std::cerr << "Read wrong value for parameter xref" << std::endl;
             return 1;
         }

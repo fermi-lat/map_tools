@@ -2,12 +2,12 @@
 * @file Parameters.h
 * @brief Tool Input Parameter Reader base class
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Parameters.h,v 1.5 2004/03/08 22:58:30 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Parameters.h,v 1.6 2004/03/09 14:10:23 burnett Exp $
 */
 #ifndef MAP_TOOLS_PARAMETERS_H
 #define MAP_TOOLS_PARAMETERS_H 
 
-#include "hoopsUtil/ParametersBase.h"
+#include "hoops/hoops_prompt_group.h" // for hoops::ParPromptGroup
 
 #include <string>
 
@@ -16,23 +16,34 @@ namespace map_tools {
 * @class Parameters
 * @brief Input reader base class for tools
 *
-* It uses hoopsUtil to read parameters from the par file.
+* It uses hoops to read parameters from the par file.
 * The description of pil format is available at
 * <a href="http://www-glast.slac.stanford.edu/sciencetools/userInterface/doc/pil.pdf">PIL user
 * manual</a>.
 *
 * @author Toby Burnett [originally from Sandhia Bansall]
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Parameters.h,v 1.5 2004/03/08 22:58:30 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Parameters.h,v 1.6 2004/03/09 14:10:23 burnett Exp $
 */
 
-class Parameters : public hoopsUtil::ParametersBase
+    class Parameters : public hoops::ParPromptGroup
 {
 public:
     // Constructors
     Parameters( int argc, char *argv[]);
     ~Parameters(){};
 
+    template< typename T>
+     T getValue(const std::string & name){ return (*this)[name];}
+
+     template <typename T>
+   T getValue(const std::string & name, const T & default_value) {
+      try {
+         return getValue<T>(name);
+      } catch (...) {
+         return default_value;
+      }
+   }
 
     // Accessor Methods
     const std::string &inputFile() const   { return m_inFile; }
