@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Nov 11 19:50:42 PST 2004
+map_tools/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+development to deal with irfResponse effective area, reading text-format history, more doxy tool description.
+    *
+------------------------------------------------------------
 User: burnett  Thu Aug 26 14:21:00 PDT 2004
 map_tools/src
 
