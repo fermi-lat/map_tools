@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sun Mar  7 16:17:38 PST 2004
+map_tools/src/exposure_map
+
+Modified Files:
+	exposure_map.cxx 
+Log Message:
+introduce new functor base class, use it for SkyImage call back 
+    *
+------------------------------------------------------------
 User: burnett  Sun Mar  7 16:17:37 PST 2004
 map_tools/src
 
