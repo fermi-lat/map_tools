@@ -3,11 +3,12 @@
 
      @author Toby Burnett
 
-     $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/read_map.cxx,v 1.1 2004/03/06 11:35:26 burnett Exp $
+     $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/read_map/read_map.cxx,v 1.1 2004/03/06 15:14:33 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
 #include "map_tools/MapParameters.h"
+#include "map_tools/SkyFunction.h"
 #include "astro/SkyDir.h"
 #include <iostream>
 
@@ -24,13 +25,13 @@ public:
 /** @class Request 
     @brief function class requests a point from the image
 */
-class Request : public SkyImage::Requester
+class Request : public SkyFunction
 {
 public:
     Request(const SkyImage& image )
         : m_image(image)
     {}
-        float operator()(const astro::SkyDir& s)const{
+        double operator()(const astro::SkyDir& s)const{
             return m_image.pixelValue(s);
         }
 private:
