@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Wed Mar 31 05:32:45 PST 2004
+map_tools/src/exposure_cube
+
+Modified Files:
+	exposure_cube.cxx 
+Log Message:
+more  st_app conversion
+    *
+------------------------------------------------------------
+User: burnett  Wed Mar 31 05:32:45 PST 2004
 map_tools/src/count_map
 
 Modified Files:
