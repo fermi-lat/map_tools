@@ -2,7 +2,7 @@
 @brief build the exposure_cube application
 
 @author Toby Burnett
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.16 2004/04/21 20:01:29 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.17 2004/04/26 11:38:20 burnett Exp $
 */
 
 #include "map_tools/MapParameters.h"
@@ -30,6 +30,9 @@ public:
         : st_app::StApp()
         , m_pars(st_app::StApp::getParGroup("exposure_cube")) {
     }
+           
+     ~ExposureCubeApp() throw() {}  // needed since StApp has empty throw.
+
     //--------------------------------------------------------------------------
     void LoadExposureFromGlast( const MapParameters& pars,   Exposure& exp )
     {

@@ -3,7 +3,7 @@
 
 @author Toby Burnett
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.12 2004/04/21 20:01:29 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.13 2004/04/26 11:38:20 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -32,7 +32,7 @@ public:
         , m_pars(st_app::StApp::getParGroup("exposure_map")) 
     {
     }
-
+    ~ExposureMapApp() throw() {} // needed since StApp has empty throw
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     /** @class Aeff
     @brief function class implements effective area

@@ -1,7 +1,7 @@
 /** @file count_map.cxx
 @brief build the count_map application
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/count_map/count_map.cxx,v 1.12 2004/04/25 23:45:13 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/count_map/count_map.cxx,v 1.13 2004/04/26 11:38:20 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -33,6 +33,8 @@ public:
         : st_app::StApp()
         , m_pars( st_app::StApp::getParGroup("count_map")) 
     { }
+
+    ~CountMap() throw() {}  // needed since StApp has empty throw.
 
     void run(){
         using tip::Table;
