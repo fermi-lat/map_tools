@@ -2,10 +2,10 @@
     @brief tools definition
     @author Toby Burnett
 
-$Id: release.notes,v 1.26 2004/12/22 23:59:40 burnett Exp $
+$Id: release.notes,v 1.27 2005/01/01 03:47:35 burnett Exp $
 @verbatim
  --------- -----  --- -----------------------------------------------------------------------
- 29-dec-04 v5r8   THB (todo)
+ 01-jan-05 v5r8   THB convert from astroroot-based image processing to tip::Image
  23-dec-04 v5r7   THB Add application map_stats to analyze a map, using astro::SkyStat 
  12-nov-04 v5r6p1 THB linux error; fix some warnings; change an annoying parameter name  
  10-nov-04 v5r6   THB implement use of Aeff from irf packages for calculating exposure map  
