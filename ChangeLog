@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Thu Nov 11 19:50:43 PST 2004
+map_tools/src/exposure_map
+
+Modified Files:
+	exposure_map.cxx 
+Log Message:
+development to deal with irfResponse effective area, reading text-format history, more doxy tool description.
+    *
+------------------------------------------------------------
+User: burnett  Thu Nov 11 19:50:43 PST 2004
 map_tools/src/exposure_cube
 
 Modified Files:
