@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Thu Mar 11 06:49:06 PST 2004
+map_tools/src
+
+Modified Files:
+	MapParameters.cxx 
+Log Message:
+allow image size to be non-integral
+    *
+------------------------------------------------------------
+User: burnett  Thu Mar 11 06:49:06 PST 2004
 map_tools/map_tools
 
 Modified Files:
