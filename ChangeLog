@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Mar 11 06:49:06 PST 2004
+map_tools/map_tools
+
+Modified Files:
+	MapParameters.h 
+Log Message:
+allow image size to be non-integral
+    *
+------------------------------------------------------------
 User: jchiang  Wed Mar 10 18:06:59 PST 2004
 map_tools/src/test
 
