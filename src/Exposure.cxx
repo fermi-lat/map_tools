@@ -1,7 +1,7 @@
 /** @file Exposure.cxx
     @brief Implementation of class Exposure
 
-   $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Exposure.cxx,v 1.4 2004/02/28 14:20:22 burnett Exp $
+   $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Exposure.cxx,v 1.5 2004/03/02 17:16:20 burnett Exp $
 */
 #include "map_tools/Exposure.h"
 #include "astro/SkyDir.h"
@@ -100,7 +100,7 @@ void Exposure::add(const astro::SkyDir& pos, double deltat){
     for(double lprime=-180.+0.5*Index::skybinsize; lprime <180. ; lprime += Index::skybinsize){
         for(double bprime=-90.+0.5*Index::skybinsize; bprime <90. ; bprime += Index::skybinsize){
             astro::SkyDir prime(lprime, bprime);
-            double cosdiff = pos()*prime();
+            double cosdiff = const_cast<astro::SkyDir&>(pos)()*prime();
             if( cosdiff> Index::cosmin)
                 m_exposureMap[Index(lprime, bprime, cosdiff)]+=deltat;
         }

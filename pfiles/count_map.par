@@ -1,4 +1,4 @@
-# $Header: /nfs/slac/g/glast/ground/cvs/map_tools/pfiles/count_map.par,v 1.1.1.1 2004/02/21 21:47:26 burnett Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/map_tools/pfiles/count_map.par,v 1.2 2004/02/23 02:44:36 burnett Exp $
 #---------------------------------------------------------------------------------------
 clobber,  b, a, "YES", , , "Overwrite existing output file?: "
 chatter,  i, a,   10,  , , , "Chatter: "
@@ -9,8 +9,8 @@ mode,     s, a,  "h",   , ,""
 #
 #---------------------------------------------------------------------------------------
 #
-#eventfile,s, a, "/glast/DC1/data/DC1AllSky-FT1-v2.fits", , , "Name of the Event Data File:"
-eventfile,s, a, "/glast/DC1/root_files/DC1_goodGamma.root", , , "Name of the Event Data File:"
+#infile,s, a, "/glast/DC1/data/DC1AllSky-FT1-v2.fits", , , "Name of the Event Data File:"
+infile,s, a, "/glast/DC1/root_files/DC1_goodGamma.root", , , "Name of the Event Data File:"
 #filter,   s, a, "calib_version[1]==1&&calib_version[2]==1&&calib_version[3]==1", , , "filter expression:"
 #filter,   s, a, "FT1Energy>100", , , "filter expression:"
 
