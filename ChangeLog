@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Fri Mar 19 10:56:32 PST 2004
+map_tools/pfiles
+
+Modified Files:
+	count_map.par test_map_tools.par 
+Log Message:
+fix for hoops
+    *
+------------------------------------------------------------
 User: burnett  Thu Mar 18 13:34:20 PST 2004
 map_tools/src
 
