@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Sun Feb 22 20:29:32 PST 2004
+map_tools/src/test
+
+Added Files:
+	test_main.cxx 
+Log Message:
+gcc fix; forgot to add test main
+    *
+------------------------------------------------------------
+User: burnett  Sun Feb 22 20:29:32 PST 2004
 map_tools/src/exposure_map
 
 Modified Files:
