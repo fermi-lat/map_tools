@@ -2,7 +2,7 @@
 @brief build the exposure_cube application
 
 @author Toby Burnett
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.15 2004/04/21 19:53:30 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.16 2004/04/21 20:01:29 burnett Exp $
 */
 
 #include "map_tools/MapParameters.h"
@@ -26,12 +26,9 @@ public:
      //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    /** \brief Create AppExample2 object, performing initializations needed for running the application.
     */
-    ExposureCubeApp(): st_app::StApp(), m_par_group(st_app::StApp::getParGroup("exposure_cube")) {
-      // Prompt for all parameters.
-      m_par_group.Prompt();
-
-      // Save the values just prompted for.
-      m_par_group.Save();
+    ExposureCubeApp()
+        : st_app::StApp()
+        , m_pars(st_app::StApp::getParGroup("exposure_cube")) {
     }
     //--------------------------------------------------------------------------
     void LoadExposureFromGlast( const MapParameters& pars,   Exposure& exp )
@@ -67,21 +64,17 @@ public:
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     void run()
     {
-        // read in, or prompt for, all necessary parameters
-        MapParameters pars(m_par_group);
-
         // create the exposure, and fill it from the history file
-        Exposure ex( pars["pixelsize"], pars["costhetabinsize"]);
+        Exposure ex( m_pars["pixelsize"], m_pars["costhetabinsize"]);
 
-        LoadExposureFromGlast(  pars, ex); 
+        LoadExposureFromGlast(  m_pars, ex); 
 
         // create the fits output file from the Exposure file
-        ExposureHyperCube cube(ex, pars.outputFile());
+        ExposureHyperCube cube(ex, m_pars.outputFile());
 
     }
     private:
-    st_app::AppParGroup & m_par_group;
-
+        MapParameters m_pars;
 };
 // Factory which can create an instance of the class above.
 st_app::StAppFactory<ExposureCubeApp> g_factory;
