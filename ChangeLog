@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: burnett  Sat Feb 28 06:20:22 PST 2004
+map_tools/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+New interface to reading and writing image fits files, adapted from astroroot.
+about to tag v2r0
+    *
+------------------------------------------------------------
 User: burnett  Fri Feb 27 14:40:13 PST 2004
 map_tools/src/image
 
