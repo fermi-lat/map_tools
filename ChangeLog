@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Mar 11 06:52:17 PST 2004
+map_tools/src/image
+
+Modified Files:
+	Image.h 
+Log Message:
+Implement convenient operator[] for access to the array
+    *
+------------------------------------------------------------
 User: burnett  Thu Mar 11 06:50:49 PST 2004
 map_tools/src
 
