@@ -2,11 +2,12 @@
 /** @file TestCosineBinner.h
 @brief test class for CosineBinner
 
-$Header$
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/test/TestCosineBinner.h,v 1.1 2005/03/04 06:19:14 burnett Exp $
 
 
 */
 #include "map_tools/CosineBinner.h"
+#include <stdexcept>
 
 
 class TestCosineBinner {
