@@ -1,7 +1,7 @@
 /** @file count_map.cxx
 @brief build the count_map application
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/count_map/count_map.cxx,v 1.13 2004/04/26 11:38:20 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/count_map/count_map.cxx,v 1.14 2004/04/27 17:08:09 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -53,7 +53,7 @@ public:
         for (Table::ConstIterator it = table.begin(); it != table.end(); ++it) {
 
             // Create local reference to the record to which the iterator refers:
-            const Table::Record & record = *it;
+            Table::ConstRecord & record = *it;
             // Get the current values
             double ra = record[m_pars.raName()].get(), 
                 dec=record[m_pars.decName()].get();
