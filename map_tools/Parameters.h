@@ -2,7 +2,7 @@
 * @file Parameters.h
 * @brief Tool Input Parameter Reader base class
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Parameters.h,v 1.11 2004/04/25 23:45:13 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Parameters.h,v 1.12 2004/04/26 21:45:32 burnett Exp $
 */
 #ifndef MAP_TOOLS_PARAMETERS_H
 #define MAP_TOOLS_PARAMETERS_H 
@@ -46,7 +46,7 @@ public:
          return default_value;
       }
    }
-   //! @brief bracket operator for numberic values only
+   //! @brief bracket operator for numeric values only
    double operator[](const std::string& name)const {return m_par[name];} 
 
     // Accessor Methods
@@ -69,6 +69,7 @@ private:
     bool        m_clobber;
     int         m_chatter;
     bool      m_own_ppg;
+    bool    m_debug;
 };
 } // namespace map_tools
 #endif

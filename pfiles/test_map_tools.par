@@ -1,7 +1,8 @@
-# $Header: /nfs/slac/g/glast/ground/cvs/map_tools/pfiles/test_map_tools.par,v 1.6 2004/04/26 12:01:06 burnett Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/map_tools/pfiles/test_map_tools.par,v 1.7 2004/11/14 07:05:48 burnett Exp $
 #---------------------------------------------------------------------------------------
-clobber,  b, a, "YES", , , "Overwrite existing output file?: "
-chatter,  i, a,   10,  , , , "Chatter: "
+clobber,b,a,yes,,,Overwrite existing output file?:
+chatter,  i, h,   2,0,4 , , "Chattiness of output"
+debug, b, h, no,,,Debugging mode activated
 mode,     s, a,  "h",   , ,""
 # uncomment the following for interactive/replacement mode
 #mode,     s, a,  "ql",   , ,""
