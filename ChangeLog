@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Fri Mar  5 18:58:47 PST 2004
+map_tools/map_tools
+
+Modified Files:
+	MapParameters.h SkyImage.h 
+Log Message:
+new application diemonstrating access to a pixel map, and support, especially to read a primary image
+    *
+------------------------------------------------------------
+User: burnett  Fri Mar  5 18:58:47 PST 2004
 map_tools/cmt
 
 Modified Files:
