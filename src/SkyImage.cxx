@@ -1,7 +1,7 @@
 /** @file SkyImage.cxx
 
 @brief implement the class SkyImage
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/SkyImage.cxx,v 1.35 2005/01/20 22:42:12 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/SkyImage.cxx,v 1.36 2005/01/22 03:16:45 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -62,6 +62,7 @@ SkyImage::SkyImage(const map_tools::MapParameters& pars)
                 +ptype +" does not have default image size");
         }
     }
+    if( m_naxis2==0) m_naxis2=m_naxis1; // default square image
     bool galactic = pars.uselb();
 
     /// arrays describing transformation: assume reference in the center
@@ -220,7 +221,8 @@ void SkyImage::fill(const astro::SkyFunction& req, unsigned int layer)
             double t= req(dir);
             m_imageData[k+offset] = t;
             m_total += t;
-        }catch(... ) { // any exception: just fill in a NaN
+        }catch(const std::exception& ex){ 
+            // any exception: just fill in a NaN
             m_imageData[k+offset]=dnan; 
         }
     }
