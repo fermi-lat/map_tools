@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Tue Mar  9 06:10:23 PST 2004
+map_tools/src/exposure_cube
+
+Modified Files:
+	exposure_cube.cxx 
+Log Message:
+clean-up after refactoring out pil code to hoopsUtil::ParametersBase
+    *
+------------------------------------------------------------
+User: burnett  Tue Mar  9 06:10:23 PST 2004
 map_tools/src/count_map
 
 Modified Files:
