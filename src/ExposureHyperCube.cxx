@@ -1,7 +1,8 @@
 /**
  * @file ExposureHyperCube.cxx
+   @brief Implement ExposureHyperCube methods
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/ExposureHyperCube.cxx,v 1.3 2004/03/02 17:16:20 burnett Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/ExposureHyperCube.cxx,v 1.4 2004/03/02 17:46:54 jchiang Exp $
  */
 
 #include "image/Image.h"
