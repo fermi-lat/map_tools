@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sat Feb  5 20:16:06 PST 2005
+map_tools/map_tools
+
+Added Files:
+	CosineBinner.h 
+Log Message:
+Add new class for exposure calculations
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r9p3, operation: add
 Package: map_tools
