@@ -2,7 +2,7 @@
 @brief build the exposure_cube application
 
 @author Toby Burnett
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.19 2004/06/11 18:21:50 cohen Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.20 2004/11/12 03:50:43 burnett Exp $
 */
 
 #include "map_tools/MapParameters.h"
@@ -62,7 +62,7 @@ public:
             for( ; mit!=history.end(); ++mit)
             {
                 const GPS::POINTINFO& pt = mit->second;
-                double t = mit->first, fraction= (t-begintime)/(endtime-begintime);
+                double t = mit->first;
                 if( t < tstart) continue;
                 if( t > tstop) break;
                 total++;
@@ -104,7 +104,7 @@ public:
     {
         std::clog << "Creating an exposure object ...";
         // create the exposure, and fill it from the history file
-        Exposure ex( m_pars["pixelsize"], m_pars["costhetabinsize"]);
+        Exposure ex( m_pars["pixelsize"], m_pars["binsize"]);
 
         LoadExposureFromGlast(  m_pars, ex); 
 

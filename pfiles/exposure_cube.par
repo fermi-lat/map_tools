@@ -1,4 +1,4 @@
-# $Header: /nfs/slac/g/glast/ground/cvs/map_tools/pfiles/exposure_cube.par,v 1.10 2004/04/25 23:58:44 burnett Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/map_tools/pfiles/exposure_cube.par,v 1.11 2004/11/12 03:50:43 burnett Exp $
 #---------------------------------------------------------------------------------------
 clobber,  b, a, "YES", , , "Overwrite existing output file?: "
 chatter,  i, a,   10,  , , , "Chatter: "
@@ -27,7 +27,7 @@ projtype, s, a,"CAR",   , , "Projection Method  (CAR, SIN, TAN, ARC, NCP, GLS, M
 uselb,    b, a, "NO",   , , "use l,b instead of ra,dec :"
 #---------------------------------------------------------------------------------------
 # Exposure generation parameters
-costhetabinsize, r,a, 0.025, , , "binsize for the cos(theta) function 
+binsize, r,a, 0.025, , , binsize for the function of theta
 # Exposure generation parameters
 tstart,  r, a,   0 ,   , , "start time"
 tstop,   r, a,  86400,  , , "end time"  
