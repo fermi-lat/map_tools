@@ -1,7 +1,7 @@
 /** @file Exposure.cxx
     @brief Implementation of class Exposure
 
-   $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Exposure.cxx,v 1.18 2005/02/24 19:54:57 burnett Exp $
+   $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Exposure.cxx,v 1.19 2005/03/04 01:39:21 burnett Exp $
 */
 #include "map_tools/Exposure.h"
 #include "map_tools/HealpixArrayIO.h"
@@ -39,7 +39,7 @@ void Exposure::fill(const astro::SkyDir& dirz, double deltat)
 }
 
 
-void Exposure::write(const std::string& outputfile, const std::string& tablename)
+void Exposure::write(const std::string& outputfile, const std::string& tablename)const
 {
     map_tools::HealpixArrayIO::instance().write(data(), outputfile, tablename);
 }
