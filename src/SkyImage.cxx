@@ -1,7 +1,7 @@
 /** @file SkyImage.cxx
 
 @brief implement the class SkyImage
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/SkyImage.cxx,v 1.36 2005/01/22 03:16:45 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/SkyImage.cxx,v 1.37 2005/02/06 04:18:32 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -221,7 +221,7 @@ void SkyImage::fill(const astro::SkyFunction& req, unsigned int layer)
             double t= req(dir);
             m_imageData[k+offset] = t;
             m_total += t;
-        }catch(const std::exception& ex){ 
+        }catch(const std::exception& ){ 
             // any exception: just fill in a NaN
             m_imageData[k+offset]=dnan; 
         }
