@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sat Feb 28 13:04:55 PST 2004
+map_tools/src/exposure_cube
+
+Modified Files:
+	exposure_cube.cxx 
+Log Message:
+put in lots of doxy comments. 
+    *
+------------------------------------------------------------
 User: burnett  Sat Feb 28 13:04:54 PST 2004
 map_tools/map_tools
 
