@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Mar 25 15:40:50 PST 2004
+map_tools/src
+
+Modified Files:
+	SkyImage.cxx 
+Log Message:
+fix initalization with AIT to properly handle other layers
+    *
+------------------------------------------------------------
 User: burnett  Thu Mar 25 04:44:51 PST 2004
 map_tools/src/read_map
 
