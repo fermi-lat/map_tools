@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Wed Mar  3 09:24:03 PST 2004
+map_tools/src/image
+
+Modified Files:
+	Fits_IO.cxx 
+Log Message:
+reimplement typeid tests
+    *
+------------------------------------------------------------
 User: burnett  Wed Mar  3 07:42:13 PST 2004
 map_tools/src/test
 
