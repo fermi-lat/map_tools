@@ -2,7 +2,7 @@
     @brief definition of the class Exposure
 
     @author T.Burnett
-    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Exposure.h,v 1.15 2005/03/04 15:33:50 burnett Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Exposure.h,v 1.16 2005/03/05 22:51:53 burnett Exp $
 */
 #ifndef MAP_TOOLS_EXPOSURE_H
 #define MAP_TOOLS_EXPOSURE_H
@@ -70,7 +70,7 @@ public:
     //! create object with specified binning
     //! @param pixelsize (deg) Approximate pixel size, in degrees
     //! @param cosbinsize bin size in the cos(theta) binner
-    Exposure(double pixelsize=1., double cosbinsize=1/40);
+    Exposure(double pixelsize=1., double cosbinsize=1./CosineBinner::s_nbins);
 
     //! add a time interval at the given position
     virtual void fill(const astro::SkyDir& dirz, double deltat);
