@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sat Apr  3 19:31:46 PST 2004
+map_tools/pfiles
+
+Modified Files:
+	count_map.par read_map.par 
+Log Message:
+set prompt mode.
+    *
+------------------------------------------------------------
 User: burnett  Sat Apr  3 07:05:18 PST 2004
 map_tools/src/count_map
 
