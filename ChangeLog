@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: jchiang  Tue Mar  2 15:24:58 PST 2004
+map_tools/src/image
+
+Modified Files:
+	Attr.h Fits_IO.cxx Header.h dev_main.cxx 
+Added Files:
+	Header.cxx 
+Log Message:
+add access to Header attributes, encapsulating the cast
+    *
+------------------------------------------------------------
 User: jchiang  Tue Mar  2 09:46:55 PST 2004
 map_tools/src
 
