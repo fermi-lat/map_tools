@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Mon Apr  5 10:04:45 PDT 2004
+map_tools/src/exposure_cube
+
+Modified Files:
+	exposure_cube.cxx 
+Log Message:
+use convenient tip function; tag v5r3
+    *
+------------------------------------------------------------
+User: burnett  Mon Apr  5 10:04:45 PDT 2004
 map_tools/src/count_map
 
 Modified Files:
