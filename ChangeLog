@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sat Jun  5 09:29:39 PDT 2004
+map_tools/src
+
+Modified Files:
+	MapParameters.cxx 
+Log Message:
+make table_name optional; default empty string
+    *
+------------------------------------------------------------
 User: burnett  Sat Jun  5 09:20:37 PDT 2004
 map_tools/src
 
