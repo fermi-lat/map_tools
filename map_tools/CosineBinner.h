@@ -3,13 +3,15 @@
 
 @author T. Burnett
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/CosineBinner.h,v 1.2 2005/02/06 19:52:23 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/CosineBinner.h,v 1.3 2005/02/24 19:54:57 burnett Exp $
 */
 
 #ifndef map_toos_CosineBinner_h
 #define map_toos_CosineBinner_h
 
 #include <vector>
+#include <string>
+
 namespace map_tools {
 
     /** @class CosineBinner
