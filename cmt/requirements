@@ -1,7 +1,8 @@
 package map_tools
 
-version v1
+version v1r1
 author T. Burnett <tburnett@u.washington.edu>
+# $Id: requirements,v 1.2 2004/02/22 00:17:11 burnett Exp $
 
 use GlastPolicy *
 use tuple *
