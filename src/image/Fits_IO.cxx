@@ -4,7 +4,7 @@
     @author Toby Burnett
     Code orginally written by Riener Rohlfs
 
-    $Header$
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/image/Fits_IO.cxx,v 1.4 2004/02/28 21:04:55 burnett Exp $
 */
 
 #include "Fits_IO.h"
@@ -372,7 +372,7 @@ static void HeaderRoot2Fits(IOElement * element, fitsfile * fptr, int * status)
     if (*status != 0)
         return;
     for( Header::iterator it = element->begin(); it != element->end(); ++it){
-        BaseAttr& attr = **it;
+        BaseAttr& attr = *(it->second);
 
            std::string tname(typeid(attr).name());
            int k = tname.find_first_of("<")+1;

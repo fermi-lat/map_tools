@@ -4,7 +4,7 @@
      @author Toby Burnett
      Code orginally written by Riener Rohlfs
 
-    $Header$
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/image/Attr.h,v 1.3 2004/02/28 21:04:55 burnett Exp $
 */
 #ifndef ATTR_H
 #define ATTR_H
@@ -36,6 +36,7 @@ public:
     virtual void print(std::ostream&)const=0;
 
     //virtual operator double()const = 0;
+
 private:
     std::string m_name;
     std::string m_unit;
