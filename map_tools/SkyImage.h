@@ -2,14 +2,14 @@
 
     @brief declare  the class SkyImage
     @author Toby Burnett <tburnett@u.washington.edu>
-    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/SkyImage.h,v 1.12 2004/03/11 14:50:49 burnett Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/SkyImage.h,v 1.13 2004/03/13 14:54:31 burnett Exp $
 
 */
 
 #ifndef MAP_TOOLS_SKYIMAGE_H
 #define MAP_TOOLS_SKYIMAGE_H
 
-#include "map_tools/SkyFunction.h"
+#include "astro/SkyFunction.h"
 
 #include <string>
 #include <vector>
@@ -66,7 +66,7 @@ public:
     @param req a functor that returns a double for a SkyDir
     @param layer layer number to fill [default 0]
     */
-    void fill( const SkyFunction& req, unsigned int layer=0);
+    void fill( const astro::SkyFunction& req, unsigned int layer=0);
 
     /** brief clear the image, putting nulls around a AIT map
     */
