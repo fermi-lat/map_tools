@@ -2,7 +2,7 @@
     @brief definition of the class Exposure
 
     @author T.Burnett
-    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Exposure.h,v 1.6 2005/01/01 18:56:30 burnett Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Exposure.h,v 1.7 2005/01/01 22:27:22 burnett Exp $
 */
 #ifndef MAP_TOOLS_EXPOSURE_H
 #define MAP_TOOLS_EXPOSURE_H
@@ -12,7 +12,6 @@
 #include <cmath>
 
 namespace astro { class SkyDir;}
-namespace tuple { class ITable;}
 namespace { 
     inline double sqr(double x){return x*x;}
 }
