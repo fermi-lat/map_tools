@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Mar  4 05:03:00 PST 2004
+map_tools/src
+
+Modified Files:
+	SkyImage.cxx 
+Log Message:
+fix extension name typo
+    *
+------------------------------------------------------------
 User: burnett  Wed Mar  3 18:11:00 PST 2004
 map_tools/doc
 
