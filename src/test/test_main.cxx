@@ -1,12 +1,11 @@
 /** @file test_main.cxx
 @brief test various classes
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/test/test_main.cxx,v 1.27 2005/01/22 15:53:19 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/test/test_main.cxx,v 1.28 2005/02/06 19:52:23 burnett Exp $
 
 */
 #include "map_tools/Exposure.h"
 #include "map_tools/MapParameters.h"
-#include "map_tools/ExposureHyperCube.h"
 #include "map_tools/SkyImage.h"
 
 #include "TestCosineBinner.h"
@@ -19,7 +18,7 @@ $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/test/test_main.cxx,v 1.27 20
 #include <stdexcept>
 using namespace map_tools;
 
-class TestAeff : public Exposure::Aeff {
+class TestAeff { //: public Exposure::Aeff {
 public:
     TestAeff(double slope=0): m_slope(slope){}
     double operator()(double ct)const{
@@ -34,6 +33,7 @@ public:
 
 int main(int argc, char** argv ){
     try{
+    
         // read a pil file--and make sure that a few simple things work
         MapParameters par(argc, argv);
         double xref = par["xref"] ;
@@ -43,7 +43,8 @@ int main(int argc, char** argv ){
         }
 
         std::cout << "Testing exposure calculation with binning function "
-            << Exposure::Index::thetaBinning() << std::endl;
+          //  << Exposure::Index::thetaBinning() 
+          << std::endl;
         Exposure e( 10,  0.1);
         double total=0;
 
@@ -51,7 +52,7 @@ int main(int argc, char** argv ){
         for( double ra=0.5; ra<360; ra+=2.0) {
             for (double st = -0.95; st < 1.0; st += 0.05){
                 double dec = asin(st)*180/M_PI;
-                e.add( astro::SkyDir(ra, dec), 1.0);
+                e.fill( astro::SkyDir(ra, dec), 1.0);
                 total += 1.0;
             }
         }
@@ -79,20 +80,21 @@ int main(int argc, char** argv ){
         }
 
         // Write out the cube...delete any existing file first.
-        ExposureHyperCube cube(e, par.inputFile());
-        cube.save();
+        e.write( par.inputFile());
+ 
 
         // Check the Exposure(fitsfile) constructor.
         Exposure e2(par.inputFile());
 
         // Write this out as a separate file for an external diff.
-        ExposureHyperCube cube2(e2, par.outputFile());
-        cube2.save();
+        e2.write( par.outputFile());
 
         // create an image to access cells
+    #if 0
         SkyImage exp3(par.inputFile(),"");
         double tt = exp3.pixelValue(astro::SkyDir(0,0));
         if( tt!=36.0) throw std::runtime_error("Fail pixelvalue test!"); 
+    #endif 
 
         // now test cos
         TestCosineBinner();

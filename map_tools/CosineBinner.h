@@ -3,7 +3,7 @@
 
 @author T. Burnett
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/CosineBinner.h,v 1.1 2005/02/06 04:16:06 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/CosineBinner.h,v 1.2 2005/02/06 19:52:23 burnett Exp $
 */
 
 #ifndef map_toos_CosineBinner_h
@@ -24,7 +24,7 @@ public:
     /// the binning function: add value to the selected bin, if costheta in range
     void fill(double costheta, double value);
     
-    /// modifiable reference to the contenta of the bin containing the cos(theta) value
+    /// modifiable reference to the contents of the bin containing the cos(theta) value
     float& operator[](double costheta);
     const float& operator[](double costheta)const;
 
@@ -33,7 +33,7 @@ public:
 
     /// integral over the range with functor accepting costheta as an arg. 
     template<class F>
-        double operator()(const F& f)const
+    double operator()(const F& f)const
     {   
         double sum=0;
         for(const_iterator it=begin(); it!=end(); ++it){
