@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Wed Feb 25 11:10:31 PST 2004
+map_tools/src/test
+
+Modified Files:
+	test_main.cxx 
+Log Message:
+test for proper reading of pil file.
+    *
+------------------------------------------------------------
+User: burnett  Wed Feb 25 11:10:31 PST 2004
 map_tools/cmt
 
 Modified Files:
