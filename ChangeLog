@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Wed Mar  3 07:42:13 PST 2004
+map_tools/src/image
+
+Modified Files:
+	Attr.h Fits_IO.cxx Header.cxx Header.h Image.h dev_main.cxx 
+Log Message:
+switch back to vector
+    *
+------------------------------------------------------------
 User: jchiang  Tue Mar  2 22:20:22 PST 2004
 map_tools/src/image
 
