@@ -4,7 +4,7 @@
      @author Toby Burnett
      Code orginally written by Riener Rohlfs
 
-    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/image/Attr.h,v 1.4 2004/03/02 23:24:57 jchiang Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/image/Attr.h,v 1.5 2004/03/03 15:42:13 burnett Exp $
 */
 #ifndef ATTR_H
 #define ATTR_H
@@ -36,7 +36,8 @@ public:
     virtual void print(std::ostream&)const=0;
 
     operator const std::string&()const{return m_name;}
-    //virtual operator double()const = 0;
+    
+    virtual void* valuePtr()const=0;
 
 private:
     std::string m_name;
@@ -64,6 +65,7 @@ public:
     virtual BaseAttr * clone() const{ return new Attr<T>(*this);}
 
     const T& value()const{return m_value;}
+    virtual void* valuePtr()const{ return reinterpret_cast<void*>(const_cast<T*>((&m_value)));}
     virtual void print(std::ostream&out)const{ out << m_value;} 
 
 private:
