@@ -2,9 +2,10 @@
     @brief tools definition
     @author Toby Burnett
 
-$Id: release.notes,v 1.19 2004/04/26 12:04:11 burnett Exp $
+$Id: release.notes,v 1.20 2004/04/26 21:47:11 burnett Exp $
 @verbatim
  --------- -----  --- -----------------------------------------------------------------------
+ 27-apr-04 v5r432 THB add throw() to StApp subclass destructors, required by StApp.
  26-apr-04 v5r4p2 THB add throw() to Parameter destructor, required by StApp.
  26-apr-04 v5r4p1 THB use STapp instead of IApp; fix so parameters are saved; add table_name to pars
  21-apr-04 v5r4   THB convert to use const Table access;
