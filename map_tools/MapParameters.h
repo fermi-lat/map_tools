@@ -2,7 +2,7 @@
 * @file MapParameters.h
 * @brief Map Parameter Reader
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/MapParameters.h,v 1.1.1.1 2004/02/21 21:47:26 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/MapParameters.h,v 1.2 2004/02/23 02:44:36 burnett Exp $
 */
 
 #ifndef MAPPARAMETERS_H
@@ -10,7 +10,7 @@
 
 #include "Parameters.h"
 #include <string>
-
+namespace map_tools {
 
 /**
 * @class MapParameters
@@ -22,7 +22,7 @@
 * href="http://www-glast.slac.stanford.edu/sciencetools/userInterface/doc/pil.pdf">PIL user
 * manual</a>.
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/MapParameters.h,v 1.1.1.1 2004/02/21 21:47:26 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/MapParameters.h,v 1.2 2004/02/23 02:44:36 burnett Exp $
 */
 
 class MapParameters : public Parameters
@@ -59,5 +59,6 @@ private:
     std::string     m_raName, m_decName;
 
 };
+}//namespace map_tools
 
 #endif

@@ -2,15 +2,18 @@
     @brief declare class ExposureHyperCube 
 
     @author Toby Burnett
-    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/ExposureHyperCube.h,v 1.5 2004/03/02 01:06:45 jchiang Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/ExposureHyperCube.h,v 1.6 2004/03/02 01:59:46 burnett Exp $
 
 */
 
 #ifndef TOOLS_EXPOSUREHYPERCUBE_H
 #define TOOLS_EXPOSUREHYPERCUBE_H
-
 #include "Exposure.h"
 class BaseImage;
+
+namespace map_tools {
+
+
 /** @class ExposureHyperCube 
     @brief Set up an exposure map hypercube
 
@@ -36,4 +39,5 @@ private:
    BaseImage * m_image;
 
 };
+}// namespace map_tools
 #endif //TOOLS_EXPOSUREHYPERCUBE_H

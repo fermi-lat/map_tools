@@ -2,13 +2,15 @@
 *   @brief Implementation for class that reads parameters for image description
 * @author Toby Burnett 
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/MapParameters.cxx,v 1.1.1.1 2004/02/21 21:47:26 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/MapParameters.cxx,v 1.2 2004/02/23 02:44:36 burnett Exp $
 */
 
 #include "map_tools/MapParameters.h"
 
+using namespace map_tools;
 
 //! Constructor
+
 MapParameters::MapParameters( int argc, char *argv[])
 : Parameters(argc, argv)
 {

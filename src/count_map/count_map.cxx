@@ -1,7 +1,7 @@
 /** @file count_map.cxx
     @brief build the count_map application
 
-    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/count_map/count_map.cxx,v 1.2 2004/02/23 02:44:36 burnett Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/count_map/count_map.cxx,v 1.3 2004/02/28 14:20:22 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -13,6 +13,7 @@
 #include "image/Image.h" 
 
 #include <algorithm>
+using namespace map_tools;
 namespace cmap { // for count_map helper classes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /** @class AddCount

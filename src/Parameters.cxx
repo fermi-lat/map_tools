@@ -3,7 +3,7 @@
 * @brief Implementation for class that reads parameters needed for tools
 * @author Toby Burnett
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Parameters.cxx,v 1.3 2004/02/23 20:59:07 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Parameters.cxx,v 1.4 2004/02/28 14:20:22 burnett Exp $
 */
 
 #include <sstream>
@@ -15,6 +15,8 @@
 #include "pil.h"
 #include <stdexcept>
 #include <cmath>
+
+using namespace map_tools;
 
 bool Parameters::s_verboseMode = false;
 bool Parameters::s_clobber = 0;
@@ -44,7 +46,7 @@ Parameters::Parameters( int argc, char *argv[])
 
     // Read name of the file containing events data
     // if the name starts with "/", assume root. Otherwise assume it is in $INFILES
-    m_eventFile = getString("eventfile");
+    m_eventFile = getString("infile");
     if( m_eventFile.substr(0,1)!="/" ){
 
         std::string test= "$(INFILES)/" + m_eventFile;

@@ -3,13 +3,14 @@
 
      @author Toby Burnett
 
-     $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.5 2004/02/28 21:04:55 burnett Exp $
+     $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.6 2004/03/02 02:54:55 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
 #include "map_tools/MapParameters.h"
 #include "map_tools/Exposure.h"
 #include "astro/SkyDir.h"
+using namespace map_tools;
 
 namespace emap{ // for simple helper classes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
