@@ -1,12 +1,14 @@
 /**
  * @file ExposureHyperCube.cxx
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/ExposureHyperCube.cxx,v 1.1 2004/03/02 01:07:34 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/ExposureHyperCube.cxx,v 1.2 2004/03/02 01:59:46 burnett Exp $
  */
 
 #include "image/Image.h"
 
 #include "map_tools/ExposureHyperCube.h"
+
+using namespace map_tools;
 
 ExposureHyperCube::ExposureHyperCube( const Exposure& exp, 
                                       std::string outfile) : m_image(0)

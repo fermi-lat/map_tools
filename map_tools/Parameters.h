@@ -2,13 +2,14 @@
 * @file Parameters.h
 * @brief Tool Input Parameter Reader base class
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Parameters.h,v 1.2 2004/02/23 02:44:36 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Parameters.h,v 1.3 2004/02/28 14:20:22 burnett Exp $
 */
 #ifndef PARAMETERS_H
 #define PARAMETERS_H 
 
 #include <string>
-
+#include <map>
+namespace map_tools {
 /**
 * @class Parameters
 * @brief Input reader base class for tools
@@ -20,11 +21,8 @@
 *
 * @author Toby Burnett [originally from Sandhia Bansall]
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Parameters.h,v 1.2 2004/02/23 02:44:36 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Parameters.h,v 1.3 2004/02/28 14:20:22 burnett Exp $
 */
-
-#include <map>
-
 class Parameters
 {
 public:
@@ -70,8 +68,6 @@ private:
     static bool        s_verboseMode;
     static bool        s_clobber;
     static int         s_chatter;
-
-
 };
-
+} // namespace map_tools
 #endif
