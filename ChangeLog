@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sat Jun  5 09:20:37 PDT 2004
+map_tools/src
+
+Modified Files:
+	SkyImage.cxx 
+Log Message:
+clean out dead code: clear maps if any transformation other than CAR
+    *
+------------------------------------------------------------
 User: burnett  Thu Jun  3 07:35:19 PDT 2004
 map_tools/src
 
