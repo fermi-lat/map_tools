@@ -2,7 +2,7 @@
 * @file Parameters.h
 * @brief Tool Input Parameter Reader base class
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Parameters.h,v 1.7 2004/03/18 19:23:42 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Parameters.h,v 1.8 2004/03/25 11:24:04 burnett Exp $
 */
 #ifndef MAP_TOOLS_PARAMETERS_H
 #define MAP_TOOLS_PARAMETERS_H 
@@ -23,15 +23,17 @@ namespace map_tools {
 *
 * @author Toby Burnett [originally from Sandhia Bansall]
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Parameters.h,v 1.7 2004/03/18 19:23:42 burnett Exp $
 */
-
-    class Parameters //: public hoops::ParPromptGroup
+class Parameters 
 {
 public:
-    // Constructors
+    //! @brief ctor for command line args
     Parameters( int argc, char *argv[]);
-    ~Parameters(){};
+
+    //! @brief ctor with hoops already set up
+    Parameters(hoops::ParPromptGroup& par);
+
+    ~Parameters();
 
     template< typename T>
         T getValue(const std::string & name){ return m_par[name];}
@@ -40,10 +42,11 @@ public:
    T getValue(const std::string & name, const T & default_value) {
       try {
          return getValue<T>(name);
-      } catch (...) {
+      } catch ( ...) {
          return default_value;
       }
    }
+   //! @brief bracket operator for numberic values only
    double operator[](const std::string& name)const { return m_par[name];}
 
     // Accessor Methods
@@ -54,6 +57,7 @@ public:
     bool clobber()      const            { return m_clobber; }
     short chatter()     const            { return m_chatter; }
 private:
+    void setup();
     hoops::ParPromptGroup& m_par;
     // Data Members
     std::string   m_inFile;
@@ -62,6 +66,7 @@ private:
     bool        m_verboseMode;
     bool        m_clobber;
     int         m_chatter;
+    bool      m_own_ppg;
 };
 } // namespace map_tools
 #endif
