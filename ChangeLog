@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Mon Apr 26 04:38:20 PDT 2004
+map_tools/src
+
+Modified Files:
+	Parameters.cxx 
+Log Message:
+refactor prompt and save to MapParameters file
+    *
+------------------------------------------------------------
+User: burnett  Mon Apr 26 04:38:20 PDT 2004
 map_tools/pfiles
 
 Modified Files:
