@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Mar  4 19:58:43 PST 2004
+map_tools/map_tools
+
+Modified Files:
+	SkyImage.h 
+Log Message:
+enhance SkyImage to create from file, access pixels.
+    *
+------------------------------------------------------------
 User: burnett  Thu Mar  4 06:52:34 PST 2004
 map_tools/src/test
 
