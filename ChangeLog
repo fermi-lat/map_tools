@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Apr  1 14:04:22 PST 2004
+map_tools/src/image
+
+Modified Files:
+	Attr.h 
+Log Message:
+fix include
+    *
+------------------------------------------------------------
 User: burnett  Wed Mar 31 05:58:11 PST 2004
 map_tools/src/exposure_map
 
