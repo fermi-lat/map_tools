@@ -1,7 +1,7 @@
 /** @file Exposure.cxx
     @brief Implementation of class Exposure
 
-   $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Exposure.cxx,v 1.9 2004/03/03 22:03:26 jchiang Exp $
+   $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Exposure.cxx,v 1.10 2004/04/02 23:13:54 burnett Exp $
 */
 #include "map_tools/Exposure.h"
 #include "astro/SkyDir.h"
@@ -35,7 +35,7 @@ Exposure::Exposure(double skybin, double costhetabin) : m_total(0)
     //total size to reserve
     unsigned int size= Index::ra_factor * Index::dec_factor * Index::cosfactor;
     m_exposureMap.resize(size);
-    std::cout << "Creating a exposure hypercube, size " << size 
+    std::clog << "Creating a exposure hypercube, size " << size 
         << "="<< Index::ra_factor << " x "<< Index::dec_factor << " x "<< Index::cosfactor << std::endl;
     std::fill(m_exposureMap.begin(), m_exposureMap.end(), 0);
 }

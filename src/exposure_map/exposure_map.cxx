@@ -5,7 +5,7 @@
 
 See the <a href="exposure_map_guide.html"> user's guide </a>.
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.14 2004/04/27 17:08:09 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.15 2004/11/12 03:50:43 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -22,6 +22,8 @@ $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cx
 #include "st_app/AppParGroup.h"
 
 #include "astro/SkyDir.h"
+
+#include <stdexcept>
 using namespace map_tools;
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -48,8 +50,8 @@ public:
         return m_aeff->value(m_energy, acos(costh)*180/M_PI, 0);
     }
     const irfInterface::IAeff* m_aeff;
-    double m_cutoff;
     double m_energy;
+    double m_cutoff;
 };
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /** @class RequestExposure 
