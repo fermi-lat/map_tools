@@ -1,5 +1,16 @@
 ------------------------------------------------------------
 User: burnett  Fri Dec 31 19:47:35 PST 2004
+map_tools/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+restore, and extend changes to implemnt change from the astroroot interface from FITS to ROOT to tip.
+due to misunderstandings and differences in philosphy, this is an interim step: the package in this form is not
+functional, and will not be tagged as such.
+    *
+------------------------------------------------------------
+User: burnett  Fri Dec 31 19:47:35 PST 2004
 map_tools/cmt
 
 Modified Files:
