@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Tue Jun  1 18:17:11 PDT 2004
+map_tools/src/read_map
+
+Modified Files:
+	read_map.cxx 
+Log Message:
+convert to use astro::SkyProj
+    *
+------------------------------------------------------------
 User: burnett  Tue Jun  1 18:15:57 PDT 2004
 map_tools/src
 
