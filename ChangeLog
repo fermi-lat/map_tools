@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Tue Mar  2 18:03:00 PST 2004
+map_tools/src/test
+
+Modified Files:
+	test_main.cxx 
+Log Message:
+clean up; strengthen unit tests
+    *
+------------------------------------------------------------
+User: jchiang  Tue Mar  2 18:03:00 PST 2004
 map_tools/src/image
 
 Modified Files:
