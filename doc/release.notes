@@ -2,9 +2,10 @@
     @brief tools definition
     @author Toby Burnett
 
-$Id$
+$Id: release.notes,v 1.2 2004/02/22 03:32:11 burnett Exp $
 @verbatim
 
+ 25-feb-04 v1r1p4 THB various patches to compile on gcc, read pil files on Linux, test same 
  21-feb-04 v1r1  THB ready for use with documentation 
  02-feb-04 v1    THB Operational tool 
 @endverbatim
