@@ -3,7 +3,7 @@
 * @brief Implementation for class that reads parameters needed for tools
 * @author Toby Burnett
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Parameters.cxx,v 1.15 2004/04/25 23:45:13 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Parameters.cxx,v 1.16 2004/04/26 11:38:20 burnett Exp $
 */
 
 #include <sstream>
@@ -30,7 +30,7 @@ Parameters::Parameters( hoops::IParGroup & par)
     setup();
 }
 
-Parameters::~Parameters(){
+Parameters::~Parameters() throw() {
     if( m_own_ppg) delete &m_par;
 }
 
