@@ -2,9 +2,10 @@
     @brief tools definition
     @author Toby Burnett
 
-$Id: release.notes,v 1.42 2005/03/04 15:38:50 burnett Exp $
+$Id: release.notes,v 1.44 2005/03/05 22:54:04 burnett Exp $
 @verbatim
  --------- -----  --- -----------------------------------------------------------------------
+ 05-mar-05 v5r12p1THB enable selection of number of cosine bins in Exposure constructor
  05-mar-05 v5r12  THB remove deprectated interfaces; add Exposure::load
  04-mar-05 v5r11p1THB little fix to obsolete class for Likelihood
  04-mar-05 v5r11  THB temporary stuff to support old interface elements expected by Likelihood 
