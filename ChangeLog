@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Fri Nov 12 14:47:44 PST 2004
+map_tools/src
+
+Modified Files:
+	Exposure.cxx 
+Log Message:
+fix unix error, some warnings.
+    *
+------------------------------------------------------------
+User: burnett  Fri Nov 12 14:47:44 PST 2004
 map_tools/pfiles
 
 Modified Files:
