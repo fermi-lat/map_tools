@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Jan 20 20:23:34 PST 2005
+map_tools/map_tools
+
+Modified Files:
+	Exposure.h 
+Log Message:
+very sensible fixes suggested by Jim Chiang.
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r9, operation: add
 Package: map_tools
