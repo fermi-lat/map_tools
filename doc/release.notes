@@ -2,9 +2,10 @@
     @brief tools definition
     @author Toby Burnett
 
-$Id: release.notes,v 1.38 2005/03/03 13:19:29 burnett Exp $
+$Id: release.notes,v 1.39 2005/03/03 14:45:14 burnett Exp $
 @verbatim
  --------- -----  --- -----------------------------------------------------------------------
+ 03-mar-05 v5r10p3THB gcc bug fix #3 
  03-mar-05 v5r10p2THB gcc bug fix #2 
  03-mar-05 v5r10p1THB gcc bug fix 
  02-mar-05 v5r10  THB Exposure converted to use healpix binning. 
