@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sat Feb 21 15:51:11 PST 2004
+map_tools/src
+
+Modified Files:
+	Exposure.cxx 
+Log Message:
+try a different name--runtime error should have worked
+    *
+------------------------------------------------------------
 User: burnett  Sat Feb 21 14:03:42 PST 2004
 map_tools/src/test
 
