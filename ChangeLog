@@ -1,5 +1,16 @@
 ------------------------------------------------------------
 User: burnett  Sat Mar  6 03:00:16 PST 2004
+map_tools/src/image
+
+Modified Files:
+	FitsImgIO.cxx Fits_IO.cxx IOElement.cxx 
+Removed Files:
+	dev_main.cxx 
+Log Message:
+fix test program, gcc warnings
+    *
+------------------------------------------------------------
+User: burnett  Sat Mar  6 03:00:16 PST 2004
 map_tools/src/exposure_cube
 
 Modified Files:
