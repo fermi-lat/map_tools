@@ -3,20 +3,20 @@ package map_tools
 version v3r1p2
 
 author T. Burnett <tburnett@u.washington.edu>
-# $Id: requirements,v 1.14 2004/03/06 11:01:39 burnett Exp $
+# $Id: requirements,v 1.15 2004/03/06 15:16:49 burnett Exp $
 
 use GlastPolicy *
 use tuple *
 
 use astro *
-use pil   * IExternal
+use hoopsUtil * 
 use facilities *
 
 set INFILES  "$(MAP_TOOLSROOT)/data"
 set PFILES   "$(MAP_TOOLSROOT)/pfiles"
 set OUTFILES "$(MAP_TOOLSROOT)/output"
 
-#independent library for FITS image I/O and keyword handling (from astroroot)
+#internal library for FITS image I/O and keyword handling (from astroroot)
 library image -no_share -s=image $(source)
 
 apply_pattern GLAST_static_library_package
