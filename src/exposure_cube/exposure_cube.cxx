@@ -2,7 +2,7 @@
 @brief build the exposure_cube application
 
 @author Toby Burnett
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.6 2004/03/06 11:00:16 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.7 2004/03/08 22:58:30 burnett Exp $
 */
 #include "tuple/ITable.h"
 
@@ -21,10 +21,10 @@ namespace ecube{
         ExposureMapParameters(int argc, char* argv[])
             : MapParameters(argc, argv)
         {
-            getDouble("costhetabinsize", 0.025); // 40 bins in sqrt(1-cos(thetat))
-            getDouble("skybinsize", 1.0); // 1 degree bins in ra and dec
-            getDouble("tstart");
-            getDouble("tstop");
+            getValue<double>("costhetabinsize"); // 40 bins in sqrt(1-cos(thetat))
+            getValue<double>("skybinsize", 1.0); // 1 degree bins in ra and dec
+            getValue<double>("tstart");
+            getValue<double>("tstop");
         }
     };
 }
