@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Mar 11 06:53:55 PST 2004
+map_tools/src/test
+
+Modified Files:
+	test_main.cxx 
+Log Message:
+make local sets, macros  private
+    *
+------------------------------------------------------------
 User: burnett  Thu Mar 11 06:53:54 PST 2004
 map_tools/cmt
 
