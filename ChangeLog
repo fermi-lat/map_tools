@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Thu Nov 11 19:50:43 PST 2004
+map_tools/src
+
+Modified Files:
+	Parameters.cxx SkyImage.cxx 
+Log Message:
+development to deal with irfResponse effective area, reading text-format history, more doxy tool description.
+    *
+------------------------------------------------------------
+User: burnett  Thu Nov 11 19:50:43 PST 2004
 map_tools/pfiles
 
 Modified Files:
