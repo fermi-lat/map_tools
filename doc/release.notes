@@ -2,9 +2,10 @@
     @brief tools definition
     @author Toby Burnett
 
-$Id: release.notes,v 1.12 2004/03/18 19:31:55 burnett Exp $
+$Id: release.notes,v 1.13 2004/03/25 11:26:00 burnett Exp $
 @verbatim
-
+ --------- -----  --- -----------------------------------------------------------------------
+ 02-apr-04 v5r0   THB convert to st_app and tip
  25-mar-04 v4r3   THB fix req file problem, change parameters interface to avoid inheritance
  04-mar-04 v4r1   THB switch from hoopsUtil to hoops for parameters
  04-mar-04 v4r0   THB switch from PIL to hoopsUtil for parameters. Additional SkyImage functionality,
