@@ -1,7 +1,7 @@
 /** @file count_map.cxx
     @brief build the count_map application
 
-    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/count_map/count_map.cxx,v 1.3 2004/02/28 14:20:22 burnett Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/count_map/count_map.cxx,v 1.4 2004/03/02 17:16:20 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -49,7 +49,7 @@ int main(int argc, char * argv[]) {
 
         // connect to  input data, specifying filter
         tuple::ITable::Factory& tableFactory = * tuple::ITable::Factory::instance();
-        tuple::ITable& table = *tableFactory( pars.eventFile() , "", pars.filter());
+        tuple::ITable& table = *tableFactory( pars.inputFile() , "", pars.filter());
 
         // create the image object
         SkyImage image(pars);

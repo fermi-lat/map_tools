@@ -2,7 +2,7 @@
 @brief build the exposure_cube application
 
 @author Toby Burnett
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.7 2004/03/08 22:58:30 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.8 2004/03/09 01:43:09 burnett Exp $
 */
 #include "tuple/ITable.h"
 
@@ -65,7 +65,7 @@ public:
             tstart = pars["tstart"], 
             tstop = pars["tstop"];
         tuple::ITable::Factory& factory = *tuple::ITable::Factory::instance();
-        tuple::ITable &tuple = *factory(pars.eventFile(),"Ext1");
+        tuple::ITable &tuple = *factory(pars.inputFile(),"Ext1");
 
         const double & ra = tuple.selectColumn("ra_scz");
         const double & dec = tuple.selectColumn("dec_scz");

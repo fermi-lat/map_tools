@@ -3,7 +3,7 @@
 
      @author Toby Burnett
 
-     $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/read_map/read_map.cxx,v 1.2 2004/03/08 00:17:38 burnett Exp $
+     $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/read_map/read_map.cxx,v 1.3 2004/03/09 01:43:09 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -17,8 +17,8 @@ using namespace map_tools;
 class ReadPars : public MapParameters{
 public:
     ReadPars(int argc, char * argv[]): MapParameters(argc,argv){
-        getDouble("ra", 0);
-        getDouble("dec", 0);
+        getValue<double>("ra", 0);
+        getValue<double>("dec", 0);
     }
 };
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
