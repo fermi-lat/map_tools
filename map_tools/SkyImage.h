@@ -2,7 +2,7 @@
 
     @brief declare  the class SkyImage
     @author Toby Burnett <tburnett@u.washington.edu>
-    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/SkyImage.h,v 1.13 2004/03/13 14:54:31 burnett Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/SkyImage.h,v 1.14 2004/03/25 12:44:51 burnett Exp $
 
 */
 
@@ -10,6 +10,7 @@
 #define MAP_TOOLS_SKYIMAGE_H
 
 #include "astro/SkyFunction.h"
+#include "astro/SkyProj.h"
 
 #include <string>
 #include <vector>
@@ -98,7 +99,9 @@ private:
     bool m_save; 
     unsigned int m_layer;
 
-    
+    /// associated projection object, initialized from a par file, or a FITS file
+    astro::SkyProj* m_wcs; 
+    bool m_galactic;  /// flag to interpret the image in galactic coords
 };
 } //namesace map_tools
 
