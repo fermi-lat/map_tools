@@ -4,13 +4,13 @@
      @author Toby Burnett
      Code orginally written by Riener Rohlfs
 
-    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/image/Attr.h,v 1.5 2004/03/03 15:42:13 burnett Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/image/Attr.h,v 1.6 2004/03/03 18:44:54 burnett Exp $
 */
 #ifndef ATTR_H
 #define ATTR_H
 
 #include <string>
-#include <ostream>
+#include <iostream>
 //_____________________________________________________________________________
 /** @class BaseAttr
     @brief abstract base class for attributes
