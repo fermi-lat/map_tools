@@ -2,10 +2,10 @@
 @brief build the exposure_cube application
 
 @author Toby Burnett
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.21 2004/11/12 22:47:44 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.22 2005/01/01 03:47:36 burnett Exp $
 */
 
-#include "map_tools/MapParameters.h"
+#include "map_tools/Parameters.h"
 #include "map_tools/Exposure.h"
 #include "map_tools/ExposureHyperCube.h"
 #include "astro/SkyDir.h"
@@ -38,7 +38,7 @@ public:
     {}
 
     //--------------------------------------------------------------------------
-    void LoadExposureFromGlast( const MapParameters& pars,   Exposure& exp )
+    void LoadExposureFromGlast( const Parameters& pars,   Exposure& exp )
     {
         using tip::Table;
 
@@ -117,7 +117,7 @@ public:
 
     }
 private:
-    MapParameters m_pars;
+    Parameters m_pars;
     st_stream::StreamFormatter m_f;
 
 };

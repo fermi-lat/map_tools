@@ -2,7 +2,7 @@
     @brief definition of the class Exposure
 
     @author T.Burnett
-    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Exposure.h,v 1.4 2004/03/02 17:16:19 burnett Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Exposure.h,v 1.5 2004/03/10 20:43:47 burnett Exp $
 */
 #ifndef MAP_TOOLS_EXPOSURE_H
 #define MAP_TOOLS_EXPOSURE_H
@@ -49,6 +49,7 @@ public:
         static double costheta_value(int bin){ 
             return 1. - sqr((bin+0.5)/cosfactor)*(1.-cosmin); 
         }
+        static std::string thetaBinning(){ return "SQRT(1-COSTHETA)";}
 #else // uniform cos theta
         static int costheta_bin(double costheta){ 
             return static_cast<int>( (1.-costheta)/(1-cosmin)* cosfactor); 
@@ -56,6 +57,7 @@ public:
         static double costheta_value(int bin){ 
             return 1. - (bin+0.5)/cosfactor*(1.-cosmin); 
         }
+        static std::string thetaBinning(){ return "COSTHETA";}
 #endif
 
         // statics, define binning

@@ -2,7 +2,7 @@
 @brief declare class ExposureHyperCube 
 
 @author Toby Burnett
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/ExposureHyperCube.h,v 1.7 2004/03/02 17:16:19 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/ExposureHyperCube.h,v 1.8 2005/01/01 03:47:35 burnett Exp $
 
 */
 
@@ -15,7 +15,8 @@ namespace map_tools {
 
 
     /** @class ExposureHyperCube 
-    @brief Set up an exposure map hypercube
+    @brief Set up an exposure map hypercube, wrapping an Exposure object
+    as a multilayer FITS image
 
     It is defined as a hypercube in ra, dec, sqrt(1-costheta) bins.
     @todo: allow other binning function
@@ -23,8 +24,14 @@ namespace map_tools {
     */
     class ExposureHyperCube  {
     public:
+        //! ctor
         ExposureHyperCube( const Exposure& exp, std::string outfile);
 
+        //! dtor updates the image file
+        ~ExposureHyperCube();
+
+        //! saves the image
+        void save();
     private:
         //! pointer to the associated tip Image class
         tip::Image* m_image;
