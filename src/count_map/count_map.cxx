@@ -1,7 +1,7 @@
 /** @file count_map.cxx
 @brief build the count_map application
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/count_map/count_map.cxx,v 1.14 2004/04/27 17:08:09 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/count_map/count_map.cxx,v 1.15 2004/06/11 18:21:49 cohen Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -11,7 +11,6 @@ $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/count_map/count_map.cxx,v 1.
 #include "tip/IFileSvc.h"
 #include "astro/SkyDir.h"
 
-#include "image/Image.h" 
 #include "st_app/AppParGroup.h"
 #include "st_app/StApp.h"
 #include "st_app/StAppFactory.h"
