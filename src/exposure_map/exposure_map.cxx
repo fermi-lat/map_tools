@@ -1,14 +1,15 @@
 /** @file exposure_map.cxx
     @brief build the exposure_map application
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.3 2004/02/23 04:29:31 burnett Exp $
+     @author Toby Burnett
+
+     $Header$
 */
 
 #include "map_tools/SkyImage.h"
 #include "map_tools/MapParameters.h"
 
 #include "map_tools/Exposure.h"
-#include "map_tools/ExposureHyperCube.h"
 
 #include "image/Image.h"
 #include "astro/SkyDir.h"

@@ -1,7 +1,8 @@
 /** @file exposure_cube.cxx
-@brief build the exposure_cube application
+    @brief build the exposure_cube application
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.2 2004/02/23 02:44:36 burnett Exp $
+    @author Toby Burnett
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.3 2004/02/28 14:20:22 burnett Exp $
 */
 #include "tuple/ITable.h"
 
