@@ -2,7 +2,7 @@
 *   @brief Implementation for class that reads parameters for image description
 * @author Toby Burnett 
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/MapParameters.cxx,v 1.9 2004/03/18 19:23:42 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/MapParameters.cxx,v 1.10 2004/03/31 13:32:45 burnett Exp $
 */
 
 #include "map_tools/MapParameters.h"
@@ -57,6 +57,9 @@ void MapParameters::setup()
     // projection type, flag for glactic transform
     m_projType = getValue<std::string>("projtype");
     m_use_lb = getValue<bool>("uselb", false);
+
+    // name of FITS extension or ROOT TTree
+    m_tableName =getValue<std::string>("table_name");
 
     // names for ra and dec columns, with defaults
     m_raName= getValue<std::string>("ra_name", "ra");

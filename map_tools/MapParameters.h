@@ -2,7 +2,7 @@
 * @file MapParameters.h
 * @brief Map Parameter Reader
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/MapParameters.h,v 1.5 2004/03/11 14:49:06 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/MapParameters.h,v 1.6 2004/03/31 13:32:45 burnett Exp $
 */
 
 #ifndef MAP_TOOLS_MAPPARAMETERS_H
@@ -24,7 +24,7 @@ namespace map_tools {
 * href="http://www-glast.slac.stanford.edu/sciencetools/userInterface/doc/pil.pdf">PIL user
 * manual</a>.
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/MapParameters.h,v 1.5 2004/03/11 14:49:06 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/MapParameters.h,v 1.6 2004/03/31 13:32:45 burnett Exp $
 */
 
 class MapParameters : public Parameters
@@ -47,6 +47,7 @@ public:
     std::string projType() const        { return m_projType; }
     std::string raName() const          { return m_raName; }
     std::string decName() const         { return m_decName; }
+   std::string tableName() const         { return m_tableName; }
 
     bool uselb()const           {return m_use_lb;}
 
@@ -62,6 +63,7 @@ private:
     std::string     m_projType;
     bool            m_use_lb;
     std::string     m_raName, m_decName;
+    std::string  m_tableName;
 
 };
 }//namespace map_tools
