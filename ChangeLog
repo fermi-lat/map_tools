@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Mar 18 11:23:42 PST 2004
+map_tools/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+replace hoopsUtil with hoops
+    *
+------------------------------------------------------------
 User: jchiang  Sat Mar 13 14:05:41 PST 2004
 map_tools/src/test
 
