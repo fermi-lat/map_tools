@@ -2,7 +2,7 @@ package map_tools
 
 version v1r1
 author T. Burnett <tburnett@u.washington.edu>
-# $Id: requirements,v 1.3 2004/02/22 03:32:11 burnett Exp $
+# $Id: requirements,v 1.4 2004/02/23 02:27:31 burnett Exp $
 
 use GlastPolicy *
 use tuple *
@@ -17,14 +17,15 @@ set OUTFILES "$(MAP_TOOLSROOT)/output"
 set TPLDIR   "$(MAP_TOOLSROOT)/Templates"
 
 
-apply_pattern GLAST_static_library_package
-
 library table -no_share -s=table $(source)
-macro_append map_tools_linkopts " -l table" Win32 "$(map_toolsDir)/table.lib"
 
+
+apply_pattern GLAST_static_library_package
+macro_append map_tools_linkopts " -l table " Win32 "$(map_toolsDir)/table.lib"
+		
 pattern ST_app \
   macro <name>_par "" WIN32 "<name>.par" ; \ 
-  application <name> -s=<name> $(source) -s=../pfiles $(<name>_par)
+  application <name> -s=<name> *.cxx  -s=../pfiles $(<name>_par)
 
 
 apply_pattern ST_app name=count_map
