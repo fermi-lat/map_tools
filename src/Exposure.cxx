@@ -1,7 +1,7 @@
 /** @file Exposure.cxx
     @brief Implementation of class Exposure
 
-   $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Exposure.cxx,v 1.7 2004/03/03 21:38:27 jchiang Exp $
+   $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Exposure.cxx,v 1.8 2004/03/03 21:51:37 jchiang Exp $
 */
 #include "map_tools/Exposure.h"
 #include "astro/SkyDir.h"
@@ -76,10 +76,7 @@ Exposure::Exposure(const std::string& fits_file)
                               + "step sizes in RA and Dec do not match.");
     }
 // @todo Check for cos(theta) weighting.
-    double cdelt3;
-    cube.getValue("CDELT3", cdelt3);
-    Index::costhetabinsize = cdelt3;  // applying getValue directly here gives 
-                                      // a bad cast for some reason.
+    cube.getValue("CDELT3", Index::costhetabinsize);
     cube.getValue("CRVAL3", Index::cosmin);
     cube.getValue("TOTAL", m_total);
 
