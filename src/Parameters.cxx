@@ -3,7 +3,7 @@
 * @brief Implementation for class that reads parameters needed for tools
 * @author Toby Burnett
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Parameters.cxx,v 1.9 2004/03/18 21:34:20 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Parameters.cxx,v 1.10 2004/03/25 11:24:04 burnett Exp $
 */
 
 #include <sstream>
@@ -19,7 +19,21 @@ using namespace map_tools;
 //! Constructor
 Parameters::Parameters( int argc, char *argv[]) 
 :  m_par(*new hoops::ParPromptGroup(argc, argv))
-{   
+,  m_own_ppg(true)
+{  setup();
+}
+//! Constructor
+Parameters::Parameters( hoops::ParPromptGroup& par) 
+:  m_par(par), m_own_ppg(false)
+{  setup();
+}
+
+Parameters::~Parameters(){
+    if( m_own_ppg) delete &m_par;
+}
+
+void Parameters::setup()
+{
 // Prompt for all parameters in the order in the par file:
     m_par.Prompt();
     m_chatter = m_par["chatter"];
