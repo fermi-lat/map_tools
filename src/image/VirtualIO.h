@@ -4,7 +4,7 @@
      @author Toby Burnett
      Code orginally written by Riener Rohlfs
 
-     $Header$
+     $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/image/VirtualIO.h,v 1.3 2004/02/28 21:04:55 burnett Exp $
 
 */
 #ifndef VIRTUALIO_H
@@ -37,7 +37,7 @@ public:
 
    virtual  void         createElement() = 0;
    virtual  int          deleteElement() = 0;
-   virtual  int          saveElement()=0;
+   virtual  void         saveElement()=0;
 
    IOElement* element()const{return m_element;}
 

@@ -3,7 +3,7 @@
 
     @author Toby Burnett
     Code orginally written by Riener Rohlfs
-    $Header$
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/image/IOElement.h,v 1.2 2004/02/28 21:04:55 burnett Exp $
 
 */
 #ifndef IOELEMENT_H
@@ -85,7 +85,7 @@ public:
     This function without any parameter has to be used to update the
     file with any change of the element in memory.
     */
-    virtual  int          saveElement(const std::string & fileName = "");
+    virtual  void          saveElement(const std::string & fileName = "");
 
     /** @brief    Deletes the element in the file, but not in memory.
 

@@ -4,7 +4,7 @@
      @author Toby Burnett
      Code orginally written by Riener Rohlfs
 
-     $Header$
+     $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/image/Fits_IO.h,v 1.3 2004/02/28 21:04:55 burnett Exp $
 */
 #ifndef ROOT_TFFitsIO_H
 #define ROOT_TFFitsIO_H
@@ -58,10 +58,18 @@ public:
     an empty one if this primary array should be deleted.
    */
    virtual  int          deleteElement();
-   virtual  int          saveElement();
+   
+   /** @brief save the element to the current fits file
+   */
+   virtual  void          saveElement();
 
    static void report_error(int status);
 private:
+    //! helper functions
+    void writeFitsHeader();
+    //! helper to attach fits headers to an element
+    void readFitsHeader();
+
    void  * m_fptr;
    int   m_cycle;
 
