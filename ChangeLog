@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Mar  4 19:58:44 PST 2004
+map_tools/src/image
+
+Modified Files:
+	Image.cxx 
+Log Message:
+enhance SkyImage to create from file, access pixels.
+    *
+------------------------------------------------------------
 User: burnett  Thu Mar  4 19:58:43 PST 2004
 map_tools/src
 
