@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Fri Mar  5 18:58:47 PST 2004
+map_tools/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+new application diemonstrating access to a pixel map, and support, especially to read a primary image
+    *
+------------------------------------------------------------
 User: burnett  Thu Mar  4 19:58:44 PST 2004
 map_tools/src/test
 
