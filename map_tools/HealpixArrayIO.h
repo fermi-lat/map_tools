@@ -3,13 +3,13 @@
 
 @author B. Lesnick
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/HealpixArrayIO.h,v 1.1 2005/02/24 19:54:57 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/HealpixArrayIO.h,v 1.2 2005/03/02 23:12:47 burnett Exp $
 */
 
 #ifndef map_tools_HealpixArrayIO_h
 #define map_tools_HealpixArrayIO_h
 
-#include "astro/HealPix.h"
+#include "astro/Healpix.h"
 #include "astro/HealpixArray.h"
 
 #include "map_tools/CosineBinner.h"
