@@ -1,0 +1,216 @@
+------------------------------------------------------------
+User: burnett  Sat Feb 21 11:33:46 PST 2004
+users/burnett/map_tools/src/table
+
+Added Files:
+	Constants.h Exception.h FitsService.cxx FitsService.h 
+	KeyData.h KeyUtil.cxx KeyUtil.h Keyword.cxx Keyword.h 
+	KeywordT.h Primary.cxx Primary.h PrimaryHDU.h 
+Log Message:
+move fits stuff into sub folder, until real table is available
+    *
+------------------------------------------------------------
+User: burnett  Sat Feb 21 11:33:45 PST 2004
+users/burnett/map_tools/src/exposure_map
+
+Modified Files:
+	exposure_map.cxx 
+Removed Files:
+	Exposure.cxx Exposure.h ExposureHyperCube.h 
+Log Message:
+move fits stuff into sub folder, until real table is available
+    *
+------------------------------------------------------------
+User: burnett  Sat Feb 21 11:33:45 PST 2004
+users/burnett/map_tools/src/exposure_cube
+
+Modified Files:
+	exposure_cube.cxx 
+Removed Files:
+	Exposure.cxx Exposure.h ExposureHyperCube.h 
+Log Message:
+move fits stuff into sub folder, until real table is available
+    *
+------------------------------------------------------------
+User: burnett  Sat Feb 21 11:33:45 PST 2004
+users/burnett/map_tools/src
+
+Modified Files:
+	Exposure.cxx mainpage.h 
+Log Message:
+move fits stuff into sub folder, until real table is available
+    *
+------------------------------------------------------------
+User: burnett  Sat Feb 21 11:33:45 PST 2004
+users/burnett/map_tools/pfiles
+
+Modified Files:
+	exposure_cube.par 
+Log Message:
+move fits stuff into sub folder, until real table is available
+    *
+------------------------------------------------------------
+User: burnett  Sat Feb 21 11:33:45 PST 2004
+users/burnett/map_tools/map_tools
+
+Modified Files:
+	Exposure.h 
+Log Message:
+move fits stuff into sub folder, until real table is available
+    *
+------------------------------------------------------------
+User: burnett  Sat Feb 21 11:33:45 PST 2004
+users/burnett/map_tools/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+move fits stuff into sub folder, until real table is available
+    *
+------------------------------------------------------------
+User: burnett  Sat Feb 21 11:32:09 PST 2004
+users/burnett/map_tools/src/table
+
+Log Message:
+Directory /nfs/slac/g/glast/ground/cvs/users/burnett/map_tools/src/table added to the repository
+
+    *
+------------------------------------------------------------
+User: burnett  Fri Feb 20 11:11:43 PST 2004
+users/burnett/map_tools/map_tools
+
+Added Files:
+	Exposure.h ExposureHyperCube.h MapParameters.h Parameters.h 
+	SkyImage.h 
+Log Message:
+clean up some more, make header files public
+    *
+------------------------------------------------------------
+User: burnett  Fri Feb 20 11:11:43 PST 2004
+users/burnett/map_tools/src/exposure_map
+
+Modified Files:
+	exposure_map.cxx 
+Log Message:
+clean up some more, make header files public
+    *
+------------------------------------------------------------
+User: burnett  Fri Feb 20 11:11:43 PST 2004
+users/burnett/map_tools/src/count_map
+
+Modified Files:
+	count_map.cxx 
+Log Message:
+clean up some more, make header files public
+    *
+------------------------------------------------------------
+User: burnett  Fri Feb 20 11:11:43 PST 2004
+users/burnett/map_tools/src
+
+Modified Files:
+	Exposure.cxx MapParameters.cxx Parameters.cxx SkyImage.cxx 
+	mainpage.h 
+Removed Files:
+	Exposure.h ExposureHyperCube.h MapParameters.h Parameters.h 
+	SkyImage.h 
+Log Message:
+clean up some more, make header files public
+    *
+------------------------------------------------------------
+User: burnett  Fri Feb 20 11:11:43 PST 2004
+users/burnett/map_tools/pfiles
+
+Modified Files:
+	count_map.par exposure_cube.par exposure_map.par 
+Log Message:
+clean up some more, make header files public
+    *
+------------------------------------------------------------
+User: burnett  Fri Feb 20 11:10:05 PST 2004
+users/burnett/map_tools/map_tools
+
+Log Message:
+Directory /nfs/slac/g/glast/ground/cvs/users/burnett/map_tools/map_tools added to the repository
+
+    *
+------------------------------------------------------------
+User: burnett  Fri Feb 20 03:31:54 PST 2004
+users/burnett/map_tools/src/count_map
+
+Removed Files:
+	CountMapParameters.cxx CountMapParameters.h 
+Log Message:
+clean up
+    *
+------------------------------------------------------------
+User: burnett  Fri Feb 20 03:31:54 PST 2004
+users/burnett/map_tools/src
+
+Added Files:
+	Exposure.cxx Exposure.h ExposureHyperCube.h 
+Log Message:
+clean up
+    *
+------------------------------------------------------------
+User: burnett  Fri Feb 20 03:31:53 PST 2004
+users/burnett/map_tools/src/exposure_map
+
+Modified Files:
+	exposure_map.cxx 
+Removed Files:
+	WriteFitsExposure.h 
+Log Message:
+clean up
+    *
+------------------------------------------------------------
+User: burnett  Fri Feb 20 03:31:53 PST 2004
+users/burnett/map_tools/src/exposure_cube
+
+Modified Files:
+	exposure_cube.cxx 
+Log Message:
+clean up
+    *
+------------------------------------------------------------
+User: burnett  Thu Feb 19 19:02:47 PST 2004
+users/burnett/map_tools
+
+Log Message:
+initial import of package to create tools involving map output
+
+Status:
+
+Vendor Tag:	THB
+Release Tags:	v0
+		
+N users/burnett/map_tools/.cvsignore
+N users/burnett/map_tools/cmt/requirements
+N users/burnett/map_tools/doc/release.notes
+N users/burnett/map_tools/pfiles/count_map.par
+N users/burnett/map_tools/pfiles/exposure_cube.par
+N users/burnett/map_tools/pfiles/exposure_map.par
+N users/burnett/map_tools/src/mainpage.h
+N users/burnett/map_tools/src/MapParameters.cxx
+N users/burnett/map_tools/src/MapParameters.h
+N users/burnett/map_tools/src/Parameters.cxx
+N users/burnett/map_tools/src/Parameters.h
+N users/burnett/map_tools/src/SkyImage.cxx
+N users/burnett/map_tools/src/SkyImage.h
+N users/burnett/map_tools/src/count_map/CountMapParameters.cxx
+N users/burnett/map_tools/src/count_map/CountMapParameters.h
+N users/burnett/map_tools/src/count_map/count_map.cxx
+N users/burnett/map_tools/src/exposure_cube/Exposure.cxx
+N users/burnett/map_tools/src/exposure_cube/Exposure.h
+N users/burnett/map_tools/src/exposure_cube/ExposureHyperCube.h
+N users/burnett/map_tools/src/exposure_cube/exposure_cube.cxx
+N users/burnett/map_tools/src/exposure_map/Exposure.cxx
+N users/burnett/map_tools/src/exposure_map/Exposure.h
+N users/burnett/map_tools/src/exposure_map/ExposureHyperCube.h
+N users/burnett/map_tools/src/exposure_map/exposure_map.cxx
+N users/burnett/map_tools/src/exposure_map/WriteFitsExposure.h
+N users/burnett/map_tools/Templates/CountMap
+N users/burnett/map_tools/Templates/ExposureCube.txt
+
+No conflicts created by this import
+
+    *
