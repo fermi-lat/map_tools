@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Mon Mar  8 17:43:09 PST 2004
+map_tools/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+convert to use hoopsUtil for pil interface
+    *
+------------------------------------------------------------
 User: burnett  Mon Mar  8 14:58:30 PST 2004
 map_tools/src/exposure_cube
 
