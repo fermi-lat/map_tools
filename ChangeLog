@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Thu Mar 11 16:03:01 PST 2004
+map_tools/src/image
+
+Modified Files:
+	Fits_IO.cxx Fits_IO.h 
+Log Message:
+add ability to read HISTORY/COMMENT header cards
+    *
+------------------------------------------------------------
 User: burnett  Thu Mar 11 12:35:32 PST 2004
 map_tools/src/image
 
