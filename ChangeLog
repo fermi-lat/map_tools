@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Tue Jun  1 18:15:57 PDT 2004
+map_tools/map_tools
+
+Modified Files:
+	MapParameters.h 
+Log Message:
+add special data member/access function for the table name
+    *
+------------------------------------------------------------
 User: burnett  Tue Jun  1 18:15:10 PDT 2004
 map_tools/src
 
