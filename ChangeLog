@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Jun  3 07:35:19 PDT 2004
+map_tools/src
+
+Modified Files:
+	SkyImage.cxx 
+Log Message:
+update to use SkyDir interface to wcslib
+    *
+------------------------------------------------------------
 User: burnett  Tue Jun  1 18:17:11 PDT 2004
 map_tools/src/read_map
 
