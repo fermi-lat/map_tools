@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: cohen  Fri Jun 11 11:21:50 PDT 2004
+map_tools/src/exposure_cube
+
+Modified Files:
+	exposure_cube.cxx 
+Log Message:
+fix a bug: see JIRA STARCH-2
+    *
+------------------------------------------------------------
 User: cohen  Fri Jun 11 11:21:49 PDT 2004
 map_tools/src/count_map
 
