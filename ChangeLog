@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Thu Mar  3 17:39:21 PST 2005
+map_tools/src
+
+Modified Files:
+	Exposure.cxx 
+Log Message:
+back off apparently sensible code since gcc can't handle it :-(
+    *
+------------------------------------------------------------
+User: burnett  Thu Mar  3 17:39:21 PST 2005
 map_tools/map_tools
 
 Modified Files:
