@@ -3,7 +3,7 @@
 
 @author T. Burnett
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/HealpixArrayIO.cxx,v 1.1 2005/02/24 19:54:57 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/HealpixArrayIO.cxx,v 1.2 2005/03/02 23:12:48 burnett Exp $
 */
 
 #include "map_tools/HealpixArrayIO.h"
@@ -16,6 +16,7 @@ $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/HealpixArrayIO.cxx,v 1.1 200
 #include <sstream>
 #include <string>
 #include <typeinfo>
+#include <stdexcept>
 
 using namespace map_tools;
 
