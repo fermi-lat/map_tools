@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Wed Mar  3 13:51:37 PST 2004
+map_tools/src
+
+Modified Files:
+	Exposure.cxx 
+Log Message:
+update m_total from FITS file
+    *
+------------------------------------------------------------
 User: jchiang  Wed Mar  3 13:38:29 PST 2004
 map_tools/src/test
 
