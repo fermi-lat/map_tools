@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Wed Apr 21 12:53:30 PDT 2004
+map_tools/src/count_map
+
+Modified Files:
+	count_map.cxx 
+Log Message:
+convert to const table
+    *
+------------------------------------------------------------
 User: burnett  Mon Apr  5 10:04:45 PDT 2004
 map_tools/src/exposure_cube
 
