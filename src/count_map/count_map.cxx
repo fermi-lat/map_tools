@@ -1,7 +1,7 @@
 /** @file count_map.cxx
 @brief build the count_map application
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/count_map/count_map.cxx,v 1.8 2004/04/02 23:13:54 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/count_map/count_map.cxx,v 1.9 2004/04/03 15:05:18 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -46,9 +46,8 @@ public:
             // Create local reference to the record to which the iterator refers:
             const Table::Record & record = *it;
             // Get the current values
-            double ra, dec;
-            record[pars.raName()].get(ra);
-            record[pars.decName()].get(dec);
+            double ra = record[pars.raName()].get(), 
+                dec=record[pars.decName()].get();
 
             image.addPoint(astro::SkyDir(ra, dec) );
         }

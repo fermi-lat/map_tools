@@ -2,7 +2,7 @@
 @brief build the exposure_cube application
 
 @author Toby Burnett
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.12 2004/03/31 13:58:10 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.13 2004/04/02 23:13:54 burnett Exp $
 */
 
 #include "map_tools/MapParameters.h"
@@ -45,10 +45,9 @@ public:
             if( start < tstart ) continue;
             if( stop > tstop ) break;
 
-            double ra, dec, livetime;
-            record["ra_scz"].get(ra);
-            record["dec_scz"].get(dec);
-            record["livetime"].get(livetime);
+            double ra =record["ra_scz"].get(), 
+                dec=record["dec_scz"].get(),
+                livetime=  record["livetime"].get();
 
             double deltat = livetime > 0 ? livetime : stop-start;
             exp.add(astro::SkyDir(ra, dec), deltat); 

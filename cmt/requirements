@@ -1,9 +1,9 @@
 package map_tools
 
-version v5r2
+version v5r3
 
 author T. Burnett <tburnett@u.washington.edu>
-# $Id: requirements,v 1.28 2004/04/02 14:34:05 burnett Exp $
+# $Id: requirements,v 1.29 2004/04/02 23:13:54 burnett Exp $
 
 use STpolicy *
 use astro *
