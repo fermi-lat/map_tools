@@ -4,7 +4,7 @@
      @author Toby Burnett
      Code orginally written by Riener Rohlfs
 
-     $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/image/Header.h,v 1.4 2004/02/28 21:04:55 burnett Exp $
+     $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/image/Header.h,v 1.5 2004/03/02 23:24:57 jchiang Exp $
 */
 #ifndef HEADER_H
 #define HEADER_H
@@ -29,7 +29,7 @@ public:
 
    template<typename T> void getValue(const std::string & name,
                                       T &value) {
-      BaseAttrMap::iterator it = find(name);
+      Header::iterator it = find(name);
       BaseAttr * my_attr = 0;
       if (it != end()) {
          my_attr = it->second;
@@ -50,8 +50,6 @@ public:
    void setName(const std::string name){m_name=name;}
 
 private:
-
-   typedef std::map<std::string, BaseAttr*> BaseAttrMap;
 
    std::string m_name;
 };
