@@ -2,7 +2,7 @@
 * @file ExposureHyperCube.cxx
 @brief Implement ExposureHyperCube methods
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/ExposureHyperCube.cxx,v 1.7 2005/01/01 18:56:30 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/ExposureHyperCube.cxx,v 1.8 2005/01/01 22:27:22 burnett Exp $
 */
 #include "map_tools/ExposureHyperCube.h"
 
@@ -18,13 +18,18 @@ namespace {
             (*header)[name].set( value); }
 }
 ExposureHyperCube::ExposureHyperCube( const Exposure& exp, 
-                                     std::string outfile) : m_image(0)
+                                     std::string outfile, bool clobber) : m_image(0)
 {
     std::vector<long> naxes(3);
     naxes[0]= Exposure::Index::ra_factor;
     naxes[1]= Exposure::Index::dec_factor;
     naxes[2] =Exposure::Index::cosfactor;
-
+ 
+    if(clobber ){
+        // the new way to rewrite a file
+        tip::IFileSvc::instance().createFile(outfile);
+    }
+ 
     tip::IFileSvc::instance().createImage(outfile, "exposure", naxes);
     m_image = tip::IFileSvc::instance().editImage(outfile, "exposure");
     header = &m_image->getHeader();// set up the anonymous convenience functions

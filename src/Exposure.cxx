@@ -1,7 +1,7 @@
 /** @file Exposure.cxx
     @brief Implementation of class Exposure
 
-   $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Exposure.cxx,v 1.12 2005/01/01 03:47:36 burnett Exp $
+   $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Exposure.cxx,v 1.13 2005/01/01 22:27:22 burnett Exp $
 */
 #include "map_tools/Exposure.h"
 #include "astro/SkyDir.h"
@@ -60,7 +60,7 @@ Exposure::Exposure(const ExposureCube& cube, double total)
 //------------------------------------------------------------------------------
 Exposure::Exposure(const std::string& fits_file)
 {
-    const tip::Image& cube = *tip::IFileSvc::instance().readImage(fits_file, "");
+    const tip::Image& cube = *tip::IFileSvc::instance().readImage(fits_file, "exposure");
     cube.get(m_exposureMap);
 
 // Obtain Index static variables from FITS header keywords. Assume a
