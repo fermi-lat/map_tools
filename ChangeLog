@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Mon Mar  1 18:57:25 PST 2004
+map_tools/src
+
+Modified Files:
+	SkyImage.cxx 
+Log Message:
+make the ref constant so it can be temporary.
+    *
+------------------------------------------------------------
+User: burnett  Mon Mar  1 18:57:25 PST 2004
 map_tools/map_tools
 
 Modified Files:
