@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Fri Mar  4 09:16:54 PST 2005
+map_tools/src/test
+
+Modified Files:
+	TestCosineBinner.h 
+Log Message:
+for gcc
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r11, operation: add
 Package: map_tools
