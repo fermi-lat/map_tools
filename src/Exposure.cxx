@@ -1,5 +1,7 @@
 /** @file Exposure.cxx
-   $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Exposure.cxx,v 1.1.1.1 2004/02/21 21:47:26 burnett Exp $
+    @brief Implementation of class Exposure
+
+   $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Exposure.cxx,v 1.2 2004/02/21 23:51:11 burnett Exp $
 */
 #include "map_tools/Exposure.h"
 #include "astro/SkyDir.h"

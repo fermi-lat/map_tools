@@ -1,9 +1,8 @@
-/**
-* @file MapParameters.cxx
-* @brief Implementation for class that reads parameters needed for EventBinning.
+/** @file MapParameters.cxx
+*   @brief Implementation for class that reads parameters for image description
 * @author Toby Burnett 
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/users/burnett/map_tools/src/MapParameters.cxx,v 1.2 2004/02/20 19:11:43 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/MapParameters.cxx,v 1.1.1.1 2004/02/21 21:47:26 burnett Exp $
 */
 
 #include "map_tools/MapParameters.h"

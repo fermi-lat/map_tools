@@ -2,11 +2,11 @@
 * @file MapParameters.h
 * @brief Map Parameter Reader
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/users/burnett/map_tools/map_tools/MapParameters.h,v 1.1 2004/02/20 19:11:43 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/MapParameters.h,v 1.1.1.1 2004/02/21 21:47:26 burnett Exp $
 */
 
 #ifndef MAPPARAMETERS_H
-#define PAPARAMETERS_H 
+#define MAPPARAMETERS_H 
 
 #include "Parameters.h"
 #include <string>
@@ -22,7 +22,7 @@
 * href="http://www-glast.slac.stanford.edu/sciencetools/userInterface/doc/pil.pdf">PIL user
 * manual</a>.
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/users/burnett/map_tools/map_tools/MapParameters.h,v 1.1 2004/02/20 19:11:43 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/MapParameters.h,v 1.1.1.1 2004/02/21 21:47:26 burnett Exp $
 */
 
 class MapParameters : public Parameters

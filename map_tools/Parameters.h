@@ -1,17 +1,13 @@
 /**
 * @file Parameters.h
 * @brief Tool Input Parameter Reader base class
-
-
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/users/burnett/map_tools/map_tools/Parameters.h,v 1.1 2004/02/20 19:11:43 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Parameters.h,v 1.1.1.1 2004/02/21 21:47:26 burnett Exp $
 */
-
 #ifndef PARAMETERS_H
 #define PARAMETERS_H 
 
 #include <string>
-
 
 /**
 * @class Parameters
@@ -24,7 +20,7 @@
 *
 * @author Toby Burnett [originally from Sandhia Bansall]
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/users/burnett/map_tools/map_tools/Parameters.h,v 1.1 2004/02/20 19:11:43 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Parameters.h,v 1.1.1.1 2004/02/21 21:47:26 burnett Exp $
 */
 
 #include <map>

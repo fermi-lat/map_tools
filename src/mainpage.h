@@ -1,4 +1,4 @@
-// $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/mainpage.h,v 1.1.1.1 2004/02/21 21:47:26 burnett Exp $
+// $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/mainpage.h,v 1.2 2004/02/22 03:19:46 burnett Exp $
 // Mainpage for doxygen
 
 /*! \mainpage package map_tools
@@ -83,5 +83,10 @@ This applicaton creates a FITS "hypercube" image file. Each layer is a bin in co
 
  @verbinclude exposure_map.par
 
+
+*/
+/** @page devguide Developer's Guide
+
+whatever
 
 */

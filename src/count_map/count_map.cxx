@@ -1,7 +1,7 @@
 /** @file count_map.cxx
-
     @brief build the count_map application
-    $Header: /nfs/slac/g/glast/ground/cvs/users/burnett/map_tools/src/count_map/count_map.cxx,v 1.2 2004/02/20 19:11:43 burnett Exp $
+
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/count_map/count_map.cxx,v 1.1.1.1 2004/02/21 21:47:26 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -13,7 +13,7 @@
 #include "table/FitsService.h"
 
 #include <algorithm>
-
+namespace cmap { // for count_map helper classes
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /** @class AddCount
 @brief Function object to apply to a tuple. fill the image with counts of (ra, dec) pairs
@@ -36,10 +36,11 @@ public:
 private:
     SkyImage& m_image;
 };
+}
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 int main(int argc, char * argv[]) {
-
+    using namespace cmap;
     try{
 
         // read in, or prompt for, all necessary parameters

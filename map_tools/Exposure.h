@@ -2,7 +2,7 @@
     @brief definition of the class Exposure
 
     @author T.Burnett
-    $Header: /nfs/slac/g/glast/ground/cvs/users/burnett/map_tools/map_tools/Exposure.h,v 1.3 2004/02/21 21:43:59 burnett Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Exposure.h,v 1.1.1.1 2004/02/21 21:47:26 burnett Exp $
 */
 #ifndef MAP_TOOLS_EXPOSURE_H
 #define MAP_TOOLS_EXPOSURE_H
@@ -97,7 +97,7 @@ public:
     */
     void load(tuple::ITable& table, double tstart=0, double tend=0);
 
-    // return the exposure at the given ra, dec, and cos theta weighting
+    /// return the exposure at the given ra, dec, and cos theta weighting
     double operator()(double ra, double dec, const Aeff& fun)const;
     double operator()(const astro::SkyDir& dir, const Aeff& fun)const;
 
