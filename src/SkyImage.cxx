@@ -1,7 +1,7 @@
 /** @file SkyImage.cxx
 
 @brief implement the class SkyImage
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/SkyImage.cxx,v 1.25 2004/06/06 19:12:15 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/SkyImage.cxx,v 1.26 2004/08/26 19:58:56 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -10,6 +10,7 @@ $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/SkyImage.cxx,v 1.25 2004/06/
 #include "astro/SkyDir.h"
 #include "tip/Image.h"
 #include "tip/IFileSvc.h"
+#include <stdexcept>
 
 namespace {
     static unsigned long lnan[2]={0xffffffff, 0x7fffffff};
@@ -73,13 +74,13 @@ SkyImage::SkyImage(const map_tools::MapParameters& pars)
     naxes[0]=m_naxis1;
     naxes[1]=m_naxis2;
     naxes[2]=m_naxis3;
-    tip::IFileSvc::instance().createImage(pars.outputFile(), "Primary", naxes);
-    m_image = tip::IFileSvc::instance().editImage(pars.outputFile(), "Primary");
+    tip::IFileSvc::instance().createImage(pars.outputFile(), "skymap", naxes);
+    m_image = tip::IFileSvc::instance().editImage(pars.outputFile(), "skymap");
 
     m_imageData.resize(m_pixelCount);
 
     // fill the boundaries with NaN
-    if( pars.projType()!="CAR") clear();
+   //THB, until know why it takes time if( pars.projType()!="CAR") clear();
 
     header = &m_image->getHeader();// set up the anonymous convenience functions
     setKey("TELESCOP", "GLAST");
