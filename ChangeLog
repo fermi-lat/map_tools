@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Thu Mar 18 11:23:42 PST 2004
+map_tools/src/exposure_cube
+
+Modified Files:
+	exposure_cube.cxx 
+Log Message:
+replace hoopsUtil with hoops
+    *
+------------------------------------------------------------
+User: burnett  Thu Mar 18 11:23:42 PST 2004
 map_tools/src
 
 Modified Files:
