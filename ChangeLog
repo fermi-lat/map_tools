@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Thu Aug 26 12:58:56 PDT 2004
+map_tools/src/count_map
+
+Modified Files:
+	count_map.cxx 
+Log Message:
+first attempt to use tip::Image
+    *
+------------------------------------------------------------
+User: burnett  Thu Aug 26 12:58:56 PDT 2004
 map_tools/src
 
 Modified Files:
