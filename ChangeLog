@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sun Apr 25 16:58:44 PDT 2004
+map_tools/pfiles
+
+Modified Files:
+	exposure_cube.par exposure_map.par 
+Log Message:
+add table_name
+    *
+------------------------------------------------------------
 User: burnett  Sun Apr 25 16:45:13 PDT 2004
 map_tools/src/count_map
 
