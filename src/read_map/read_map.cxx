@@ -3,7 +3,7 @@
 
      @author Toby Burnett
 
-     $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/read_map/read_map.cxx,v 1.1 2004/03/06 15:14:33 burnett Exp $
+     $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/read_map/read_map.cxx,v 1.2 2004/03/08 00:17:38 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -41,7 +41,7 @@ private:
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 int main(int argc, char * argv[]) {
-    try{
+    try{ 
         //! a big @todo: this will fail if the WCS transformation parameters for the
         //! map are not the same!
 
