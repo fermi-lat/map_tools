@@ -1,4 +1,42 @@
 ------------------------------------------------------------
+TAG
+Tag name: v5r8p1, operation: add
+Package: map_tools
+User: burnett  Sat Jan  1 14:29:21 2005
+Files:
+  map_tools/.cvsignore  1.1.1.1
+  map_tools/ChangeLog  1.1.1.292
+  map_tools/Templates/ExposureCube.txt  1.1.1.1
+  map_tools/Templates/CountMap  1.2
+  map_tools/cmt/.cvsignore  1.2
+  map_tools/cmt/requirements  1.44
+  map_tools/doc/release.notes  1.29
+  map_tools/doc/Doxyfile  1.1
+  map_tools/map_tools/Parameters.h  1.13
+  map_tools/map_tools/ExposureHyperCube.h  1.9
+  map_tools/map_tools/MapParameters.h  1.7
+  map_tools/map_tools/Exposure.h  1.7
+  map_tools/map_tools/SkyImage.h  1.20
+  map_tools/pfiles/test_map_tools.par  1.8
+  map_tools/pfiles/exposure_map.par  1.7
+  map_tools/pfiles/read_map.par  1.7
+  map_tools/pfiles/exposure_cube.par  1.14
+  map_tools/pfiles/count_map.par  1.17
+  map_tools/src/mainpage.h  1.7
+  map_tools/src/Parameters.cxx  1.19
+  map_tools/src/Exposure.cxx  1.13
+  map_tools/src/SkyImage.cxx  1.32
+  map_tools/src/MapParameters.cxx  1.12
+  map_tools/src/ExposureHyperCube.cxx  1.8
+  map_tools/src/count_map/count_map.cxx  1.18
+  map_tools/src/exposure_cube/exposure_cube.cxx  1.24
+  map_tools/src/exposure_map/exposure_map.cxx  1.18
+  map_tools/src/map_stats/map_stats.cxx  1.1
+  map_tools/src/read_map/read_map.cxx  1.8
+  map_tools/src/test/test_main.cxx  1.24
+
+    *
+------------------------------------------------------------
 User: burnett  Sat Jan  1 14:27:22 PST 2005
 map_tools/src/test
 
