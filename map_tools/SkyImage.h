@@ -2,7 +2,7 @@
 
     @brief declare  the class SkyImage
     @author Toby Burnett <tburnett@u.washington.edu>
-    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/SkyImage.h,v 1.14 2004/03/25 12:44:51 burnett Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/SkyImage.h,v 1.15 2004/06/02 01:15:10 burnett Exp $
 
 */
 
@@ -90,6 +90,9 @@ public:
     void getNeighbors(const astro::SkyDir& pos, std::vector<double>& neighbors)const ;
 
 private:
+    //! @brief internal routine to convert SkyDir to pixel index
+    unsigned int pixel_index(const astro::SkyDir& pos, int layer=-1) const;
+
     //! sizes of the respective axes.
     int   m_naxis1, m_naxis2, m_naxis3;
     double m_total;
@@ -101,7 +104,7 @@ private:
 
     /// associated projection object, initialized from a par file, or a FITS file
     astro::SkyProj* m_wcs; 
-    bool m_galactic;  /// flag to interpret the image in galactic coords
+ //   bool m_galactic;  /// flag to interpret the image in galactic coords
 };
 } //namesace map_tools
 
