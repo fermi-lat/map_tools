@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: burnett  Thu Mar 25 04:44:51 PST 2004
+map_tools/map_tools
+
+Modified Files:
+	SkyImage.h 
+Removed Files:
+	SkyFunction.h 
+Log Message:
+moved SkyFunciton to astro
+    *
+------------------------------------------------------------
 User: burnett  Thu Mar 25 03:26:00 PST 2004
 map_tools/doc
 
