@@ -1,14 +1,16 @@
 /** @file exposure_cube.cxx
 @brief build the exposure_cube application
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.1.1.1 2004/02/21 21:47:26 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.2 2004/02/23 02:44:36 burnett Exp $
 */
+#include "tuple/ITable.h"
 
 #include "map_tools/MapParameters.h"
 #include "map_tools/Exposure.h"
 #include "map_tools/ExposureHyperCube.h"
 
-#include "tuple/ITable.h"
+#include <iostream>
+
 namespace ecube{
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 class ExposureMapParameters : public MapParameters 
@@ -33,10 +35,6 @@ int main(int argc, char * argv[]) {
         // read in, or prompt for, all necessary parameters
         ExposureMapParameters pars(argc, argv);
 
-        // open output file
-        table::FitsService iosrv;
-        iosrv.createNewFile(pars.outputFile(), pars.templateFile());
-
         // create the exposure, and fill it from the history file
         Exposure ex( pars["skybinsize"], pars["costhetabinsize"]);
 
@@ -44,9 +42,8 @@ int main(int argc, char * argv[]) {
 
         ex.load( *factory(pars.eventFile(),"Ext1"), pars["tstart"] , pars["tstop"]); 
 
-        ExposureHyperCube cube(ex);
-        cube.write(&iosrv);
-        iosrv.closeFile();
+        // create the fits output file from the Exposure file
+        ExposureHyperCube cube(ex, pars.outputFile());
 
     }catch( const std::exception& e){
         std::cerr << "Error: ending with exception: " << e.what() << std::endl;

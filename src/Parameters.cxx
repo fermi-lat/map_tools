@@ -3,7 +3,7 @@
 * @brief Implementation for class that reads parameters needed for tools
 * @author Toby Burnett
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Parameters.cxx,v 1.2 2004/02/22 01:59:12 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Parameters.cxx,v 1.3 2004/02/23 20:59:07 burnett Exp $
 */
 
 #include <sstream>
@@ -64,7 +64,6 @@ Parameters::Parameters( int argc, char *argv[])
         facilities::Util::expandEnvVar(&m_oname);
     }
 
-    m_templateFile = getString("templatefile");
 
     if( s_clobber ) m_oname= "!"+m_oname;  // FITS convention to rewrite file
 
