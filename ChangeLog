@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Mon Mar  1 17:07:34 PST 2004
+map_tools/src
+
+Added Files:
+	ExposureHyperCube.cxx 
+Log Message:
+separated implementation for image/Image.h
+    *
+------------------------------------------------------------
 User: jchiang  Mon Mar  1 17:06:46 PST 2004
 map_tools/map_tools
 
