@@ -1,7 +1,7 @@
 /** @file count_map.cxx
 @brief build the count_map application
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/count_map/count_map.cxx,v 1.16 2004/08/26 19:58:56 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/count_map/count_map.cxx,v 1.17 2005/01/01 03:47:36 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -40,6 +40,7 @@ public:
 //        gSystem->Load("libHist.dll");
 #endif
     }
+    ~CountMapApp() throw() {} // required by StApp with gcc
 
     void run(){
         using tip::Table;
@@ -71,8 +72,8 @@ public:
                 <<" at file\n\t" << m_pars.outputFile() << std::endl; 
     }
 private:
-    MapParameters m_pars;
     st_stream::StreamFormatter m_f;
+    MapParameters m_pars;
 
 };
 
