@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Wed Mar 10 12:43:47 PST 2004
+map_tools/src/image
+
+Modified Files:
+	Image.h 
+Log Message:
+suppress warnings in doxy and from hoops
+    *
+------------------------------------------------------------
+User: burnett  Wed Mar 10 12:43:47 PST 2004
 map_tools/map_tools
 
 Modified Files:
