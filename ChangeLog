@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Sun Feb  6 11:52:23 PST 2005
+map_tools/src/test
+
+Modified Files:
+	test_main.cxx 
+Log Message:
+add test for CosineBinner, clean up current Exposure a little
+    *
+------------------------------------------------------------
+User: burnett  Sun Feb  6 11:52:23 PST 2005
 map_tools/src
 
 Modified Files:
