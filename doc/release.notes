@@ -2,9 +2,10 @@
     @brief tools definition
     @author Toby Burnett
 
-$Id: release.notes,v 1.40 2005/03/03 19:49:12 burnett Exp $
+$Id: release.notes,v 1.41 2005/03/04 02:22:31 burnett Exp $
 @verbatim
  --------- -----  --- -----------------------------------------------------------------------
+ 04-mar-05 v5r11  THB temporary stuff to support old interface elements expected by Likelihood 
  03-mar-05 v5r10p4THB gcc bug fix #4 
  03-mar-05 v5r10p3THB gcc bug fix #3 
  03-mar-05 v5r10p2THB gcc bug fix #2 
