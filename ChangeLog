@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Sun Apr 25 16:45:13 PDT 2004
+map_tools/pfiles
+
+Modified Files:
+	count_map.par 
+Log Message:
+add table_name to parameter files, and set for update
+    *
+------------------------------------------------------------
+User: burnett  Sun Apr 25 16:45:13 PDT 2004
 map_tools/map_tools
 
 Modified Files:
