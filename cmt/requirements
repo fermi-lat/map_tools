@@ -3,11 +3,11 @@ package map_tools
 version v4r0
 
 author T. Burnett <tburnett@u.washington.edu>
-# $Id: requirements,v 1.19 2004/03/11 14:53:54 burnett Exp $
+# $Id: requirements,v 1.20 2004/03/11 20:35:31 burnett Exp $
 
 
 use astro *
-use hoopsUtil * 
+use hoops * 
 use tuple *
 
 #suppress annoying warnings from hoops: "illegal conversion" and "forcing value to bool" 

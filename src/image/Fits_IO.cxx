@@ -4,7 +4,7 @@
 @author Toby Burnett
 Code orginally written by Riener Rohlfs
 
-    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/image/Fits_IO.cxx,v 1.16 2004/03/12 00:03:01 jchiang Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/image/Fits_IO.cxx,v 1.17 2004/03/13 22:05:41 jchiang Exp $
 */
 
 #include "Fits_IO.h"
@@ -385,7 +385,7 @@ void Fits_IO::readFitsCards(std::string keyname) {
 
    char *include[] = {const_cast<char *>(keyname.c_str())};
    int ninc = 1;
-   char *exclude[] = {};
+   char *exclude[] = {""};
    int nexc = 0;
    char card[80];
 
