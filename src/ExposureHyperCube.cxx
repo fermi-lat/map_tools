@@ -1,7 +1,7 @@
 /**
  * @file ExposureHyperCube.cxx
  *
- * $Header$
+ * $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/ExposureHyperCube.cxx,v 1.1 2004/03/02 01:07:34 jchiang Exp $
  */
 
 #include "image/Image.h"
@@ -17,7 +17,7 @@ ExposureHyperCube::ExposureHyperCube( const Exposure& exp,
    naxes[2] =Exposure::Index::cosfactor;
    
    m_image = new FloatImg("hypercube", outfile, naxes);
-   reinterpret_cast<FloatImg *>(m_image)->data() = exp.data(); 
+   dynamic_cast<FloatImg *>(m_image)->data() = exp.data(); 
    
    setKey("TELESCOP", "GLAST");
    setKey("INSTRUME", "SIMULATION");
@@ -55,18 +55,19 @@ ExposureHyperCube::ExposureHyperCube( const Exposure& exp,
 void ExposureHyperCube::setKey(std::string name, double value, 
                                std::string unit, std::string comment)
 {
-   reinterpret_cast<FloatImg *>(m_image)->addAttribute(DoubleAttr(name, value, unit, comment)); 
+   m_image->addAttribute(DoubleAttr(name, value, unit, comment)); 
 }
 
 void ExposureHyperCube::setKey(std::string name, std::string value,
                                std::string unit, std::string comment)
 {
-   reinterpret_cast<FloatImg *>(m_image)->addAttribute(StringAttr(name, value,unit,comment)); 
+   m_image->addAttribute(StringAttr(name, value,unit,comment)); 
 }
 
 void ExposureHyperCube::save(std::string outfile){
-   reinterpret_cast<FloatImg *>(m_image)->saveElement(outfile);
-   delete reinterpret_cast<FloatImg *>(m_image);
+
+   dynamic_cast<FloatImg*>(m_image)->saveElement(outfile);
+   m_image;
    m_image=0;
 }
 
