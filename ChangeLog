@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Mon Mar  1 17:59:46 PST 2004
+map_tools/map_tools
+
+Modified Files:
+	ExposureHyperCube.h SkyImage.h 
+Log Message:
+use forward declaration of image base class to hide specific class.
+    *
+------------------------------------------------------------
 User: jchiang  Mon Mar  1 17:07:34 PST 2004
 map_tools/src
 
