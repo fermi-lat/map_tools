@@ -2,9 +2,10 @@
     @brief tools definition
     @author Toby Burnett
 
-$Id: release.notes,v 1.16 2004/04/02 23:13:54 burnett Exp $
+$Id: release.notes,v 1.17 2004/04/05 17:04:45 burnett Exp $
 @verbatim
  --------- -----  --- -----------------------------------------------------------------------
+ 21-apr-04 v5r4   THB convert to use const Table access; use STapp instead of IApp
  04-apr-04 v5r3   THB use simpler tip access method for doubles
  02-apr-04 v5r1   THB convert to tip
  02-apr-04 v5r0p1 THB unix fixes
