@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Wed Mar  2 15:12:48 PST 2005
+map_tools/src
+
+Modified Files:
+	HealpixArrayIO.cxx mainpage.h 
+Log Message:
+extended I/O to handle WMAP data.
+    *
+------------------------------------------------------------
 User: burnett  Wed Mar  2 15:12:47 PST 2005
 map_tools/map_tools
 
