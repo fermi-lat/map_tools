@@ -1,7 +1,7 @@
 /**
  * @file ExposureHyperCube.cxx
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/ExposureHyperCube.cxx,v 1.2 2004/03/02 01:59:46 burnett Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/ExposureHyperCube.cxx,v 1.3 2004/03/02 17:16:20 burnett Exp $
  */
 
 #include "image/Image.h"
@@ -69,7 +69,7 @@ void ExposureHyperCube::setKey(std::string name, std::string value,
 void ExposureHyperCube::save(std::string outfile){
 
    dynamic_cast<FloatImg*>(m_image)->saveElement(outfile);
-   m_image;
+   delete dynamic_cast<FloatImg*>(m_image);
    m_image=0;
 }
 
