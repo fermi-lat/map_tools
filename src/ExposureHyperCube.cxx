@@ -2,7 +2,7 @@
 * @file ExposureHyperCube.cxx
 @brief Implement ExposureHyperCube methods
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/ExposureHyperCube.cxx,v 1.9 2005/01/04 21:20:08 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/ExposureHyperCube.cxx,v 1.10 2005/01/22 03:16:45 burnett Exp $
 */
 #include "map_tools/ExposureHyperCube.h"
 
@@ -10,6 +10,7 @@
 #include "tip/IFileSvc.h"
 
 #include <errno.h>
+#include <stdexcept>
 
 
 using namespace map_tools;

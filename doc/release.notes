@@ -2,10 +2,11 @@
     @brief tools definition
     @author Toby Burnett
 
-$Id: release.notes,v 1.31 2005/01/20 22:42:12 burnett Exp $
+$Id: release.notes,v 1.32 2005/01/22 03:16:45 burnett Exp $
 @verbatim
  --------- -----  --- -----------------------------------------------------------------------
- 01-jan-05 v5r9p1 THB adjust to tip v2r1
+ 20-jan-05 v5r9p2 THB gcc bug fix
+ 20-jan-05 v5r9p1 THB adjust to tip v2r1
  01-jan-05 v5r9   THB changes to use new tip image facility.
  01-jan-05 v5r8p2 THB gcc warnings, bypass problem with st_stream and manipulators
  01-jan-05 v5r8p1 THB Make Exposure costh binning user-selectable
