@@ -4,7 +4,7 @@
      @author Toby Burnett
      Code orginally written by Riener Rohlfs
 
-    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/image/Attr.h,v 1.3 2004/02/28 21:04:55 burnett Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/image/Attr.h,v 1.4 2004/03/02 23:24:57 jchiang Exp $
 */
 #ifndef ATTR_H
 #define ATTR_H
@@ -35,6 +35,7 @@ public:
     void setName(const std::string& name){m_name=name;}
     virtual void print(std::ostream&)const=0;
 
+    operator const std::string&()const{return m_name;}
     //virtual operator double()const = 0;
 
 private:

@@ -4,7 +4,7 @@
      @author Toby Burnett
      Code orginally written by Riener Rohlfs
 
-     $Header$
+     $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/image/Image.h,v 1.2 2004/02/28 21:04:55 burnett Exp $
 */
 
 #ifndef ROOT_TFImage_H
@@ -13,6 +13,7 @@
 #include "IOElement.h"
 
 template <class T> class Image;
+#include <vector>
 
 //_____________________________________________________________________________
 /** @class BaseImage
