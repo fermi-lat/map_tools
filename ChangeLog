@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Tue Jun  1 18:15:10 PDT 2004
+map_tools/map_tools
+
+Modified Files:
+	SkyImage.h 
+Log Message:
+convert to use new SkyProj for conversion to/from pixel coordinates
+    *
+------------------------------------------------------------
 User: jchiang  Fri Apr 30 14:27:10 PDT 2004
 map_tools/doc
 
