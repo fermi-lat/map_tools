@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Sat Mar 13 14:05:41 PST 2004
+map_tools/map_tools
+
+Added Files:
+	DataCube.h 
+Log Message:
+add DataCube class to provide generic access to FITS image data
+    *
+------------------------------------------------------------
 User: burnett  Sat Mar 13 06:54:31 PST 2004
 map_tools/map_tools
 
