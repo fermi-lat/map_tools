@@ -3,7 +3,7 @@
 * @brief Implementation for class that reads parameters needed for tools
 * @author Toby Burnett
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Parameters.cxx,v 1.11 2004/03/31 12:54:08 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Parameters.cxx,v 1.12 2004/03/31 13:32:45 burnett Exp $
 */
 
 #include <sstream>
@@ -50,10 +50,10 @@ void Parameters::setup()
     m_inFile = infile;
 
     facilities::Util::expandEnvVar(&m_inFile);
-
+#if 0
     std::string filter = m_par["filter"];
     m_filter = filter;
-
+#endif
     std::string outfile = m_par["outfile"];
     m_outFile = outfile;
     facilities::Util::expandEnvVar(&m_outFile);

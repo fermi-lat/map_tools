@@ -1,7 +1,7 @@
-# $Header: /nfs/slac/g/glast/ground/cvs/map_tools/pfiles/count_map.par,v 1.9 2004/03/31 13:58:10 burnett Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/map_tools/pfiles/count_map.par,v 1.10 2004/04/02 14:33:07 burnett Exp $
 #---------------------------------------------------------------------------------------
 clobber,  b, a, "YES", , , "Overwrite existing output file?: "
-chatter,  i, a,   10,  , , , "Chatter: "
+chatter,  i, a,   5,  , , , "Chatter: "
 mode,     s, a,  "h",   , ,""
 # uncomment the following for interactive/replacement mode
 #mode,     s, a,  "ql",   , ,""
@@ -9,7 +9,7 @@ mode,     s, a,  "h",   , ,""
 #
 #---------------------------------------------------------------------------------------
 #
-infile, f, a, "/common/DC1/root_files/DC1_goodGamma.root", , , "Name of the Event Data File:"
+infile, f, a, "/glast/DC1/data/DC1_goodGamma.root", , , "Name of the Event Data File:"
 #filter,   s, a, "calib_version[1]==1&&calib_version[2]==1&&calib_version[3]==1", , , "filter expression:"
 filter,   s, a, "", , , "filter expression:"
 

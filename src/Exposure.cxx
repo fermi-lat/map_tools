@@ -1,11 +1,10 @@
 /** @file Exposure.cxx
     @brief Implementation of class Exposure
 
-   $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Exposure.cxx,v 1.8 2004/03/03 21:51:37 jchiang Exp $
+   $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Exposure.cxx,v 1.9 2004/03/03 22:03:26 jchiang Exp $
 */
 #include "map_tools/Exposure.h"
 #include "astro/SkyDir.h"
-#include "tuple/ITable.h"
 
 #include "image/Fits_IO.h"
 #include "image/Image.h"
