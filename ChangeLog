@@ -1,5 +1,16 @@
 ------------------------------------------------------------
 User: burnett  Fri Mar  5 18:58:47 PST 2004
+map_tools/pfiles
+
+Modified Files:
+	count_map.par 
+Added Files:
+	read_map.par 
+Log Message:
+new application diemonstrating access to a pixel map, and support, especially to read a primary image
+    *
+------------------------------------------------------------
+User: burnett  Fri Mar  5 18:58:47 PST 2004
 map_tools/map_tools
 
 Modified Files:
