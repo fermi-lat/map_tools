@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Sun Feb 22 18:44:36 PST 2004
+map_tools/src/table
+
+Modified Files:
+	Constants.h Exception.h FitsService.h 
+Log Message:
+clean up a bit more
+    *
+------------------------------------------------------------
+User: burnett  Sun Feb 22 18:44:36 PST 2004
 map_tools/src/exposure_map
 
 Modified Files:
