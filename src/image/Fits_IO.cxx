@@ -4,7 +4,7 @@
 @author Toby Burnett
 Code orginally written by Riener Rohlfs
 
-    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/image/Fits_IO.cxx,v 1.10 2004/03/03 21:38:28 jchiang Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/image/Fits_IO.cxx,v 1.11 2004/03/03 22:40:30 burnett Exp $
 */
 
 #include "Fits_IO.h"
@@ -388,6 +388,7 @@ void Fits_IO::writeFitsHeader()
         BaseAttr& attr = *(*it);
         void * pval = attr.valuePtr();
         int fitsType=0;
+        char cbuf[120];
 
         if (typeid(attr).name() == doubleAttrClassName)      { fitsType = TDOUBLE; 
         } else if (typeid(attr).name() == floatAttrClassName){ fitsType = TFLOAT; 
@@ -397,7 +398,6 @@ void Fits_IO::writeFitsHeader()
         } else if (typeid(attr).name() == stringAttrClassName){fitsType = TSTRING; 
 
             // special case: need to make a copy of the character string
-            char cbuf[120];
             pval = (void*) cbuf;  // and override the pointer
 
             StringAttr & my_attr = dynamic_cast<StringAttr&>(attr); 
