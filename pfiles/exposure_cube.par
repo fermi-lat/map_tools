@@ -1,4 +1,4 @@
-# $Header: /nfs/slac/g/glast/ground/cvs/map_tools/pfiles/exposure_cube.par,v 1.4 2004/03/09 01:43:09 burnett Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/map_tools/pfiles/exposure_cube.par,v 1.5 2004/03/18 19:23:42 burnett Exp $
 #---------------------------------------------------------------------------------------
 clobber,  b, a, "YES", , , "Overwrite existing output file?: "
 chatter,  i, a,   10,  , , , "Chatter: "
@@ -9,8 +9,8 @@ mode,     s, a,  "h",   , ,""
 #
 #---------------------------------------------------------------------------------------
 #
-infile, s, a, "../../../data/D2_full_history.fits", , , "Name of the exposure file:" 
-outfile,   s, a, "$(OUTFILES)/expcube_1day.fits", , , "Name of the output file:"
+infile,   f, a, "/glast/DC1/data/D2_full_history.fits", , , "Name of the exposure file:" 
+outfile,  f, a, "$(OUTFILES)/expcube_1day.fits", , , "Name of the output file:"
 #---------------------------------------------------------------------------------------
 #Parameters for Spatial binning
 #

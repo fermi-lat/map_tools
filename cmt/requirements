@@ -3,12 +3,13 @@ package map_tools
 version v4r3
 
 author T. Burnett <tburnett@u.washington.edu>
-# $Id: requirements,v 1.22 2004/03/18 19:31:55 burnett Exp $
+# $Id: requirements,v 1.24 2004/03/25 11:25:59 burnett Exp $
 
 
 use astro *
 use hoops * 
 use tuple *
+use st_app *
 
 
 path_append PFILES "$(MAP_TOOLSROOT)/pfiles"

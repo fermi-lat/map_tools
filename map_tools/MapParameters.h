@@ -2,14 +2,16 @@
 * @file MapParameters.h
 * @brief Map Parameter Reader
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/MapParameters.h,v 1.4 2004/03/06 02:58:47 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/MapParameters.h,v 1.5 2004/03/11 14:49:06 burnett Exp $
 */
 
-#ifndef MAPPARAMETERS_H
-#define MAPPARAMETERS_H 
+#ifndef MAP_TOOLS_MAPPARAMETERS_H
+#define MAP_TOOLS_MAPPARAMETERS_H 
 
 #include "Parameters.h"
 #include <string>
+namespace hoops { class IParGroup; }
+
 namespace map_tools {
 
 /**
@@ -22,14 +24,15 @@ namespace map_tools {
 * href="http://www-glast.slac.stanford.edu/sciencetools/userInterface/doc/pil.pdf">PIL user
 * manual</a>.
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/MapParameters.h,v 1.4 2004/03/06 02:58:47 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/MapParameters.h,v 1.5 2004/03/11 14:49:06 burnett Exp $
 */
 
 class MapParameters : public Parameters
 {
 public:
     // Constructors
-    MapParameters( int argc, char *argv[]);
+    MapParameters(hoops::IParGroup & pars);
+    MapParameters(int argc, char * argv[]);
 
     int npix() const                   { return m_npix; }
     int npixX() const                   { return m_npix; }
@@ -49,6 +52,8 @@ public:
 
 
 private:
+
+    void setup();
 
     int             m_npix, m_npix_y, m_npix_z;
     double         m_imgSizeX, m_imgSizeY;

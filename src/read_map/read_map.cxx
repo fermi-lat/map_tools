@@ -3,7 +3,7 @@
 
      @author Toby Burnett
 
-     $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/read_map/read_map.cxx,v 1.4 2004/03/09 14:10:23 burnett Exp $
+     $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/read_map/read_map.cxx,v 1.5 2004/03/25 12:44:51 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -13,14 +13,7 @@
 #include <iostream>
 
 using namespace map_tools;
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-class ReadPars : public MapParameters{
-public:
-    ReadPars(int argc, char * argv[]): MapParameters(argc,argv){
-        getValue<double>("ra", 0);
-        getValue<double>("dec", 0);
-    }
-};
+
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /** @class Request 
     @brief function class requests a point from the image
@@ -46,7 +39,7 @@ int main(int argc, char * argv[]) {
         //! map are not the same!
 
         // read in, or prompt for, all necessary parameters
-        ReadPars pars(argc, argv);
+        MapParameters pars(argc, argv);
 
         std::cout << "Reading FITS input file " << pars.inputFile() << std::endl;
         SkyImage image(pars.inputFile(), "Primary"); 

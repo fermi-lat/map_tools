@@ -2,17 +2,25 @@
 *   @brief Implementation for class that reads parameters for image description
 * @author Toby Burnett 
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/MapParameters.cxx,v 1.8 2004/03/13 14:54:05 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/MapParameters.cxx,v 1.9 2004/03/18 19:23:42 burnett Exp $
 */
 
 #include "map_tools/MapParameters.h"
 #include <iostream>
+
 using namespace map_tools;
-
 //! Constructor
-
-MapParameters::MapParameters( int argc, char *argv[])
+MapParameters::MapParameters(int argc, char * argv[])
 : Parameters(argc, argv)
+{
+    setup();
+}
+MapParameters::MapParameters( hoops::IParGroup& hpar)
+: Parameters(hpar)
+{
+    setup();
+}
+void MapParameters::setup()
 {
 
     // Read number of pixels along x
