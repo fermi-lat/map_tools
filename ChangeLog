@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Tue Mar  2 16:12:13 PST 2004
+map_tools/src/image
+
+Modified Files:
+	Header.cxx 
+Log Message:
+satisfy all Header class unit tests
+    *
+------------------------------------------------------------
 User: jchiang  Tue Mar  2 15:24:58 PST 2004
 map_tools/src/test
 
