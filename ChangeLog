@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Wed Dec 22 15:31:26 PST 2004
+map_tools/pfiles
+
+Modified Files:
+	read_map.par 
+Log Message:
+Make a SkyImage implement the SkyFunction interface. Simplifies read_map copy application
+    *
+------------------------------------------------------------
+User: burnett  Wed Dec 22 15:31:26 PST 2004
 map_tools/map_tools
 
 Modified Files:
