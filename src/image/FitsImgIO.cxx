@@ -4,7 +4,7 @@
      @author Toby Burnett
      Code orginally written by Riener Rohlfs
 
-     $Header$
+     $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/image/FitsImgIO.cxx,v 1.3 2004/02/28 21:04:55 burnett Exp $
     (TODO: make them static in the Fits_IO class)
 */
 #include "Fits_IO.h"
@@ -115,7 +115,8 @@ IOElement * MakeImage(fitsfile * fptr, int * status)
     {
 
    case LONG_IMG:
-       image = ReadIntImage(fptr,  axes, status);
+//       image = ReadIntImage(fptr,  axes, status);
+       image = ReadFloatImage(fptr,  axes, status);
        break;
    case FLOAT_IMG:
        image = ReadFloatImage(fptr,  axes, status);

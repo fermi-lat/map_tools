@@ -2,7 +2,7 @@
 *   @brief Implementation for class that reads parameters for image description
 * @author Toby Burnett 
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/MapParameters.cxx,v 1.2 2004/02/23 02:44:36 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/MapParameters.cxx,v 1.3 2004/03/02 17:16:20 burnett Exp $
 */
 
 #include "map_tools/MapParameters.h"
@@ -18,6 +18,7 @@ MapParameters::MapParameters( int argc, char *argv[])
     // Read number of pixels
     m_npix = getInt("npix");
     m_npix_y= getInt("npixy", m_npix);
+    m_npix_z= getInt("layers", 1);
 
     // Read Image size
     m_imgSizeX= getInt( "imgsize" );

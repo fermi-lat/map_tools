@@ -4,7 +4,7 @@
 @author Toby Burnett
 Code orginally written by Riener Rohlfs
 
-    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/image/Fits_IO.cxx,v 1.11 2004/03/03 22:40:30 burnett Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/image/Fits_IO.cxx,v 1.12 2004/03/03 23:21:48 jchiang Exp $
 */
 
 #include "Fits_IO.h"
@@ -106,33 +106,36 @@ IOElement * Fits_IO::read(const std::string & fileName, const std::string & name
 
     // move to the required HDU
     if (cycle <= 0) {
-        if ( name.empty() ) {
+        if ( name.empty() || name=="Primary" ) {
+#if 0 // this means primary--astroroot rejected it
             throw std::invalid_argument(errMsg[7]);
             //Error::SetError("Fits_IO::TFRead", errMsg[7], fileName); 
             return NULL;
-        }
+#endif
+        }else{
 
-        // move by name
-        fits_movnam_hdu(fptr, ANY_HDU, const_cast<char*>(name.c_str()), -cycle, &status);
+            // move by name
+            fits_movnam_hdu(fptr, ANY_HDU, const_cast<char*>(name.c_str()), -cycle, &status);
 
-        if (status != 0) {
-            status = 0;
-            // try GROUPING
-            char gr[10];
-            strcpy(gr, "GROUPING");
-            fits_movnam_hdu(fptr, ANY_HDU, gr, 0, &status);
-            if ( status != 0 ){             
+            if (status != 0) {
+                status = 0;
+                // try GROUPING
+                char gr[10];
+                strcpy(gr, "GROUPING");
+                fits_movnam_hdu(fptr, ANY_HDU, gr, 0, &status);
+                if ( status != 0 ){             
 
-                //TFError::SetError("Fits_IO::TFRead", errMsg[2], name, fileName); 
-                fits_close_file(fptr, &status);
-                Fits_IO::report_error(status);
+                    //TFError::SetError("Fits_IO::TFRead", errMsg[2], name, fileName); 
+                    fits_close_file(fptr, &status);
+                    Fits_IO::report_error(status);
+                }
             }
-        }
 
-        // get the current hdu number = cycle
-        int hduNum;
-        fits_get_hdu_num(fptr, &hduNum);
-        cycle = hduNum;
+            // get the current hdu number = cycle
+            int hduNum;
+            fits_get_hdu_num(fptr, &hduNum);
+            cycle = hduNum;
+        }
     }
     else {
         // move to HDU number (the correct name will be tested later)
