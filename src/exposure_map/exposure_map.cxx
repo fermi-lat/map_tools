@@ -3,7 +3,7 @@
 
      @author Toby Burnett
 
-     $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.6 2004/03/02 02:54:55 burnett Exp $
+     $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.7 2004/03/02 17:16:20 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -31,7 +31,7 @@ public:
 /** @class RequestExposure 
     @brief function class requests a point from the exposure
 */
-class RequestExposure : public SkyImage::Requester
+class RequestExposure : public SkyFunction
 {
 public:
     RequestExposure(const Exposure& exp, const Aeff& aeff, double norm=1.0)
@@ -39,7 +39,7 @@ public:
         , m_aeff(aeff)
         , m_norm(norm)
     {}
-        float operator()(const astro::SkyDir& s)const{
+        double operator()(const astro::SkyDir& s)const{
             return m_norm*m_exp(s, m_aeff);
         }
 private:
