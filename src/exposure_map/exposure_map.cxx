@@ -1,7 +1,7 @@
 /** @file exposure_map.cxx
     @brief build the exposure_map application
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.1.1.1 2004/02/21 21:47:26 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.2 2004/02/23 02:44:36 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -99,7 +99,8 @@ int main(int argc, char * argv[]) {
         // create the image object, fill it from the exposure, write out
         SkyImage image(pars); 
 
-        image.fill(RequestExposure(ex, Aeff(), 1.0));
+        RequestExposure req(ex, Aeff(), 1.0);
+        image.fill(req);
         image.write(&iosrv);
 
         iosrv.closeFile();
