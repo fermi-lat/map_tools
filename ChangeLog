@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Sat Jun  5 12:40:26 PDT 2004
+map_tools/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+tagging after changes implied by new astro::SkyProj
+    *
+------------------------------------------------------------
+User: burnett  Sat Jun  5 12:40:26 PDT 2004
 map_tools/cmt
 
 Modified Files:
