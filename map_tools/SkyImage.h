@@ -3,7 +3,7 @@
     @brief declare  the class SkyImage
 
     @author Toby Burnett <tburnett@u.washington.edu>
-    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/SkyImage.h,v 1.19 2004/12/22 23:31:26 burnett Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/SkyImage.h,v 1.20 2005/01/01 03:47:35 burnett Exp $
 
 */
 
@@ -92,8 +92,8 @@ public:
     void getNeighbors(const astro::SkyDir& pos, std::vector<double>& neighbors)const ;
     
     /// @brief implement SkyFunction interface by returning value at the selected pixel
-    /// @param dir the direction
-    /// note that if there are multiple layers, it will choose the selected layer, set setLayer.
+    /// @param s the direction
+    /// note that if there are multiple layers, it will choose the selected layer, see setLayer.
     double operator()(const astro::SkyDir& s)const;
 
 private:
