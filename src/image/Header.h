@@ -4,7 +4,7 @@
      @author Toby Burnett
      Code orginally written by Riener Rohlfs
 
-     $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/image/Header.h,v 1.7 2004/03/03 15:42:13 burnett Exp $
+     $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/image/Header.h,v 1.8 2004/03/03 21:38:28 jchiang Exp $
 */
 #ifndef HEADER_H
 #define HEADER_H
@@ -41,7 +41,7 @@ public:
             value = dynamic_cast<Attr<T> *>(my_attr)->value();
          } else {
             throw std::runtime_error("Header::getValue: bad cast of type "
-                                     + std::string(typeid(value).name()));
+                + std::string(typeid(value).name()) );
          }
       } else {
          throw std::invalid_argument("Header::getValue: attribute " 

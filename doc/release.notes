@@ -2,9 +2,11 @@
     @brief tools definition
     @author Toby Burnett
 
-$Id: release.notes,v 1.9 2004/03/06 11:01:39 burnett Exp $
+$Id: release.notes,v 1.10 2004/03/06 15:16:49 burnett Exp $
 @verbatim
 
+ 04-mar-04 v4r0   THB switch from PIL to hoopsUtil for parameters. Additional SkyImage functionality,
+                      new interface SkyFunction
  04-mar-04 v3r1p2 THB new read_map application
  04-mar-04 v3r1p1 THB fix for test program
  04-mar-04 v3r1  THB allow constructing SkyImage from fits file, and access to pixel values
