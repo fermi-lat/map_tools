@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Sun Feb 22 18:44:36 PST 2004
+map_tools/src
+
+Modified Files:
+	Exposure.cxx MapParameters.cxx SkyImage.cxx mainpage.h 
+Log Message:
+clean up a bit more
+    *
+------------------------------------------------------------
+User: burnett  Sun Feb 22 18:44:36 PST 2004
 map_tools/pfiles
 
 Modified Files:
