@@ -2,7 +2,7 @@
 @brief build the exposure_cube application
 
 @author Toby Burnett
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.5 2004/03/02 17:16:20 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.6 2004/03/06 11:00:16 burnett Exp $
 */
 #include "tuple/ITable.h"
 
@@ -99,7 +99,7 @@ int main(int argc, char * argv[]) {
         ExposureHyperCube cube(ex, pars.outputFile());
 
     }catch( const std::exception& e){
-        std::cerr << "Error: ending with exception: " << e.what() << std::endl;
+        std::cerr << "Error: ending with exception: " << typeid(e).name()<< " \""<< e.what() << "\""<<std::endl;
         return 1;
     }
     return 0;
