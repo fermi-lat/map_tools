@@ -2,7 +2,7 @@
     @brief definition of the class Exposure
 
     @author T.Burnett
-    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Exposure.h,v 1.13 2005/03/04 06:05:42 burnett Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Exposure.h,v 1.14 2005/03/04 14:35:39 burnett Exp $
 */
 #ifndef MAP_TOOLS_EXPOSURE_H
 #define MAP_TOOLS_EXPOSURE_H
@@ -72,11 +72,14 @@ public:
     //! add a time interval at the given position
     virtual void fill(const astro::SkyDir& dirz, double deltat);
 
+    //! for backward compatibility: deprecated
+    void add(const astro::SkyDir& dirz, double deltat){fill(dirz,deltat);}
+
     //! create object from the data file (FITS for now)
     Exposure(const std::string& inputfile, const std::string& tablename="Exposure");
 
     //! write out to a file.
-    void write(const std::string& outputfile, const std::string& tablename="Exposure");
+    void write(const std::string& outputfile, const std::string& tablename="Exposure")const;
 
     /// this is deprecated, here only for Likelihood
     class Aeff {
