@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Aug 26 12:58:56 PDT 2004
+map_tools/map_tools
+
+Modified Files:
+	SkyImage.h 
+Log Message:
+first attempt to use tip::Image
+    *
+------------------------------------------------------------
 User: cohen  Fri Jun 11 11:21:50 PDT 2004
 map_tools/src/exposure_cube
 
