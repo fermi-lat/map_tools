@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Thu Mar  3 11:49:12 PST 2005
+map_tools/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+gcc bug fix tag
+    *
+------------------------------------------------------------
+User: burnett  Thu Mar  3 11:49:12 PST 2005
 map_tools/cmt
 
 Modified Files:
