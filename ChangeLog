@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Mon Apr 26 04:38:20 PDT 2004
+map_tools/pfiles
+
+Modified Files:
+	count_map.par 
+Log Message:
+refactor prompt and save to MapParameters file
+    *
+------------------------------------------------------------
 User: burnett  Sun Apr 25 16:58:44 PDT 2004
 map_tools/pfiles
 
