@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Tue Jun  1 18:15:10 PDT 2004
+map_tools/src
+
+Modified Files:
+	SkyImage.cxx 
+Log Message:
+convert to use new SkyProj for conversion to/from pixel coordinates
+    *
+------------------------------------------------------------
+User: burnett  Tue Jun  1 18:15:10 PDT 2004
 map_tools/map_tools
 
 Modified Files:
