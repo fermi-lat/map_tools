@@ -3,12 +3,12 @@
 
      @author Toby Burnett
 
-     $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/read_map/read_map.cxx,v 1.3 2004/03/09 01:43:09 burnett Exp $
+     $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/read_map/read_map.cxx,v 1.4 2004/03/09 14:10:23 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
 #include "map_tools/MapParameters.h"
-#include "map_tools/SkyFunction.h"
+#include "astro/SkyFunction.h"
 #include "astro/SkyDir.h"
 #include <iostream>
 
@@ -25,7 +25,7 @@ public:
 /** @class Request 
     @brief function class requests a point from the image
 */
-class Request : public SkyFunction
+class Request : public astro::SkyFunction
 {
 public:
     Request(const SkyImage& image )
