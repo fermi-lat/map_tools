@@ -2,13 +2,14 @@ package map_tools
 
 version v1r1
 author T. Burnett <tburnett@u.washington.edu>
-# $Id: requirements,v 1.2 2004/02/22 00:17:11 burnett Exp $
+# $Id: requirements,v 1.3 2004/02/22 03:32:11 burnett Exp $
 
 use GlastPolicy *
 use tuple *
 
 use astro *
 use pil   * IExternal
+use facilities *
 
 set INFILES  "$(MAP_TOOLSROOT)/data"
 set PFILES   "$(MAP_TOOLSROOT)/pfiles"
