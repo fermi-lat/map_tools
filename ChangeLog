@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Wed Dec 22 15:59:39 PST 2004
+map_tools/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+tagging v5r7 after adding new test application
+    *
+------------------------------------------------------------
 User: burnett  Wed Dec 22 15:31:26 PST 2004
 map_tools/src/read_map
 
