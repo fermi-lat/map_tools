@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Thu Mar 25 03:24:04 PST 2004
+map_tools/src
+
+Modified Files:
+	Parameters.cxx 
+Log Message:
+fix req file problem. remove hoops from inheritance.
+    *
+------------------------------------------------------------
+User: burnett  Thu Mar 25 03:24:04 PST 2004
 map_tools/pfiles
 
 Modified Files:
