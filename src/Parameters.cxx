@@ -3,7 +3,7 @@
 * @brief Implementation for class that reads parameters needed for tools
 * @author Toby Burnett
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/users/burnett/map_tools/src/Parameters.cxx,v 1.2 2004/02/20 19:11:43 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Parameters.cxx,v 1.1.1.1 2004/02/21 21:47:26 burnett Exp $
 */
 
 #include <sstream>
@@ -14,7 +14,7 @@
 #include "map_tools/Parameters.h"
 
 #include "pil.h"
-#include <exception>
+#include <stdexcept>
 
 bool Parameters::s_verboseMode = false;
 bool Parameters::s_clobber = 0;
@@ -74,7 +74,7 @@ std::string Parameters::getString(const std::string& name){
     else{
         std::ostringstream buf;
         buf << "PIL parameter '" << name << "' not found";
-        throw table::Exception(buf.str());
+        throw std::invalid_argument(buf.str());
     }
 }
 
@@ -85,7 +85,7 @@ int Parameters::getInt(const std::string &name){
     else{
         std::ostringstream buf;
         buf << "PIL parameter '" << name << "' not found";
-        throw table::Exception(buf.str());
+        throw std::invalid_argument(buf.str());
     }
 }
 bool Parameters::getBool(const std::string &name){
@@ -95,7 +95,7 @@ bool Parameters::getBool(const std::string &name){
     else{
         std::ostringstream buf;
         buf << "PIL parameter '" << name << "' not found";
-        throw table::Exception(buf.str());
+        throw std::invalid_argument(buf.str());
     }
 }
 
@@ -109,7 +109,7 @@ double Parameters::getDouble(const std::string &name){
     else{
         std::ostringstream buf;
         buf << "PIL parameter '" << name << "' not found";
-        throw table::Exception(buf.str());
+        throw std::invalid_argument(buf.str());
     }
 }
 
@@ -139,7 +139,7 @@ bool       Parameters::getBool(const std::string& name, bool deflt)
 double Parameters::operator[](const std::string& name)const{
     DoubleDict::const_iterator it =  m_dictionary.find(name);
     if( it == m_dictionary.end() ){
-        throw std::runtime_error(std::string(name)+" not found in double dictionary");
+        throw std::invalid_argument(name+" not found in double dictionary");
     }
     return (*it).second;
 }
