@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Mon Apr 26 04:38:20 PDT 2004
+map_tools/src/count_map
+
+Modified Files:
+	count_map.cxx 
+Log Message:
+refactor prompt and save to MapParameters file
+    *
+------------------------------------------------------------
+User: burnett  Mon Apr 26 04:38:20 PDT 2004
 map_tools/src
 
 Modified Files:
