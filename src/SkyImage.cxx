@@ -10,7 +10,7 @@
 #include "astro/SkyDir.h"
 namespace {
     static unsigned long lnan[2]={0xffffffff, 0x7fffffff};
-    static double& nan = *( double* )lnan;
+    static double& dnan = *( double* )lnan;
 }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 SkyImage::SkyImage(const MapParameters& pars)
@@ -73,13 +73,12 @@ SkyImage::SkyImage(const MapParameters& pars)
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 void SkyImage::addPoint(const astro::SkyDir& dir, double delta){
 
-    double ra=dir.ra(), dec=dir.dec(); // for testing
     std::pair<double,double> p= dir.project();
     unsigned int 
         i = static_cast<unsigned int>(p.first),
         j = static_cast<unsigned int>(p.second),
         k = i+m_naxis1*j;
-    if( k>=0 && k< m_data.size()){
+    if(  k< m_data.size()){
         m_data[k]+=delta;
         m_total += delta;
     }
@@ -99,7 +98,7 @@ void SkyImage::fill(Requester& req)
             m_data[k] = t; 
             m_total += t;
         }catch(... ) { // any exception: just fill in a NaN
-            m_data[k]=nan; 
+            m_data[k]=dnan; 
         }
     }
 }
@@ -116,7 +115,7 @@ void SkyImage::clear()
             astro::SkyDir dir(x,y,astro::SkyDir::PROJECTION);
             m_data[k] = 0; 
         }catch(... ) { // any exception: just fill in a NaN
-            m_data[k]=nan; 
+            m_data[k]=dnan; 
         }
     }
 }
