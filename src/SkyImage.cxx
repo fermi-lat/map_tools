@@ -1,7 +1,7 @@
 /** @file SkyImage.cxx
 
 @brief implement the class SkyImage
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/SkyImage.cxx,v 1.33 2005/01/01 23:54:04 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/SkyImage.cxx,v 1.34 2005/01/04 21:20:08 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -86,7 +86,7 @@ SkyImage::SkyImage(const map_tools::MapParameters& pars)
     m_imageData.resize(m_pixelCount);
 
     // fill the boundaries with NaN
-   //THB, until know why it takes time if( pars.projType()!="CAR") clear();
+    if( pars.projType()!="CAR") clear();
 
     header = &m_image->getHeader();// set up the anonymous convenience functions
 
@@ -114,6 +114,8 @@ SkyImage::SkyImage(const map_tools::MapParameters& pars)
         "Y-axis incr per pixel of physical coord at position of ref pixel(deg)");
 
     setKey("CROTA2",  crota2, "", "Image rotation (deg)");
+    setKey("LONPOLE", 180.0, "deg", "longitude of celestial pole");
+    setKey("LATPOLE", 0,     "deg", "latitude of celestial pole");
 }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 SkyImage::SkyImage(const std::string& fits_file, const std::string& extension)
