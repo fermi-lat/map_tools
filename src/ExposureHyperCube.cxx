@@ -2,7 +2,7 @@
 * @file ExposureHyperCube.cxx
 @brief Implement ExposureHyperCube methods
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/ExposureHyperCube.cxx,v 1.6 2005/01/01 03:47:36 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/ExposureHyperCube.cxx,v 1.7 2005/01/01 18:56:30 burnett Exp $
 */
 #include "map_tools/ExposureHyperCube.h"
 
@@ -14,7 +14,7 @@ namespace {
     //! @brief add a string or double key or whatever to the image 
     tip::Header* header;
     template <typename T>
-        void setKey(std::string name, T value, std::string unit="", std::string comment=""){
+        void setKey(std::string name, T value, std::string /*unit*/="", std::string /*comment*/=""){
             (*header)[name].set( value); }
 }
 ExposureHyperCube::ExposureHyperCube( const Exposure& exp, 

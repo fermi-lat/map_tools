@@ -2,7 +2,7 @@
 @brief build the exposure_cube application
 
 @author Toby Burnett
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.22 2005/01/01 03:47:36 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.23 2005/01/01 18:56:31 burnett Exp $
 */
 
 #include "map_tools/Parameters.h"
@@ -36,6 +36,7 @@ public:
         , m_f("ExposureCubeApp", "", 2)
 
     {}
+    ~ExposureCubeApp() throw() {} // required by StApp with gcc
 
     //--------------------------------------------------------------------------
     void LoadExposureFromGlast( const Parameters& pars,   Exposure& exp )

@@ -5,7 +5,7 @@
 
 See the <a href="exposure_map_guide.html"> user's guide </a>.
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.16 2004/11/12 22:47:44 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.17 2005/01/01 03:47:36 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -94,6 +94,8 @@ public:
         , m_pars(st_app::StApp::getParGroup("exposure_map")) 
     {
     }
+        ~ExposureMapApp() throw() {} // required by StApp with gcc
+
     /**
     */
 
