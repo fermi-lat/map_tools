@@ -2,13 +2,13 @@
     @brief definition of the class Exposure
 
     @author T.Burnett
-    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Exposure.h,v 1.9 2005/02/06 19:52:23 burnett Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Exposure.h,v 1.10 2005/02/24 19:54:57 burnett Exp $
 */
 #ifndef MAP_TOOLS_EXPOSURE_H
 #define MAP_TOOLS_EXPOSURE_H
 
 
-namespace astro { class SkyDir;}
+#include "astro/SkyDir.h"
 #include "astro/HealpixArray.h"
 #include "map_tools/CosineBinner.h"
 
