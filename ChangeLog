@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Sat Apr  3 07:05:18 PST 2004
+map_tools/src/count_map
+
+Modified Files:
+	count_map.cxx 
+Log Message:
+put in a Prompt
+    *
+------------------------------------------------------------
+User: burnett  Sat Apr  3 07:05:18 PST 2004
 map_tools/src
 
 Modified Files:
