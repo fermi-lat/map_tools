@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Sun Feb  6 11:52:23 PST 2005
+map_tools/map_tools
+
+Modified Files:
+	CosineBinner.h Exposure.h ExposureHyperCube.h 
+Log Message:
+add test for CosineBinner, clean up current Exposure a little
+    *
+------------------------------------------------------------
+User: burnett  Sun Feb  6 11:52:23 PST 2005
 map_tools/doc
 
 Modified Files:
