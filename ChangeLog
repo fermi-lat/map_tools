@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Wed Mar  3 15:21:48 PST 2004
+map_tools/src/image
+
+Modified Files:
+	Fits_IO.cxx 
+Log Message:
+move cbuf into outer scope
+    *
+------------------------------------------------------------
 User: burnett  Wed Mar  3 14:40:30 PST 2004
 map_tools/src/image
 
