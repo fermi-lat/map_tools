@@ -2,9 +2,10 @@
     @brief tools definition
     @author Toby Burnett
 
-$Id: release.notes,v 1.32 2005/01/22 03:16:45 burnett Exp $
+$Id: release.notes,v 1.33 2005/01/22 05:13:33 burnett Exp $
 @verbatim
  --------- -----  --- -----------------------------------------------------------------------
+ 20-jan-05 v5r9p3 THB gcc bug fix #2
  20-jan-05 v5r9p2 THB gcc bug fix
  20-jan-05 v5r9p1 THB adjust to tip v2r1
  01-jan-05 v5r9   THB changes to use new tip image facility.
