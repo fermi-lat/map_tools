@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Mar 11 06:50:49 PST 2004
+map_tools/map_tools
+
+Modified Files:
+	SkyImage.h 
+Log Message:
+fix warnings, allow filling other layers
+    *
+------------------------------------------------------------
 User: burnett  Thu Mar 11 06:49:06 PST 2004
 map_tools/src
 
