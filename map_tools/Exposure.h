@@ -2,7 +2,7 @@
     @brief definition of the class Exposure
 
     @author T.Burnett
-    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Exposure.h,v 1.1.1.1 2004/02/21 21:47:26 burnett Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Exposure.h,v 1.2 2004/02/23 02:44:36 burnett Exp $
 */
 #ifndef MAP_TOOLS_EXPOSURE_H
 #define MAP_TOOLS_EXPOSURE_H
@@ -72,8 +72,10 @@ public:
     typedef   std::vector<float> ExposureCube;
 
     //! constructor from external source
-
     Exposure(const ExposureCube& cube, double total);
+
+    //! constructor from a file
+    Exposure(const std::string& filename);
 
     /** @class Exposure::Aeff
 

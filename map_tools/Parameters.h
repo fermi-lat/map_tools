@@ -2,7 +2,7 @@
 * @file Parameters.h
 * @brief Tool Input Parameter Reader base class
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Parameters.h,v 1.1.1.1 2004/02/21 21:47:26 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Parameters.h,v 1.2 2004/02/23 02:44:36 burnett Exp $
 */
 #ifndef PARAMETERS_H
 #define PARAMETERS_H 
@@ -20,7 +20,7 @@
 *
 * @author Toby Burnett [originally from Sandhia Bansall]
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Parameters.h,v 1.1.1.1 2004/02/21 21:47:26 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Parameters.h,v 1.2 2004/02/23 02:44:36 burnett Exp $
 */
 
 #include <map>
@@ -38,7 +38,6 @@ public:
     const std::string &inputFile() const   { return m_eventFile; }
     const std::string &filter() const      { return m_filter; }
     const std::string &outputFile() const  { return m_oname; }
-    const std::string &templateFile() const  { return m_templateFile; }
     static bool verboseMode()              { return s_verboseMode; }
     static bool clobber()                  { return s_clobber; }
     static short chatter()                 { return s_chatter; }
@@ -65,7 +64,6 @@ private:
     std::string   m_eventFile;
     std::string   m_oname;
     std::string   m_filter;
-    std::string   m_templateFile;
     DoubleDict m_dictionary;
 
     static std::string s_tool;

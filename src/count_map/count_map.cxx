@@ -1,7 +1,7 @@
 /** @file count_map.cxx
     @brief build the count_map application
 
-    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/count_map/count_map.cxx,v 1.1.1.1 2004/02/21 21:47:26 burnett Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/count_map/count_map.cxx,v 1.2 2004/02/23 02:44:36 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -10,7 +10,7 @@
 #include "tuple/ITable.h"
 #include "astro/SkyDir.h"
 
-#include "table/FitsService.h"
+#include "image/Image.h" 
 
 #include <algorithm>
 namespace cmap { // for count_map helper classes
@@ -50,21 +50,15 @@ int main(int argc, char * argv[]) {
         tuple::ITable::Factory& tableFactory = * tuple::ITable::Factory::instance();
         tuple::ITable& table = *tableFactory( pars.eventFile() , "", pars.filter());
 
-        // open output file
-        table::FitsService iosrv;
-        iosrv.createNewFile(pars.outputFile(), pars.templateFile());
-
         // create the image object
         SkyImage image(pars);
+
         // define a function opject to analyze each row, then apply it to all selected rows
         AddCount count(pars, table, image);
         std::for_each( table.begin(), table.end(), count);
 
         std::cout << "Total added to image: " << image.total() << std::endl;
-
-        image.write(&iosrv);
-        iosrv.closeFile();
-
+ 
     }catch( const std::exception& e){
         std::cerr << "caught exception: " << e.what() << std::endl;
         return 1;
