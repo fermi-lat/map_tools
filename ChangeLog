@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Tue Mar  2 15:24:58 PST 2004
+map_tools/src/test
+
+Modified Files:
+	test_main.cxx 
+Log Message:
+add access to Header attributes, encapsulating the cast
+    *
+------------------------------------------------------------
+User: jchiang  Tue Mar  2 15:24:58 PST 2004
 map_tools/src/image
 
 Modified Files:
