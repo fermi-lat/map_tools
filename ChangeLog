@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Wed Mar  3 13:38:28 PST 2004
+map_tools/src/image
+
+Modified Files:
+	Fits_IO.cxx Header.cxx Header.h 
+Log Message:
+fix up HeaderFits2Root a bit; test Exposure(fitsfile) constructor
+    *
+------------------------------------------------------------
+User: jchiang  Wed Mar  3 13:38:28 PST 2004
 map_tools/src
 
 Modified Files:
