@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sat Feb 28 08:13:21 PST 2004
+map_tools/src
+
+Modified Files:
+	SkyImage.cxx 
+Log Message:
+gcc fixes
+    *
+------------------------------------------------------------
 User: burnett  Sat Feb 28 06:20:23 PST 2004
 map_tools/src/table
 
