@@ -1,22 +1,4 @@
 ------------------------------------------------------------
-User: burnett  Thu Mar  4 06:52:34 PST 2004
-map_tools/src/test
-
-Modified Files:
-	test_main.cxx 
-Log Message:
-use tmp for test output, and parameter to resolve env vars.
-    *
-------------------------------------------------------------
-User: burnett  Thu Mar  4 06:52:34 PST 2004
-map_tools/pfiles
-
-Modified Files:
-	test_map_tools.par 
-Log Message:
-use tmp for test output, and parameter to resolve env vars.
-    *
-------------------------------------------------------------
 User: burnett  Thu Mar  4 05:03:00 PST 2004
 map_tools/src
 
