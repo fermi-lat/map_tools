@@ -2,7 +2,7 @@
     @brief definition of the class Exposure
 
     @author T.Burnett
-    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Exposure.h,v 1.12 2005/03/04 01:39:21 burnett Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Exposure.h,v 1.13 2005/03/04 06:05:42 burnett Exp $
 */
 #ifndef MAP_TOOLS_EXPOSURE_H
 #define MAP_TOOLS_EXPOSURE_H
@@ -81,7 +81,7 @@ public:
     /// this is deprecated, here only for Likelihood
     class Aeff {
     public: 
-      double operator()(double costh)const=0;
+      virtual double operator()(double costh)const=0;
     };
 private:
 };
