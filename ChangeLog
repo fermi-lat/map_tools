@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Nov 11 19:50:43 PST 2004
+map_tools/pfiles
+
+Modified Files:
+	count_map.par exposure_cube.par exposure_map.par 
+Log Message:
+development to deal with irfResponse effective area, reading text-format history, more doxy tool description.
+    *
+------------------------------------------------------------
 User: burnett  Thu Nov 11 19:50:42 PST 2004
 map_tools/map_tools
 
