@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sat Feb 21 20:59:22 PST 2004
+map_tools/map_tools
+
+Modified Files:
+	SkyImage.h 
+Log Message:
+gcc warnings
+    *
+------------------------------------------------------------
 User: burnett  Sat Feb 21 20:56:06 PST 2004
 map_tools/src
 
