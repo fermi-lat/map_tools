@@ -1,4 +1,4 @@
-# $Header: /nfs/slac/g/glast/ground/cvs/map_tools/pfiles/exposure_map.par,v 1.2 2004/03/02 17:16:20 burnett Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/map_tools/pfiles/exposure_map.par,v 1.3 2004/03/31 13:58:10 burnett Exp $
 #---------------------------------------------------------------------------------------
 clobber,  b, a, "YES", , , "Overwrite existing output file?: "
 chatter,  i, a,   10,  , , , "Chatter: "
@@ -10,6 +10,7 @@ mode,     s, a,  "h",   , ,""
 #---------------------------------------------------------------------------------------
 #
 infile,  f, a, "$(OUTFILES)/expcube_1day.fits", , , "Name of the exposure cube input file:"
+table_name,s,a,"",,,"name of the extension or ROOT tree"
 filter,   s, a, "", , , "filter expression:"
 outfile,  f, a, "$(OUTFILES)/exp_1_day_ait.fits", , , "Name of the exposure output file:"
 #
