@@ -2,7 +2,7 @@
 * @file Parameters.h
 * @brief Tool Input Parameter Reader base class
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Parameters.h,v 1.10 2004/03/31 13:32:45 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Parameters.h,v 1.11 2004/04/25 23:45:13 burnett Exp $
 */
 #ifndef MAP_TOOLS_PARAMETERS_H
 #define MAP_TOOLS_PARAMETERS_H 
@@ -33,7 +33,7 @@ public:
     //! @brief ctor with hoops already set up
     Parameters( hoops::IParGroup& par);
 
-    ~Parameters();
+    ~Parameters() throw() ;
 
     template< typename T>
         T getValue(const std::string & name){ return m_par[name];}
