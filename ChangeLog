@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sat Mar  6 03:00:16 PST 2004
+map_tools/src/exposure_cube
+
+Modified Files:
+	exposure_cube.cxx 
+Log Message:
+fix test program, gcc warnings
+    *
+------------------------------------------------------------
 User: burnett  Fri Mar  5 19:00:52 PST 2004
 map_tools/doc
 
