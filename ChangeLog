@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: burnett  Tue Mar  2 09:16:20 PST 2004
+map_tools/map_tools
+
+Modified Files:
+	Exposure.h ExposureHyperCube.h MapParameters.h Parameters.h 
+	SkyImage.h 
+Log Message:
+some refactoring; put into namespace
+    *
+------------------------------------------------------------
 User: burnett  Mon Mar  1 19:00:40 PST 2004
 map_tools/doc
 
