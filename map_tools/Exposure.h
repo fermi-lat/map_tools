@@ -2,7 +2,7 @@
     @brief definition of the class Exposure
 
     @author T.Burnett
-    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Exposure.h,v 1.11 2005/03/03 19:47:17 burnett Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Exposure.h,v 1.12 2005/03/04 01:39:21 burnett Exp $
 */
 #ifndef MAP_TOOLS_EXPOSURE_H
 #define MAP_TOOLS_EXPOSURE_H
@@ -25,6 +25,8 @@ template< class S, class C>
 class BasicExposure {
 public:
     BasicExposure(S sky):m_sky(sky), m_total(0){}
+
+    virtual ~BasicExposure(){}
 
     virtual void fill(const astro::SkyDir& dirz, double deltat)=0;
 
@@ -65,7 +67,7 @@ public:
     //! create object with specified binning
     //! @param pixelsize (deg) Approximate pixel size, in degrees
     //! @param cosbinsize bin size in the cos(theta) binner
-    Exposure(double pixelsize, double cosbinsize);
+    Exposure(double pixelsize=1., double cosbinsize=1/40);
 
     //! add a time interval at the given position
     virtual void fill(const astro::SkyDir& dirz, double deltat);
@@ -76,6 +78,11 @@ public:
     //! write out to a file.
     void write(const std::string& outputfile, const std::string& tablename="Exposure");
 
+    /// this is deprecated, here only for Likelihood
+    class Aeff {
+    public: 
+      double operator()(double costh)const=0;
+    };
 private:
 };
 
