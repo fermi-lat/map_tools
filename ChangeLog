@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sun Apr 25 16:45:13 PDT 2004
+map_tools/map_tools
+
+Modified Files:
+	Parameters.h 
+Log Message:
+add table_name to parameter files, and set for update
+    *
+------------------------------------------------------------
 User: burnett  Wed Apr 21 14:36:45 PDT 2004
 map_tools/doc
 
