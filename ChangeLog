@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Wed Mar  3 13:38:29 PST 2004
+map_tools/src/test
+
+Modified Files:
+	test_main.cxx 
+Log Message:
+fix up HeaderFits2Root a bit; test Exposure(fitsfile) constructor
+    *
+------------------------------------------------------------
 User: jchiang  Wed Mar  3 13:38:28 PST 2004
 map_tools/src/image
 
