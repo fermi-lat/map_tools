@@ -1,8 +1,9 @@
 SIMPLE   =                    T / File conforms to NOST standard
 BITPIX   =                  -32 / Bits per pixel
-NAXIS    =                    2 / No data is associated with this header
+NAXIS    =                    3 / No data is associated with this header
 NAXIS1   =                    1 / Length of data axis 1
 NAXIS2   =                    1 / Length of data axis 2
+NAXIS3   =                    1 / Length of data axis 3
 EXTEND   =                    T / Extensions may be present
 CTYPE1   =                      / RA---%%%, %%% represents the projection method such as AIT
 CRPIX1   =                      / Reference pixel
@@ -22,5 +23,5 @@ DATE-OBS =                      / Start Date and Time of the observation (UTC)
 DATE-END =                      / End Date and Time of the observation (UTC)
 EQUINOX  =               2000.0 / Equinox of RA & DEC specifications
 CREATOR  =                      / Software and version creating file
-HISTORY                   $Id: CountMap,v 1.1.1.1 2004/02/20 03:02:46 burnett Exp $ 
+HISTORY                   $Id: CountMap,v 1.1.1.1 2004/02/21 21:47:26 burnett Exp $ 
 END

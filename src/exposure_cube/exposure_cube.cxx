@@ -1,7 +1,7 @@
 /** @file exposure_cube.cxx
-
 @brief build the exposure_cube application
-$Header: /nfs/slac/g/glast/ground/cvs/users/burnett/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.3 2004/02/21 19:33:45 burnett Exp $
+
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.1.1.1 2004/02/21 21:47:26 burnett Exp $
 */
 
 #include "map_tools/MapParameters.h"
@@ -9,8 +9,7 @@ $Header: /nfs/slac/g/glast/ground/cvs/users/burnett/map_tools/src/exposure_cube/
 #include "map_tools/ExposureHyperCube.h"
 
 #include "tuple/ITable.h"
-
-
+namespace ecube{
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 class ExposureMapParameters : public MapParameters 
 {
@@ -24,10 +23,11 @@ public:
             getDouble("tstop");
         }
     };
+}
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 int main(int argc, char * argv[]) {
-
+    using namespace ecube;
     try{
 
         // read in, or prompt for, all necessary parameters
