@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Mon Mar  1 18:54:55 PST 2004
+map_tools/src/exposure_map
+
+Modified Files:
+	exposure_map.cxx 
+Log Message:
+remove an extraneous include
+    *
+------------------------------------------------------------
 User: burnett  Mon Mar  1 17:59:46 PST 2004
 map_tools/src
 
