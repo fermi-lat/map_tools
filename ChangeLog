@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Mar 25 03:24:04 PST 2004
+map_tools/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+fix req file problem. remove hoops from inheritance.
+    *
+------------------------------------------------------------
 User: burnett  Fri Mar 19 10:56:32 PST 2004
 map_tools/pfiles
 
