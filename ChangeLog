@@ -1,5 +1,17 @@
 ------------------------------------------------------------
 User: burnett  Sat Feb 28 08:13:21 PST 2004
+map_tools/src/image
+
+Modified Files:
+	Attr.h FitsImgIO.cxx Fits_IO.cxx Fits_IO.h Header.h 
+	IOElement.cxx VirtualIO.h 
+Added Files:
+	VirtualIO.cxx 
+Log Message:
+gcc fixes
+    *
+------------------------------------------------------------
+User: burnett  Sat Feb 28 08:13:21 PST 2004
 map_tools/src
 
 Modified Files:
