@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Mar 11 06:53:54 PST 2004
+map_tools/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+make local sets, macros  private
+    *
+------------------------------------------------------------
 User: burnett  Thu Mar 11 06:52:17 PST 2004
 map_tools/src/image
 
