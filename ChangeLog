@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: burnett  Fri Feb 27 14:40:13 PST 2004
+map_tools/src/image
+
+Added Files:
+	Error.cxx FitsImgIO.cxx Fits_IO.cxx Fits_IO.h Header.h 
+	IOElement.cxx IOElement.h Image.cxx Image.h VirtualIO.h 
+	dev_main.cxx 
+Log Message:
+New interface to reading and writing image fits files, adapted from astroroot.
+    *
+------------------------------------------------------------
 User: burnett  Fri Feb 27 14:37:28 PST 2004
 map_tools/src/image
 
