@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sat Mar  6 07:14:34 PST 2004
+map_tools/src/exposure_map
+
+Removed Files:
+	read_map.cxx 
+Log Message:
+new application- read_map
+    *
+------------------------------------------------------------
 User: burnett  Sat Mar  6 07:14:33 PST 2004
 map_tools/src/read_map
 
