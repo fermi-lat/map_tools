@@ -2,7 +2,7 @@
 @brief declare class ExposureHyperCube 
 
 @author Toby Burnett
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/ExposureHyperCube.h,v 1.8 2005/01/01 03:47:35 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/ExposureHyperCube.h,v 1.9 2005/01/01 18:56:30 burnett Exp $
 
 */
 
@@ -25,7 +25,7 @@ namespace map_tools {
     class ExposureHyperCube  {
     public:
         //! ctor
-        ExposureHyperCube( const Exposure& exp, std::string outfile);
+        ExposureHyperCube( const Exposure& exp, std::string outfile, bool clobber=true);
 
         //! dtor updates the image file
         ~ExposureHyperCube();
