@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Sat Mar 13 14:05:41 PST 2004
+map_tools/src/test
+
+Modified Files:
+	test_main.cxx 
+Log Message:
+add DataCube class to provide generic access to FITS image data
+    *
+------------------------------------------------------------
+User: jchiang  Sat Mar 13 14:05:41 PST 2004
 map_tools/src/image
 
 Modified Files:
