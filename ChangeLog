@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sat Apr  3 07:05:18 PST 2004
+map_tools/src
+
+Modified Files:
+	Parameters.cxx 
+Log Message:
+put in a Prompt
+    *
+------------------------------------------------------------
 User: burnett  Fri Apr  2 15:13:54 PST 2004
 map_tools/src/exposure_cube
 
