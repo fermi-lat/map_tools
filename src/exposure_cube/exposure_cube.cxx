@@ -2,7 +2,7 @@
 @brief build the exposure_cube application
 
 @author Toby Burnett
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.13 2004/04/02 23:13:54 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.14 2004/04/05 17:04:45 burnett Exp $
 */
 
 #include "map_tools/MapParameters.h"
@@ -32,9 +32,9 @@ public:
             tstop = pars["tstop"];
 
         // connect to  input data
-        Table & table = *tip::IFileSvc::getSvc().editTable(pars.inputFile(), "Ext1");
+        const Table & table = *tip::IFileSvc::getSvc().readTable(pars.inputFile(), "Ext1");
 
-        for (Table::Iterator it = table.begin(); it != table.end(); ++it) {
+        for (Table::ConstIterator it = table.begin(); it != table.end(); ++it) {
 
             const Table::Record & record = *it;
 
