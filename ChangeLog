@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Thu Mar  3 05:19:29 PST 2005
+map_tools/map_tools
+
+Modified Files:
+	CosineBinner.h 
+Log Message:
+bug fix patch tag
+    *
+------------------------------------------------------------
+User: burnett  Thu Mar  3 05:19:29 PST 2005
 map_tools/doc
 
 Modified Files:
