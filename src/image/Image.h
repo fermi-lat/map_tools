@@ -4,7 +4,7 @@
      @author Toby Burnett
      Code orginally written by Riener Rohlfs
 
-     $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/image/Image.h,v 1.3 2004/03/03 15:42:13 burnett Exp $
+     $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/image/Image.h,v 1.4 2004/03/10 20:43:47 burnett Exp $
 */
 
 #ifndef ROOT_TFImage_H
@@ -41,7 +41,7 @@ public:
     const std::vector<long> & getAxisSize()const{return m_axisSize;}
     unsigned int   pixelCount()const;
 
-    operator  Image<float> * ();
+  // operator  Image<float> * ();
 
 protected:
     static BaseImage* readImage(const std::string & fileName, const std::string & name,  
@@ -83,6 +83,9 @@ public:
     //! const access to data array
     const std::vector<T> &    data() const   {return m_data;}
 
+    //! simple index
+    T  operator[](int k)const {return m_data[k];}
+
     //! writable access to data
     std::vector<T> &    data()   {return m_data;}
 
@@ -110,7 +113,7 @@ typedef    Image<int>      IntImg;
 //_____________________________________________________________________________
 //_____________________________________________________________________________
 
-inline BaseImage::operator Image<float> * () {return dynamic_cast <FloatImg *>(this);}
+//? inline BaseImage::operator Image<float> * () {return dynamic_cast <FloatImg *>(this);}
 
 
 
