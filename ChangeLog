@@ -1,5 +1,16 @@
 ------------------------------------------------------------
 User: burnett  Sat Feb 28 13:04:55 PST 2004
+map_tools/src/image
+
+Modified Files:
+	Attr.h FitsImgIO.cxx Fits_IO.cxx Fits_IO.h Header.h 
+	IOElement.cxx IOElement.h Image.cxx Image.h VirtualIO.cxx 
+	VirtualIO.h 
+Log Message:
+put in lots of doxy comments. 
+    *
+------------------------------------------------------------
+User: burnett  Sat Feb 28 13:04:55 PST 2004
 map_tools/src/exposure_map
 
 Modified Files:
