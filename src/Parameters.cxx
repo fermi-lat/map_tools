@@ -3,7 +3,7 @@
 * @brief Implementation for class that reads parameters needed for tools
 * @author Toby Burnett
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Parameters.cxx,v 1.13 2004/04/02 23:13:54 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Parameters.cxx,v 1.14 2004/04/03 15:05:18 burnett Exp $
 */
 
 #include <sstream>
@@ -39,6 +39,7 @@ void Parameters::setup()
       // Prompt for all parameters in the order in the par file:
 
     dynamic_cast<hoops::ParPromptGroup&>(m_par).Prompt();
+     dynamic_cast<hoops::ParPromptGroup&>(m_par).Save();
     m_chatter = m_par["chatter"];
 
     m_clobber = m_par["clobber"];
@@ -54,6 +55,9 @@ void Parameters::setup()
     std::string outfile = m_par["outfile"];
     m_outFile = outfile;
     facilities::Util::expandEnvVar(&m_outFile);
+
+    std::string table_name = m_par["table_name"];
+    m_table_name = table_name;
 
     if( m_clobber ) m_outFile= "!"+m_outFile;  // FITS convention to rewrite file
 
