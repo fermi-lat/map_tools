@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: burnett  Sat Feb 21 16:17:11 PST 2004
+map_tools/cmt
+
+Modified Files:
+	.cvsignore requirements 
+Removed Files:
+	NMake cleanup.bat setup.bat 
+Log Message:
+about to tag 
+    *
+------------------------------------------------------------
 User: burnett  Sat Feb 21 15:51:11 PST 2004
 map_tools/src
 
