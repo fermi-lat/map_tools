@@ -2,7 +2,7 @@
 @brief declare class ExposureHyperCube 
 
 @author Toby Burnett
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/ExposureHyperCube.h,v 1.9 2005/01/01 18:56:30 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/ExposureHyperCube.h,v 1.10 2005/01/04 21:20:07 burnett Exp $
 
 */
 
@@ -33,7 +33,7 @@ namespace map_tools {
         //! saves the image
         void save();
     private:
-        //! pointer to the associated tip Image class
+        //! pointer to the associated tip Image object
         tip::Image* m_image;
     };
 }// namespace map_tools

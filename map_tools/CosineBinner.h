@@ -3,7 +3,7 @@
 
 @author T. Burnett
 
-$Header$
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/CosineBinner.h,v 1.1 2005/02/06 04:16:06 burnett Exp $
 */
 
 #ifndef map_toos_CosineBinner_h
@@ -42,6 +42,10 @@ public:
         return sum; 
 
     }
+
+    /// define the binning scheme with class (static) variables
+    static void setBinning(double cosmin=0., size_t nbins=40, bool sqrt_weight=true){
+        s_cosmin=cosmin, s_nbins=nbins, s_sqrt_weight=sqrt_weight;}
 
     static std::string thetaBinning();
 
