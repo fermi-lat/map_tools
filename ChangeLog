@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sat Mar  6 07:14:33 PST 2004
+map_tools/src
+
+Modified Files:
+	ExposureHyperCube.cxx mainpage.h 
+Log Message:
+new application- read_map
+    *
+------------------------------------------------------------
 User: burnett  Sat Mar  6 03:45:48 PST 2004
 map_tools/src/read_map
 
