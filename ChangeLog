@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Wed Mar  3 14:40:30 PST 2004
+map_tools/src/image
+
+Modified Files:
+	Fits_IO.cxx Fits_IO.h IOElement.cxx IOElement.h VirtualIO.h 
+Log Message:
+finally clean up writing fits header, get rid of astroroot legacy static functions for read/write header
+    *
+------------------------------------------------------------
 User: jchiang  Wed Mar  3 14:03:27 PST 2004
 map_tools/src/test
 
