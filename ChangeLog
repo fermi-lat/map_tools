@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sun Jun  6 12:12:16 PDT 2004
+map_tools/src
+
+Modified Files:
+	SkyImage.cxx 
+Log Message:
+implement default image size for common projections
+    *
+------------------------------------------------------------
 User: burnett  Sat Jun  5 14:12:29 PDT 2004
 map_tools/doc
 
