@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Wed Mar  3 07:42:13 PST 2004
+map_tools/src/test
+
+Modified Files:
+	test_main.cxx 
+Log Message:
+switch back to vector
+    *
+------------------------------------------------------------
+User: burnett  Wed Mar  3 07:42:13 PST 2004
 map_tools/src/image
 
 Modified Files:
