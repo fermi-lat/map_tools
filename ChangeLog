@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sun Feb 22 20:29:32 PST 2004
+map_tools/src/exposure_map
+
+Modified Files:
+	exposure_map.cxx 
+Log Message:
+gcc fix; forgot to add test main
+    *
+------------------------------------------------------------
 User: burnett  Sun Feb 22 18:44:36 PST 2004
 map_tools/src/table
 
