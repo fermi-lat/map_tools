@@ -1,7 +1,8 @@
 /** @file ExposureHyperCube.h
     @brief declare class ExposureHyperCube 
 
-    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/ExposureHyperCube.h,v 1.2 2004/02/23 02:44:36 burnett Exp $
+    @author Toby Burnett
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/ExposureHyperCube.h,v 1.3 2004/02/28 14:20:22 burnett Exp $
 
 */
 
