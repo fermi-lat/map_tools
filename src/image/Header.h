@@ -4,7 +4,7 @@
      @author Toby Burnett
      Code orginally written by Riener Rohlfs
 
-     $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/image/Header.h,v 1.6 2004/03/03 02:03:00 jchiang Exp $
+     $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/image/Header.h,v 1.7 2004/03/03 15:42:13 burnett Exp $
 */
 #ifndef HEADER_H
 #define HEADER_H
@@ -48,6 +48,8 @@ public:
                                      + name + " not found.");
       }         
    }
+
+   void getAttributeNames(std::vector<std::string> & names) const;
 
    void setName(const std::string name){m_name=name;}
 

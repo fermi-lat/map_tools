@@ -4,7 +4,7 @@
  * @authors T. Burnett, J. Chiang
  * Original code from Riener Rohlfs
  *
- * $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/image/Header.cxx,v 1.3 2004/03/03 02:03:00 jchiang Exp $
+ * $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/image/Header.cxx,v 1.4 2004/03/03 15:42:13 burnett Exp $
  */
 
 #include "Header.h"
@@ -58,4 +58,12 @@ const BaseAttr & Header::operator[](const std::string & name) const {
 
    throw std::runtime_error("Header::::operator[]: attribute "
                                + name + " not found.");
+}
+
+void Header::getAttributeNames(std::vector<std::string> & names) const {
+   names.clear();
+   Header::const_iterator it = begin();
+   for ( ; it != end(); ++it) {
+      names.push_back((*it)->name());
+   }
 }
