@@ -2,9 +2,10 @@
     @brief tools definition
     @author Toby Burnett
 
-$Id: release.notes,v 1.21 2004/04/27 17:09:19 burnett Exp $
+$Id: release.notes,v 1.22 2004/04/30 21:27:10 jchiang Exp $
 @verbatim
  --------- -----  --- -----------------------------------------------------------------------
+ 05-jun-04 v5r5   THB convert to use new astro::SkyProj, requiring astro v1* 
  30-apr-04 v5r4p4 JC  fix buffer overrun on Windows when reading long FITS HISTORY cards
  27-apr-04 v5r432 THB add throw() to StApp subclass destructors, required by StApp.
  26-apr-04 v5r4p2 THB add throw() to Parameter destructor, required by StApp.
