@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Tue Apr 27 10:08:09 PDT 2004
+map_tools/src/count_map
+
+Modified Files:
+	count_map.cxx 
+Log Message:
+add explicit destructors with empty throw spec, as needed by StApp
+    *
+------------------------------------------------------------
 User: burnett  Mon Apr 26 14:47:11 PDT 2004
 map_tools/doc
 
