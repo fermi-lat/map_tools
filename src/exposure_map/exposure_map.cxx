@@ -3,7 +3,7 @@
 
 @author Toby Burnett
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.9 2004/03/25 12:44:51 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.10 2004/03/31 13:32:45 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -29,6 +29,7 @@ public:
     class Aeff : public Exposure::Aeff{
     public:
         Aeff(double cutoff=0.25):m_cutoff(cutoff){}
+
         double operator()(double costh) const
         {
             if(m_cutoff==2.) return 1.0;
@@ -60,7 +61,7 @@ public:
 
     void run() {
         // read in, or prompt for, all necessary parameters
-        MapParameters pars( hoopsGetParGroup());
+        MapParameters pars( IApp::hoopsGetParGroup());
 
         // create the exposure, read it in from the FITS input file
         Exposure ex(pars.inputFile() ); 

@@ -2,7 +2,7 @@
 @brief build the exposure_cube application
 
 @author Toby Burnett
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.10 2004/03/18 19:23:42 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.11 2004/03/31 13:32:45 burnett Exp $
 */
 #include "tuple/ITable.h"
 
@@ -80,7 +80,7 @@ public:
     void run()
     {
         // read in, or prompt for, all necessary parameters
-        MapParameters pars(this->hoopsGetParGroup());
+        MapParameters pars( IApp::hoopsGetParGroup());
 
         // create the exposure, and fill it from the history file
         Exposure ex( pars["pixelsize"], pars["costhetabinsize"]);
