@@ -1,4 +1,18 @@
 ------------------------------------------------------------
+User: burnett  Sat Feb 28 06:20:23 PST 2004
+map_tools/src/image
+
+Modified Files:
+	Fits_IO.cxx Header.h 
+Added Files:
+	Attr.h 
+Removed Files:
+	Error.cxx 
+Log Message:
+New interface to reading and writing image fits files, adapted from astroroot.
+about to tag v2r0
+    *
+------------------------------------------------------------
 User: burnett  Sat Feb 28 06:20:22 PST 2004
 map_tools/src/exposure_map
 
