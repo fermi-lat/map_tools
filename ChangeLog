@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: burnett  Fri Mar  4 07:33:50 PST 2005
+map_tools/map_tools
+
+Modified Files:
+	Exposure.h 
+Added Files:
+	ExposureHyperCube.h 
+Log Message:
+restore this file since Likelihood needs it
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r10p6, operation: add
 Package: map_tools
