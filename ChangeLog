@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Wed Apr 21 13:01:29 PDT 2004
+map_tools/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+convert to STapp
+    *
+------------------------------------------------------------
 User: burnett  Wed Apr 21 12:53:30 PDT 2004
 map_tools/src/exposure_cube
 
