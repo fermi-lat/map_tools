@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Wed Jun 22 10:58:44 PDT 2005
+map_tools/src
+
+Modified Files:
+	Exposure.cxx 
+Log Message:
+make sure get last entry when making map
+    *
+------------------------------------------------------------
 User: burnett  Wed Jun 22 10:57:19 PDT 2005
 map_tools/src
 
