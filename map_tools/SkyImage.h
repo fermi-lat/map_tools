@@ -3,7 +3,7 @@
     @brief declare  the class SkyImage
 
     @author Toby Burnett <tburnett@u.washington.edu>
-    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/SkyImage.h,v 1.20 2005/01/01 03:47:35 burnett Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/SkyImage.h,v 1.21 2005/02/24 19:54:57 burnett Exp $
 
 */
 
@@ -15,7 +15,7 @@
 
 #include <string>
 #include <vector>
-namespace tip { class Image; }
+#include "tip/Image.h"
 
 namespace astro { class SkyDir; }
 

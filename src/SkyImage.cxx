@@ -1,7 +1,7 @@
 /** @file SkyImage.cxx
 
 @brief implement the class SkyImage
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/SkyImage.cxx,v 1.37 2005/02/06 04:18:32 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/SkyImage.cxx,v 1.38 2005/02/06 19:52:23 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -9,7 +9,6 @@ $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/SkyImage.cxx,v 1.37 2005/02/
 
 #include "astro/SkyDir.h"
 #include "astro/SkyFunction.h"
-#include "tip/Image.h"
 #include "tip/IFileSvc.h"
 #include <stdexcept>
 #include <sstream>
