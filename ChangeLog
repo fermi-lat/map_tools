@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Wed Jun 22 10:55:32 PDT 2005
+map_tools/src
+
+Modified Files:
+	SkyImage.cxx 
+Log Message:
+new Image class is templated.
+    *
+------------------------------------------------------------
+User: burnett  Wed Jun 22 10:55:32 PDT 2005
 map_tools/map_tools
 
 Modified Files:
