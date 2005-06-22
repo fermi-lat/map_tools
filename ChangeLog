@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Wed Jun 22 10:55:32 PDT 2005
+map_tools/map_tools
+
+Modified Files:
+	SkyImage.h 
+Log Message:
+new Image class is templated.
+    *
+------------------------------------------------------------
 User: burnett  Fri Apr  8 15:12:16 PDT 2005
 map_tools/pfiles
 
