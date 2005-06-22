@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Wed Jun 22 10:57:19 PDT 2005
+map_tools/map_tools
+
+Modified Files:
+	HealpixArrayIO.h 
+Log Message:
+convert to use auto_prt
+    *
+------------------------------------------------------------
 User: burnett  Wed Jun 22 10:55:32 PDT 2005
 map_tools/src
 
