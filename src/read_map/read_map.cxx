@@ -3,7 +3,7 @@
 
      @author Toby Burnett
 
-     $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/read_map/read_map.cxx,v 1.7 2004/06/02 01:17:11 burnett Exp $
+     $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/read_map/read_map.cxx,v 1.8 2004/12/22 23:31:26 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -25,10 +25,6 @@ int main(int argc, char * argv[]) {
 
         std::cout << "Reading FITS input file " << pars.inputFile() << std::endl;
         SkyImage image(pars.inputFile(), pars.tableName()); 
-
-        std::cout << "Value of pixel at l, b: "<< pars["ra"]<< ", "<< pars["dec"] << ": "
-        <<image(astro::SkyDir(pars["ra"],pars["dec"],astro::SkyDir::GALACTIC)) 
-        << std::endl;
 
         std::cout << "Creating copy at file " << pars.outputFile() << std::endl;
         SkyImage copy(pars);
