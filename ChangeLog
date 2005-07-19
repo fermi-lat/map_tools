@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Tue Jul 19 15:44:16 PDT 2005
+map_tools/src/exposure_cube
+
+Modified Files:
+	exposure_cube.cxx 
+Log Message:
+needed namespace for a GPS call
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r13, operation: add
 Package: map_tools
