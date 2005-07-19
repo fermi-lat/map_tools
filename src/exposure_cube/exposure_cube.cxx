@@ -2,7 +2,7 @@
 @brief build the exposure_cube application
 
 @author Toby Burnett
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.27 2005/03/05 22:51:54 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.28 2005/03/06 20:51:40 burnett Exp $
 */
 
 #include "map_tools/Parameters.h"
@@ -65,6 +65,7 @@ public:
     //--------------------------------------------------------------------------
     void loadExposureWithGPS(Exposure& exp, const std::string& inputFile, const Exposure::GTIvector& gti )
     {
+        using astro::GPS;
 
         double 
             tstart = gti.front().first,
