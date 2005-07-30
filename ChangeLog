@@ -1,4 +1,17 @@
 ------------------------------------------------------------
+User: mcenery  Sat Jul 30 12:04:00 PDT 2005
+map_tools/map_tools
+
+Modified Files:
+	Exposure.h 
+Log Message:
+Add zenith cuts so that we don't increment the exposure in part of the 
+sky occulted by the Earth. The Exposure::fill() method has been changed
+to require an additional argument (the direction of zenith).
+
+
+    *
+------------------------------------------------------------
 User: burnett  Tue Jul 19 15:44:16 PDT 2005
 map_tools/src/exposure_cube
 
