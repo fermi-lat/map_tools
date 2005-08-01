@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: mcenery  Sun Jul 31 17:16:35 PDT 2005
+map_tools/src
+
+Modified Files:
+	Exposure.cxx 
+Log Message:
+Make yesterdays changes backwards compatible.
+
+    *
+------------------------------------------------------------
 User: mcenery  Sun Jul 31 17:16:34 PDT 2005
 map_tools/map_tools
 
