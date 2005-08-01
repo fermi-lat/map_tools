@@ -2,7 +2,7 @@
     @brief definition of the class Exposure
 
     @author T.Burnett
-    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Exposure.h,v 1.17 2005/03/06 20:51:40 burnett Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Exposure.h,v 1.18 2005/07/30 19:04:00 mcenery Exp $
 */
 #ifndef MAP_TOOLS_EXPOSURE_H
 #define MAP_TOOLS_EXPOSURE_H
@@ -32,6 +32,7 @@ public:
 
     virtual ~BasicExposure(){}
 
+    virtual void fill(const astro::SkyDir& dirz, double deltat)=0;
     virtual void fill(const astro::SkyDir& dirz, const astro::SkyDir& dirzenith, double deltat)=0;
 
     template<class F>
@@ -73,6 +74,7 @@ public:
     Exposure(double pixelsize=1., double cosbinsize=1./CosineBinner::s_nbins);
 
     //! add a time interval at the given position
+    virtual void fill(const astro::SkyDir& dirz, double deltat);
     virtual void fill(const astro::SkyDir& dirz, const astro::SkyDir& dirzenith, double deltat);
 
     //! create object from the data file (FITS for now)
