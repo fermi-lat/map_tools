@@ -1,7 +1,7 @@
 /** @file Exposure.cxx
     @brief Implementation of class Exposure
 
-   $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Exposure.cxx,v 1.23 2005/06/22 17:58:44 burnett Exp $
+   $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Exposure.cxx,v 1.25 2005/07/30 19:26:55 mcenery Exp $
 */
 #include "map_tools/Exposure.h"
 #include "map_tools/HealpixArrayIO.h"
@@ -44,6 +44,17 @@ Exposure::Exposure(double pixelsize, double cosbinsize)
     }
 }
 
+void Exposure::fill(const astro::SkyDir& dirz, double deltat)
+{
+    SkyBinner::iterator is = data().begin();
+    for( ; is != data().end(); ++is){ // loop over all pixels
+        CosineBinner & pixeldata= *is; // get the contents of this pixel
+        astro::SkyDir pdir = data().dir(is); // dir() is defined in HealpixArray.h
+        double costh = pdir().dot(dirz());
+	pixeldata.fill(costh, deltat); // fill() is defined in CosineBinner.h
+    }
+    addtotal(deltat);
+}
 
 void Exposure::fill(const astro::SkyDir& dirz, const astro::SkyDir& dirzenith, double deltat)
 {
