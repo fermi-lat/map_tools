@@ -2,9 +2,10 @@
     @brief tools definition
     @author Toby Burnett
 
-$Id: release.notes,v 1.45 2005/03/06 20:54:31 burnett Exp $
+$Id: release.notes,v 1.46 2005/06/22 18:03:09 burnett Exp $
 @verbatim
  --------- -----  --- -----------------------------------------------------------------------
+ 10-aug-05 v5r14  THB remove all executables but exposure_map and exposure_cube from being built
  22-jun-05 v5r13  THB various fixes, including adjust to new tip/Image
  05-mar-05 v5r12p1THB enable selection of number of cosine bins in Exposure constructor
  05-mar-05 v5r12  THB remove deprectated interfaces; add Exposure::load
