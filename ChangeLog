@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Wed Aug 10 12:37:16 PDT 2005
+map_tools/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+remove executables
+    *
+------------------------------------------------------------
 User: mcenery  Sun Jul 31 17:16:35 PDT 2005
 map_tools/src
 
