@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Wed Aug 10 12:37:16 PDT 2005
+map_tools/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+remove executables
+    *
+------------------------------------------------------------
+User: burnett  Wed Aug 10 12:37:16 PDT 2005
 map_tools/cmt
 
 Modified Files:
