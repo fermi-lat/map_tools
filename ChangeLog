@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: burnett  Wed Sep 21 20:07:44 PDT 2005
+map_tools/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+implement possibilty to use all defined irfs.
+tagging.
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r14, operation: add
 Package: map_tools
