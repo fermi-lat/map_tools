@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: burnett  Wed Sep 21 20:07:44 PDT 2005
+map_tools/src/exposure_map
+
+Modified Files:
+	exposure_map.cxx 
+Log Message:
+implement possibilty to use all defined irfs.
+tagging.
+    *
+------------------------------------------------------------
+User: burnett  Wed Sep 21 20:07:44 PDT 2005
 map_tools/pfiles
 
 Modified Files:
