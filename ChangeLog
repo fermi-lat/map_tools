@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: burnett  Wed Sep 21 20:07:44 PDT 2005
+map_tools/pfiles
+
+Modified Files:
+	exposure_cube.par exposure_map.par 
+Log Message:
+implement possibilty to use all defined irfs.
+tagging.
+    *
+------------------------------------------------------------
+User: burnett  Wed Sep 21 20:07:44 PDT 2005
 map_tools/doc
 
 Modified Files:
