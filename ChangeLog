@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Fri Oct 21 14:55:40 PDT 2005
+map_tools/src
+
+Modified Files:
+	HealpixArrayIO.cxx SkyImage.cxx 
+Log Message:
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r15, operation: add
 Package: map_tools
