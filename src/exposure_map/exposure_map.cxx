@@ -5,7 +5,7 @@
 
 See the <a href="exposure_map_guide.html"> user's guide </a>.
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.20 2005/02/24 19:54:57 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.21 2005/09/22 03:07:44 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -125,7 +125,7 @@ public:
             {
                 // should use accumulate here
                 double value = m_aeff[0]->value(energy, theta, phi);
-                for( int i = 1; i < m_aeff.size(); ++i){
+                for( unsigned int i = 1; i < m_aeff.size(); ++i){
                     value+=m_aeff[i]->value(energy, theta, phi);
                 }
                 return value;
