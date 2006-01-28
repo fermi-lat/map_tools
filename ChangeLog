@@ -1,22 +1,4 @@
 ------------------------------------------------------------
-User: burnett  Sat Jan 28 04:22:12 PST 2006
-map_tools/src
-
-Modified Files:
-	SkyImage.cxx 
-Log Message:
-implement full-sky option for newest constructor
-    *
-------------------------------------------------------------
-User: burnett  Sat Jan 28 04:22:10 PST 2006
-map_tools/map_tools
-
-Modified Files:
-	SkyImage.h 
-Log Message:
-implement full-sky option for newest constructor
-    *
-------------------------------------------------------------
 TAG
 Tag name: ScienceToolsv6r2, operation: add
 Package: map_tools
