@@ -3,7 +3,7 @@
     @brief declare  the class SkyImage
 
     @author Toby Burnett <tburnett@u.washington.edu>
-    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/SkyImage.h,v 1.23 2005/12/10 21:28:26 burnett Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/SkyImage.h,v 1.24 2006/01/28 12:22:10 burnett Exp $
 
 */
 
@@ -51,7 +51,7 @@ public:
         @param center coords of image center
         @param outputFile FITS file to write the image to
         @param pixel_size [0.5] degree size of indivitual pixel
-        @param fov [20] (degrees0 size of field of view, square if <90, full sky if>90
+        @param fov [20] (degrees) size of field of view, square if <90, full sky if>90
         @param layers [1] number of layers to allocate
         @param ptype ["ZEA"] projection type.
         @param galactic [false] use galactic or equatorial coords
