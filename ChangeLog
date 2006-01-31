@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Tue Jan 31 07:58:19 PST 2006
+map_tools/map_tools
+
+Modified Files:
+	SkyImage.h 
+Log Message:
+a little clean up
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r16p1, operation: add
 Package: map_tools
