@@ -2,14 +2,14 @@
 * @file Parameters.h
 * @brief Tool Input Parameter Reader base class
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Parameters.h,v 1.12 2004/04/26 21:45:32 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Parameters.h,v 1.13 2005/01/01 03:47:35 burnett Exp $
 */
 #ifndef MAP_TOOLS_PARAMETERS_H
 #define MAP_TOOLS_PARAMETERS_H 
 
 #include <string>
 
-#include "hoops/hoops_group.h"
+#include "hoops/hoops_prompt_group.h"
 
 namespace map_tools {
 /**
@@ -31,7 +31,7 @@ public:
     Parameters( int argc, char *argv[]);
 
     //! @brief ctor with hoops already set up
-    Parameters( hoops::IParGroup& par);
+    Parameters( hoops::ParPromptGroup& par);
 
     ~Parameters() throw() ;
 
@@ -59,7 +59,7 @@ public:
     short chatter()     const            { return m_chatter; }
 private:
     void setup();
-     hoops::IParGroup & m_par;
+     hoops::ParPromptGroup & m_par;
     // Data Members
     std::string   m_inFile;
     std::string   m_outFile;

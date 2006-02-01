@@ -2,7 +2,7 @@
 *   @brief Implementation for class that reads parameters for image description
 * @author Toby Burnett 
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/MapParameters.cxx,v 1.11 2004/06/02 01:15:57 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/MapParameters.cxx,v 1.12 2004/06/05 16:29:38 burnett Exp $
 */
 
 #include "map_tools/MapParameters.h"
@@ -15,7 +15,7 @@ MapParameters::MapParameters(int argc, char * argv[])
 {
     setup();
 }
-MapParameters::MapParameters( hoops::IParGroup& hpar)
+MapParameters::MapParameters( hoops::ParPromptGroup& hpar)
 : Parameters(hpar)
 {
     setup();
