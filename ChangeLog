@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: peachey  Wed Feb  1 11:43:49 PST 2006
+map_tools/map_tools
+
+Modified Files:
+	MapParameters.h Parameters.h SkyImage.h 
+Log Message:
+Add new mode for creating exposure maps, in which the map geometry is read
+from an input counts map.
+
+    *
+------------------------------------------------------------
 User: burnett  Tue Jan 31 07:58:21 PST 2006
 map_tools/src
 
