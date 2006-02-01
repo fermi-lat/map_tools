@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: peachey  Wed Feb  1 11:43:56 PST 2006
+map_tools/src/exposure_map
+
+Modified Files:
+	exposure_map.cxx 
+Log Message:
+Add new mode for creating exposure maps, in which the map geometry is read
+from an input counts map.
+
+    *
+------------------------------------------------------------
 User: peachey  Wed Feb  1 11:43:55 PST 2006
 map_tools/src
 
