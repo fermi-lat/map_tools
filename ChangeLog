@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: peachey  Wed Feb  1 11:43:55 PST 2006
+map_tools/src
+
+Modified Files:
+	MapParameters.cxx Parameters.cxx SkyImage.cxx 
+Log Message:
+Add new mode for creating exposure maps, in which the map geometry is read
+from an input counts map.
+
+    *
+------------------------------------------------------------
 User: peachey  Wed Feb  1 11:43:52 PST 2006
 map_tools/pfiles
 
