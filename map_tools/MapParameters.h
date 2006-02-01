@@ -2,7 +2,7 @@
 * @file MapParameters.h
 * @brief Map Parameter Reader
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/MapParameters.h,v 1.6 2004/03/31 13:32:45 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/MapParameters.h,v 1.7 2004/06/02 01:15:57 burnett Exp $
 */
 
 #ifndef MAP_TOOLS_MAPPARAMETERS_H
@@ -24,14 +24,14 @@ namespace map_tools {
 * href="http://www-glast.slac.stanford.edu/sciencetools/userInterface/doc/pil.pdf">PIL user
 * manual</a>.
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/MapParameters.h,v 1.6 2004/03/31 13:32:45 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/MapParameters.h,v 1.7 2004/06/02 01:15:57 burnett Exp $
 */
 
 class MapParameters : public Parameters
 {
 public:
     // Constructors
-    MapParameters(hoops::IParGroup & pars);
+    MapParameters(hoops::ParPromptGroup & pars);
     MapParameters(int argc, char * argv[]);
 
     int npix() const                   { return m_npix; }

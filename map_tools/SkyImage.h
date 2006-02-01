@@ -3,7 +3,7 @@
     @brief declare  the class SkyImage
 
     @author Toby Burnett <tburnett@u.washington.edu>
-    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/SkyImage.h,v 1.24 2006/01/28 12:22:10 burnett Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/SkyImage.h,v 1.25 2006/01/31 15:58:17 burnett Exp $
 
 */
 
@@ -82,6 +82,8 @@ public:
     //! set default layer, return previous 
     unsigned int setLayer(unsigned int newlayer);
  
+    void getEnergies(std::vector<double> & energy) const { energy = m_energy; }
+
     /**
     @brief loop over all internal bins, request the intensity from a functor derived
     from SkyFunction
@@ -126,6 +128,13 @@ private:
     /// @brief internal routine to check layer, or perhaps extend
     void checkLayer(unsigned int layer)const;
 
+    /** @brief internal method to load image from a file
+        @param filename name of the file, only FITS for now
+        @param extension Name of an extension: if blank, assume primary
+        @param dim_only If true, only the geometry information will be loaded from the file, not the data
+    */
+    void loadImage(const std::string& fits_file, const std::string& extension, bool dim_only = false);
+
     //! sizes of the respective axes.
     int   m_naxis1, m_naxis2, m_naxis3;
 
@@ -136,6 +145,8 @@ private:
 
     //! the actual image data
     std::vector<float>m_imageData;
+    //! energy bounds for layers
+    std::vector<double>m_energy;
 
     unsigned int m_pixelCount;
     bool m_save; 

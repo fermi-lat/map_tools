@@ -1,4 +1,4 @@
-# $Header: /nfs/slac/g/glast/ground/cvs/map_tools/pfiles/exposure_map.par,v 1.9 2005/01/20 22:42:12 burnett Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/map_tools/pfiles/exposure_map.par,v 1.10 2005/09/22 03:07:44 burnett Exp $
 #---------------------------------------------------------------------------------------
 clobber,  b, h, "YES", , , "Overwrite existing output files with new output files"
 chatter,  i, h,   2,0,4 , , "Chattiness of output"
@@ -14,6 +14,7 @@ infile,   f,a,"",,,"Name of the exposure cube input file:"
 table,s,a,"Ext1",,,"name of the extension or ROOT tree"
 filter,   s,h,,,,"filter expression:"
 #outfile,f,a,"simple.fits",,,"output file name"
+cmfile,   f,a,"",,,"Name of input count map file whose geometry to match (NONE for no count map)"
 outfile,  f,a,"",,,"output file name"
 #
 #------------ describe the effective area -------

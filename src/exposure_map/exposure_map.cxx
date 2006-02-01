@@ -5,7 +5,7 @@
 
 See the <a href="exposure_map_guide.html"> user's guide </a>.
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.21 2005/09/22 03:07:44 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.22 2005/11/30 21:39:57 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -182,18 +182,15 @@ public:
         // create the image object, fill it from the exposure, write out
         std::clog << "Creating an Image, will write to file " << m_pars.outputFile() << std::endl;
         SkyImage image(m_pars); 
-        double ratio = sqrt(10.); //,emin= 100/ratio, emax = 1e5;
-        int layer = 0;
-        double energy = m_pars["emin"], eratio = m_pars["eratio"];
-        int layers = m_pars.getValue<int>("layers");
-        for (int layer=0; layer <layers; energy *= eratio, ++layer){
-
-            double norm = aeff!=0? aeff->value(energy,0,0): 1.0; // for normalization
+        std::vector<double> energy;
+        image.getEnergies(energy);
+        for ( std::vector<double>::size_type layer = 0; layer != energy.size(); ++layer){
+            double norm = aeff!=0? aeff->value(energy[layer],0,0): 1.0; // for normalization
             std::clog << "Generating layer " << layer
-                << " at energy " << energy << " MeV " 
+                << " at energy " << energy[layer] << " MeV " 
                 << " Aeff(0): " << norm << " cm^2"<< std::endl;
 
-            RequestExposure<IrfAeff> req(ex, IrfAeff(aeff, energy), 1.); 
+            RequestExposure<IrfAeff> req(ex, IrfAeff(aeff, energy[layer]), 1.); 
             image.fill(req, layer);
         }
     }
