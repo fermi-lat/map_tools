@@ -3,7 +3,7 @@
 
 @author T. Burnett
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/HealpixArrayIO.cxx,v 1.5 2005/10/21 21:55:40 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/HealpixArrayIO.cxx,v 1.6 2005/11/30 21:39:57 burnett Exp $
 */
 
 #include "map_tools/HealpixArrayIO.h"
@@ -12,6 +12,7 @@ $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/HealpixArrayIO.cxx,v 1.5 200
 //#define TIP_ONECOLUMNBUG // remove this when tip is fixed to allow a single column
 
 #include <cmath>
+#include <errno.h>
 #include <sstream>
 #include <string>
 #include <typeinfo>
