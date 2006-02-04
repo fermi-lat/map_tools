@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Sat Feb  4 09:47:55 PST 2006
+map_tools/pfiles
+
+Modified Files:
+	test_map_tools.par 
+Log Message:
+make MapParameters::getValue const; add needed entries to test app parfile
+    *
+------------------------------------------------------------
 User: jchiang  Sat Feb  4 09:47:54 PST 2006
 map_tools/map_tools
 
