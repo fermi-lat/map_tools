@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Sat Feb  4 09:47:54 PST 2006
+map_tools/map_tools
+
+Modified Files:
+	Parameters.h 
+Log Message:
+make MapParameters::getValue const; add needed entries to test app parfile
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r17, operation: add
 Package: map_tools
