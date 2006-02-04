@@ -2,7 +2,7 @@
 * @file Parameters.h
 * @brief Tool Input Parameter Reader base class
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Parameters.h,v 1.13 2005/01/01 03:47:35 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Parameters.h,v 1.14 2006/02/01 19:43:45 peachey Exp $
 */
 #ifndef MAP_TOOLS_PARAMETERS_H
 #define MAP_TOOLS_PARAMETERS_H 
@@ -36,10 +36,10 @@ public:
     ~Parameters() throw() ;
 
     template< typename T>
-        T getValue(const std::string & name){ return m_par[name];}
+        T getValue(const std::string & name) const { return m_par[name];}
 
      template <typename T>
-   T getValue(const std::string & name, const T & default_value) {
+   T getValue(const std::string & name, const T & default_value) const {
       try {
          return getValue<T>(name);
       } catch ( ...) {
