@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: peachey  Wed Feb  8 11:33:59 PST 2006
+map_tools/src
+
+Modified Files:
+	SkyImage.cxx 
+Log Message:
+Support computing exposure for N bin centers or N+1 bin edges using layercalc
+parameter.
+
+    *
+------------------------------------------------------------
 User: peachey  Wed Feb  8 08:46:59 PST 2006
 map_tools/src/exposure_cube
 
