@@ -5,7 +5,7 @@
 
 See the <a href="exposure_map_guide.html"> user's guide </a>.
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.23 2006/02/01 19:43:56 peachey Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.24 2006/02/08 16:10:28 peachey Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -221,6 +221,7 @@ public:
         }
     
         m_pars.Prompt("filter");
+        m_pars.Prompt("layercalc");
         m_pars.Prompt("table");
         m_pars.Prompt("chatter");
         m_pars.Prompt("clobber");
