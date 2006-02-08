@@ -5,7 +5,7 @@
 
 See the <a href="exposure_map_guide.html"> user's guide </a>.
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.24 2006/02/08 16:10:28 peachey Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.25 2006/02/08 19:34:52 peachey Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -205,7 +205,7 @@ public:
         m_pars.Prompt("resptype");
     
         std::string uc_cm_file = m_pars["cmfile"];
-        for (std::string::iterator itor = uc_cm_file.begin(); itor != uc_cm_file.end(); ++itor) *itor = toupper(*itor);
+        for ( std::string::iterator itor = uc_cm_file.begin(); itor != uc_cm_file.end(); ++itor) *itor = std::toupper(*itor);
         if ("NONE" == uc_cm_file) {
             m_pars.Prompt("numxpix");
             m_pars.Prompt("numypix");
@@ -215,13 +215,13 @@ public:
             m_pars.Prompt("yref");
             m_pars.Prompt("axisrot");
             m_pars.Prompt("proj");
-            m_pars.Prompt("layers");
             m_pars.Prompt("emin");
-            m_pars.Prompt("eratio");
+            m_pars.Prompt("emax");
+            m_pars.Prompt("enumbins");
         }
     
+        m_pars.Prompt("bincalc");
         m_pars.Prompt("filter");
-        m_pars.Prompt("layercalc");
         m_pars.Prompt("table");
         m_pars.Prompt("chatter");
         m_pars.Prompt("clobber");
