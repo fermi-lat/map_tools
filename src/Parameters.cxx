@@ -3,10 +3,9 @@
 * @brief Implementation for class that reads parameters needed for tools
 * @author Toby Burnett
 *
-* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Parameters.cxx,v 1.19 2005/01/01 03:47:36 burnett Exp $
+* $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Parameters.cxx,v 1.20 2006/02/01 19:43:52 peachey Exp $
 */
 
-#include <cctype>
 #include <sstream>
 
 #include "facilities/Util.h"
@@ -38,34 +37,7 @@ Parameters::~Parameters() throw() {
 void Parameters::setup()
 {
     // Prompt for all parameters in the order in the par file:
-
-    m_par.Prompt("infile");
-    m_par.Prompt("table");
-    m_par.Prompt("filter");
-    m_par.Prompt("cmfile");
-    m_par.Prompt("outfile");
-    m_par.Prompt("rspfunc");
-
-    std::string uc_cm_file = m_par["cmfile"];
-    for (std::string::iterator itor = uc_cm_file.begin(); itor != uc_cm_file.end(); ++itor) *itor = toupper(*itor);
-    if ("NONE" == uc_cm_file) {
-      m_par.Prompt("pixelsize");
-      m_par.Prompt("projtype");
-      m_par.Prompt("uselb");
-      m_par.Prompt("npix");
-      m_par.Prompt("npixy");
-      m_par.Prompt("xref");
-      m_par.Prompt("yref");
-      m_par.Prompt("rot");
-      m_par.Prompt("layers");
-      m_par.Prompt("emin");
-      m_par.Prompt("eratio");
-    }
-
-    m_par.Prompt("clobber");
-    m_par.Prompt("chatter");
-    m_par.Prompt("debug");
-//    m_par.Prompt("gui");
+    m_par.Prompt();
     m_par.Save();
 
     m_chatter = m_par["chatter"];
