@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: peachey  Wed Feb  8 12:18:22 PST 2006
+map_tools/src
+
+Modified Files:
+	SkyImage.cxx 
+Log Message:
+Rationalize energy binning parameters to match evtbin's logarithmic binner. Rename layercalc
+parameter to bincalc.
+
+    *
+------------------------------------------------------------
 User: peachey  Wed Feb  8 12:18:17 PST 2006
 map_tools/pfiles
 
