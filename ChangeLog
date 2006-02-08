@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: peachey  Wed Feb  8 08:46:58 PST 2006
+map_tools/src
+
+Modified Files:
+	Exposure.cxx 
+Log Message:
+Silence compiler warnings.
+
+    *
+------------------------------------------------------------
 User: peachey  Wed Feb  8 08:39:50 PST 2006
 map_tools/src
 
