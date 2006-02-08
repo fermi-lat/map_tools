@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: peachey  Wed Feb  8 08:46:59 PST 2006
+map_tools/src/exposure_cube
+
+Modified Files:
+	exposure_cube.cxx 
+Log Message:
+Silence compiler warnings.
+
+    *
+------------------------------------------------------------
 User: peachey  Wed Feb  8 08:46:58 PST 2006
 map_tools/src
 
