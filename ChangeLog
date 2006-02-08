@@ -1,4 +1,16 @@
 ------------------------------------------------------------
+User: peachey  Wed Feb  8 08:39:50 PST 2006
+map_tools/src
+
+Modified Files:
+	SkyImage.cxx 
+Log Message:
+Revert SkyImage::SkyImage(const MapParameters&) to v5r16p1 version, because
+constructor SkyImage::SkyImage(const hoops::IParGroup&) replaces it, and with the
+original behavior restored, other map_tools executables will run again.
+
+    *
+------------------------------------------------------------
 User: peachey  Wed Feb  8 08:10:28 PST 2006
 map_tools/src/exposure_map
 
