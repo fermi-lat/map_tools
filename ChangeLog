@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: peachey  Wed Feb  8 08:08:23 PST 2006
+map_tools/pfiles
+
+Modified Files:
+	exposure_map.par 
+Log Message:
+Rationalize parameter file to conform to most ScienceTools precedents.
+
+    *
+------------------------------------------------------------
 User: peachey  Wed Feb  8 07:07:48 PST 2006
 map_tools/src
 
