@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: peachey  Wed Feb  8 07:07:48 PST 2006
+map_tools/src
+
+Modified Files:
+	Parameters.cxx 
+Log Message:
+Revert to calling single Prompt() method to prompt for all parameters.
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: v5r17p1, operation: add
 Package: map_tools
