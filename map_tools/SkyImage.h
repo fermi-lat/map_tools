@@ -3,7 +3,7 @@
     @brief declare  the class SkyImage
 
     @author Toby Burnett <tburnett@u.washington.edu>
-    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/SkyImage.h,v 1.26 2006/02/01 19:43:45 peachey Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/SkyImage.h,v 1.27 2006/02/08 16:09:29 peachey Exp $
 
 */
 
@@ -135,13 +135,6 @@ private:
 
     /// @brief internal routine to check layer, or perhaps extend
     void checkLayer(unsigned int layer)const;
-
-    /** @brief internal method to load image from a file
-        @param filename name of the file, only FITS for now
-        @param extension Name of an extension: if blank, assume primary
-        @param dim_only If true, only the geometry information will be loaded from the file, not the data
-    */
-    void loadImage(const std::string& fits_file, const std::string& extension, bool dim_only = false);
 
     //! sizes of the respective axes.
     int   m_naxis1, m_naxis2, m_naxis3;
