@@ -3,7 +3,7 @@
     @brief declare  the class SkyImage
 
     @author Toby Burnett <tburnett@u.washington.edu>
-    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/SkyImage.h,v 1.27 2006/02/08 16:09:29 peachey Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/SkyImage.h,v 1.28 2006/02/08 19:34:00 peachey Exp $
 
 */
 
@@ -24,8 +24,6 @@ namespace astro { class SkyDir; }
 namespace hoops { class IParGroup; }
 
 namespace map_tools {
-class MapParameters;
-
 /**
     @class SkyImage
     @brief define an image for export to a FITS image
@@ -34,15 +32,22 @@ class MapParameters;
 class SkyImage : public astro::SkyFunction
 {
 public:
-    /** @brief constructor set up the map
-
-    @param pars an object containing all the necessary parameters
-    */
-    SkyImage(const map_tools::MapParameters& pars);
-
     /** @brief constructor set up the map using standard ScienceTools map configuration
 
     @param pars an object containing all the necessary parameters
+    @verbatim
+    cmfile
+    bincalc  determine how energy values are computed from bins using bincalc parameter.
+    numxpix,  numypix
+    enumbins
+    proj
+    pixscale
+    coordsys
+    xref, yref
+    axisrot
+    emin, emax
+    outfile, clobber
+@endverbatim
     */
     SkyImage(const hoops::IParGroup& pars);
 

@@ -1,7 +1,7 @@
 /** @file test_main.cxx
 @brief test various classes
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/test/test_main.cxx,v 1.29 2005/02/24 19:54:57 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/test/test_main.cxx,v 1.30 2005/03/05 22:51:54 burnett Exp $
 
 */
 #include "map_tools/Exposure.h"
@@ -83,19 +83,11 @@ int main(int argc, char** argv ){
         // Write out the cube...delete any existing file first.
         e.write( par.inputFile());
  
-
         // Check the Exposure(fitsfile) constructor.
         Exposure e2(par.inputFile());
 
         // Write this out as a separate file for an external diff.
         e2.write( par.outputFile());
-
-        // create an image to access cells
-    #if 0 // new healpix scheme does not create image files
-        SkyImage exp3(par.inputFile(),"");
-        double tt = exp3.pixelValue(astro::SkyDir(0,0));
-        if( tt!=36.0) throw std::runtime_error("Fail pixelvalue test!"); 
-    #endif 
 
         // now test cos
         TestCosineBinner();
