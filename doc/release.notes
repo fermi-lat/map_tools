@@ -2,9 +2,10 @@
     @brief tools definition
     @author Toby Burnett
 
-$Id: release.notes,v 1.54 2006/02/04 17:50:03 jchiang Exp $
+$Id: release.notes,v 1.55 2006/02/08 20:30:33 peachey Exp $
 @verbatim
  --------- -----  --- -----------------------------------------------------------------------
+ 04-mar-06 v6r1   THB Refactor a bit, cleaning up interfaces
  08-feb-06 v6      JP Allow computation of maps using N bin centers or N+1 bin edges, to
                       support both general use and binned likelihood. Rationalize parameters for
                       exposure_map to conform to ScienceTools conventions.
