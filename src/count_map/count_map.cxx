@@ -1,7 +1,7 @@
 /** @file count_map.cxx
 @brief build the count_map application
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/count_map/count_map.cxx,v 1.17 2005/01/01 03:47:36 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/count_map/count_map.cxx,v 1.18 2005/01/01 22:27:22 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -14,6 +14,8 @@ $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/count_map/count_map.cxx,v 1.
 #include "st_app/AppParGroup.h"
 #include "st_app/StApp.h"
 #include "st_app/StAppFactory.h"
+#include "st_app/AppParGroup.h"
+
 #include "st_stream/StreamFormatter.h"
 #include "st_stream/st_stream.h"
 #include "TSystem.h" // ROOT, for gSystem
