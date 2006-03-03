@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Fri Mar  3 12:06:21 PST 2006
+map_tools/map_tools
+
+Modified Files:
+	MapParameters.h SkyImage.h 
+Log Message:
+some refactorting following addition of new SkyImage constructor
+    *
+------------------------------------------------------------
 User: burnett  Sun Feb 19 12:41:10 PST 2006
 map_tools/src/test
 
