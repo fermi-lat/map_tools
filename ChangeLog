@@ -1,4 +1,31 @@
 ------------------------------------------------------------
+User: jchiang  Mon Mar  6 13:45:11 PST 2006
+map_tools/src/test
+
+Modified Files:
+	test_main.cxx 
+Log Message:
+comment out parts of test code that are no longer supported by MapParameters; tagging v6r1p1
+    *
+------------------------------------------------------------
+User: jchiang  Mon Mar  6 13:45:11 PST 2006
+map_tools/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+comment out parts of test code that are no longer supported by MapParameters; tagging v6r1p1
+    *
+------------------------------------------------------------
+User: jchiang  Mon Mar  6 13:45:10 PST 2006
+map_tools/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+comment out parts of test code that are no longer supported by MapParameters; tagging v6r1p1
+    *
+------------------------------------------------------------
 TAG
 Tag name: v6r1, operation: add
 Package: map_tools
