@@ -1,7 +1,7 @@
 /** @file test_main.cxx
 @brief test various classes
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/test/test_main.cxx,v 1.30 2005/03/05 22:51:54 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/test/test_main.cxx,v 1.31 2006/02/19 20:41:10 burnett Exp $
 
 */
 #include "map_tools/Exposure.h"
@@ -80,14 +80,14 @@ int main(int argc, char** argv ){
             return 1;
         }
 
-        // Write out the cube...delete any existing file first.
-        e.write( par.inputFile());
+//         // Write out the cube...delete any existing file first.
+//         e.write( par.inputFile());
  
-        // Check the Exposure(fitsfile) constructor.
-        Exposure e2(par.inputFile());
+//         // Check the Exposure(fitsfile) constructor.
+//         Exposure e2(par.inputFile());
 
-        // Write this out as a separate file for an external diff.
-        e2.write( par.outputFile());
+//         // Write this out as a separate file for an external diff.
+//         e2.write( par.outputFile());
 
         // now test cos
         TestCosineBinner();

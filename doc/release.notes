@@ -2,9 +2,11 @@
     @brief tools definition
     @author Toby Burnett
 
-$Id: release.notes,v 1.55 2006/02/08 20:30:33 peachey Exp $
+$Id: release.notes,v 1.56 2006/03/03 20:09:00 burnett Exp $
 @verbatim
  --------- -----  --- -----------------------------------------------------------------------
+ 06-mar-06 v6r1p1  JC Comment out parts of test program that are no longer
+                      supported by MapParameters
  04-mar-06 v6r1   THB Refactor a bit, cleaning up interfaces
  08-feb-06 v6      JP Allow computation of maps using N bin centers or N+1 bin edges, to
                       support both general use and binned likelihood. Rationalize parameters for
