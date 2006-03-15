@@ -3,7 +3,7 @@
 
 @author B. Lesnick
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/HealpixArrayIO.h,v 1.3 2005/03/03 14:45:14 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/HealpixArrayIO.h,v 1.4 2005/06/22 17:57:19 burnett Exp $
 */
 
 #ifndef map_tools_HealpixArrayIO_h
@@ -39,9 +39,9 @@ namespace map_tools
             
             /**@brief Write a HealpixArray<CosineBinner> object to a fits file
             @param ha Object to be output
-            @parm outputFile Fully qualified fits output file name
-            @parm tablename Fits secondary extension name
-            @parm clobber Whether to delete an existing file first */
+            @param outputFile Fully qualified fits output file name
+            @param tablename Fits secondary extension name
+            @param clobber Whether to delete an existing file first */
             std::auto_ptr<tip::Table> write(const astro::HealpixArray<CosineBinner> & ha,
                         const std::string & outputFile,
                         const std::string & tablename, bool clobber=true);
@@ -58,10 +58,10 @@ namespace map_tools
             by the number of elements passed in the fieldname argument.
             
             @param ha Object to be output
-            @parm outputFile Fully qualified fits output file name
-            @parm tablename Fits secondary extension name
-            @parm fieldname Vector of field names to be written to table.  
-            @parm clobber Whether to delete an existing file first */
+            @param outputFile Fully qualified fits output file name
+            @param tablename Fits secondary extension name
+            @param fieldname Vector of field names to be written to table.  
+            @param clobber Whether to delete an existing file first */
             std::auto_ptr<tip::Table> write(const astro::HealpixArray<std::vector<float> > & ha,
                         const std::string & outputFile,
                         const std::string & tablename,
@@ -81,9 +81,9 @@ namespace map_tools
             Note that the number of floats per record read from the file is determined
             by the number of elements passed in the fieldname argument.
             
-            @parm inputFile Fully qualified fits input file name
-            @parm tablename Fits secondary extension name
-            @parm fieldname Vector of field names to be read from the table.*/
+            @param inputFile Fully qualified fits input file name
+            @param tablename Fits secondary extension name
+            @param fieldname Vector of field names to be read from the table.*/
             astro::HealpixArray<std::vector<float> > read(const std::string & inputFile,
                         const std::string & tablename,
                         const std::vector<std::string> & fieldname);
