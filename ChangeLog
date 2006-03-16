@@ -1,31 +1,4 @@
 ------------------------------------------------------------
-User: burnett  Wed Mar 15 20:43:42 PST 2006
-map_tools/src
-
-Added Files:
-	PhotonMap.cxx 
-Log Message:
-New class that manages list of heal-pixelized photons
-    *
-------------------------------------------------------------
-User: burnett  Wed Mar 15 20:43:42 PST 2006
-map_tools/map_tools
-
-Added Files:
-	PhotonMap.h 
-Log Message:
-New class that manages list of heal-pixelized photons
-    *
-------------------------------------------------------------
-User: burnett  Wed Mar 15 20:42:26 PST 2006
-map_tools/src
-
-Modified Files:
-	SkyImage.cxx 
-Log Message:
-guard against adding photon not in current image
-    *
-------------------------------------------------------------
 User: burnett  Wed Mar 15 14:55:57 PST 2006
 map_tools/map_tools
 
