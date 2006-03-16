@@ -1,7 +1,7 @@
 /** @file PhotonMap.h
 @brief definition of class PhotonMap
 
-$Header$
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/PhotonMap.h,v 1.1 2006/03/16 04:43:42 burnett Exp $
 
 */
 #ifndef map_tools_PhotonMap_h
@@ -56,15 +56,21 @@ public:
     /// direction and energy
     astro::HealPixel pixel(const astro::Photon& gamma);
 
-    void write(const std::string& filename);
 
+    /** @brief extract a subset around a given direction
+        @param radius The maximum radius (deg)
+        @param vec the vector to fill with (count, distance(rad) ) pairs
+        @return the total number of photons (sum of count)
+    */
+    int extract(int level,const astro::SkyDir& dir, double radius, std::vector<std::pair<int, float> >& vec)const;
+    
    
     int photonCount()const { return m_photons;}
     int pixelCount()const { return m_pixels; }
 
 private:
     double m_emin;     ///< minimum energy for first bin
-    double m_eratio;   ///< ratio between energy bins
+    double m_logeratio;   ///< log10(ratio between energy bins)
     int    m_levels;   ///< number of levels to create
     int    m_minlevel; ///< level number for first pixel 
     int    m_photons;  ///< total number of photons added
