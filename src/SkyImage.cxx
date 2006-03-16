@@ -1,7 +1,7 @@
 /** @file SkyImage.cxx
 
 @brief implement the class SkyImage
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/SkyImage.cxx,v 1.50 2006/02/19 20:41:10 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/SkyImage.cxx,v 1.51 2006/03/03 20:06:22 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -254,10 +254,13 @@ unsigned int SkyImage::setLayer(unsigned int newlayer)
 void SkyImage::addPoint(const astro::SkyDir& dir, double delta, unsigned int layer)
 {
     std::pair<double,double> p= dir.project(*m_wcs);
+    // ignore if not in the image.
+    if( p.first<0 || p.first >= m_naxis1 || p.second<0 || p.second>=m_naxis2) return;
     unsigned int 
         i = static_cast<unsigned int>(p.first),
         j = static_cast<unsigned int>(p.second),
         k = i+m_naxis1*(j + layer*m_naxis2);
+    
     if(  k< m_pixelCount){
         m_imageData[k] += delta;
         m_total += delta;
