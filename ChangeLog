@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Fri Mar 24 09:24:15 PST 2006
+map_tools/src/exposure_map
+
+Modified Files:
+	exposure_map.cxx 
+Log Message:
+Improve documentation, fix defautl behavior for tool use
+    *
+------------------------------------------------------------
 User: burnett  Fri Mar 24 09:24:14 PST 2006
 map_tools/src
 
