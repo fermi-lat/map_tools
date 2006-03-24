@@ -1,7 +1,7 @@
 /** @file PhotonMap.h
 @brief definition of class PhotonMap
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/PhotonMap.h,v 1.1 2006/03/16 04:43:42 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/PhotonMap.h,v 1.2 2006/03/16 12:26:21 burnett Exp $
 
 */
 #ifndef map_tools_PhotonMap_h
@@ -49,6 +49,10 @@ public:
     /// @return density for a given direction, in photons/area of the base pixel.
     double density (const astro::SkyDir & sd) const;
 
+    //! Count the photons within a given pixel.
+    int photonCount(const astro::HealPixel & px, bool includeChildren=false,
+                              bool weighted=false) const;
+
     ///  implement the SkyFunction class by returning density
     double operator()(const astro::SkyDir & sd) const{ return density(sd);}
 
@@ -65,8 +69,11 @@ public:
     int extract(int level,const astro::SkyDir& dir, double radius, std::vector<std::pair<int, float> >& vec)const;
     
    
-    int photonCount()const { return m_photons;}
-    int pixelCount()const { return m_pixels; }
+    int photonCount()const { return m_photons;} ///< current number of photons
+    int pixelCount()const { return m_pixels; } ///< current nubmer of pixesl
+
+    int minLevel()const { return m_minlevel;} ///< minimum Healpixel level
+    int levels()const {return m_levels;};  ///< number of energy bins
 
 private:
     double m_emin;     ///< minimum energy for first bin
