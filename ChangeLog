@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Fri Mar 24 09:24:12 PST 2006
+map_tools/map_tools
+
+Modified Files:
+	SkyImage.h 
+Log Message:
+Improve documentation, fix defautl behavior for tool use
+    *
+------------------------------------------------------------
 User: burnett  Fri Mar 24 09:23:15 PST 2006
 map_tools/src
 
