@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Fri Mar 24 09:26:39 PST 2006
+map_tools/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+tagging
+    *
+------------------------------------------------------------
 TAG
 Tag name: v6r3, operation: add
 Package: map_tools
