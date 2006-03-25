@@ -1,7 +1,7 @@
 /** @file PhotonMap.h
 @brief definition of class PhotonMap
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/PhotonMap.h,v 1.2 2006/03/16 12:26:21 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/PhotonMap.h,v 1.3 2006/03/24 17:23:15 burnett Exp $
 
 */
 #ifndef map_tools_PhotonMap_h
@@ -50,7 +50,7 @@ public:
     double density (const astro::SkyDir & sd) const;
 
     //! Count the photons within a given pixel.
-    int photonCount(const astro::HealPixel & px, bool includeChildren=false,
+    double photonCount(const astro::HealPixel & px, bool includeChildren=false,
                               bool weighted=false) const;
 
     ///  implement the SkyFunction class by returning density

@@ -1,7 +1,7 @@
 /** @file PhotonMap.cxx
 @brief implementation of PhotonMap
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/PhotonMap.cxx,v 1.2 2006/03/16 12:26:21 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/PhotonMap.cxx,v 1.3 2006/03/24 17:23:15 burnett Exp $
 */
 
 #include "map_tools/PhotonMap.h"
@@ -97,8 +97,8 @@ int PhotonMap::extract(int level, const astro::SkyDir& dir, double radius, std::
     return total;
 }
 
-//! Count the photons within a given pixel.
-int PhotonMap::photonCount(const astro::HealPixel & px, bool includeChildren,
+//! Count the photons, perhaps weighted, within a given pixel.
+double PhotonMap::photonCount(const astro::HealPixel & px, bool includeChildren,
                               bool weighted) const
 {
     static bool first = true;
