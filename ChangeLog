@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sat Mar 25 08:46:43 PST 2006
+map_tools/src/exposure_map
+
+Modified Files:
+	exposure_map.cxx 
+Log Message:
+fix defaults and a gcc warning
+    *
+------------------------------------------------------------
 User: burnett  Sat Mar 25 08:46:42 PST 2006
 map_tools/src
 
