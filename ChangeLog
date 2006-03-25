@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sat Mar 25 08:46:40 PST 2006
+map_tools/map_tools
+
+Modified Files:
+	PhotonMap.h 
+Log Message:
+fix defaults and a gcc warning
+    *
+------------------------------------------------------------
 TAG
 Tag name: v6r3, operation: add
 Package: map_tools
