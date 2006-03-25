@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sat Mar 25 10:40:13 PST 2006
+map_tools/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+fix gcc compilation
+    *
+------------------------------------------------------------
 TAG
 Tag name: v6r3p1, operation: add
 Package: map_tools
