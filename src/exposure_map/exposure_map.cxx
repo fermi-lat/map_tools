@@ -5,11 +5,13 @@
 
 See the <a href="exposure_map_guide.html"> user's guide </a>.
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.27 2006/03/24 17:24:14 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.28 2006/03/25 16:46:43 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
 #include "map_tools/Exposure.h"
+
+#include "astro/SkyDir.h"
 
 #include "irfInterface/IAeff.h"
 #include "irfInterface/Irfs.h"
@@ -22,9 +24,10 @@ $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cx
 #include "st_stream/StreamFormatter.h"
 #include "st_stream/st_stream.h"
 
-#include <sstream>
 
-#include "astro/SkyDir.h"
+#include <sstream>
+#include <iterator> // for ostream_iterator
+
 
 #include <stdexcept>
 using namespace map_tools;
@@ -328,7 +331,8 @@ General Parameters
     Number of logarithmically uniform energy bins, defaults to 8. 
     
   (bincalc = "CENTER") [string] 
-    How are energy layers computed from count map ebounds? (CENTER|EDGE) 
+     How are energy layers computed from count map ebounds?  Options are CENTER and EDGE
+
     
   (filter  = no default) [string] 
     Filter expression (FTOOLS style).  
