@@ -5,7 +5,7 @@
 
 See the <a href="exposure_map_guide.html"> user's guide </a>.
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.28 2006/03/25 16:46:43 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.29 2006/03/25 18:40:15 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -186,10 +186,10 @@ public:
         std::string in_file = m_pars["infile"];
         std::string table = m_pars["table"];
         Exposure ex(in_file, table);
-
+#if 0 //! todo: find out how this was broken
         double total_elaspsed = ex.total();
         m_f.info() << "\ttotal elapsed time: " << total_elaspsed << std::endl;
-
+#endif
         irfInterface::IAeff* aeff = findAeff(m_pars["resptype"]);
 
         // create the image object, fill it from the exposure, write out
