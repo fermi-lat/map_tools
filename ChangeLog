@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Fri Apr 14 12:38:32 PDT 2006
+map_tools/src
+
+Modified Files:
+	Exposure.cxx 
+Log Message:
+use more efficient method to compute angle between a pixel and given directoin
+    *
+------------------------------------------------------------
 User: burnett  Fri Apr 14 12:30:54 PDT 2006
 map_tools/src
 
