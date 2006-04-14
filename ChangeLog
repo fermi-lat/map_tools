@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Fri Apr 14 12:30:54 PDT 2006
+map_tools/src
+
+Modified Files:
+	PhotonMap.cxx 
+Log Message:
+add extract method that returns vector of pixels and weights
+    *
+------------------------------------------------------------
 User: burnett  Fri Apr 14 12:30:53 PDT 2006
 map_tools/map_tools
 
