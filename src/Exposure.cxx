@@ -1,7 +1,7 @@
 /** @file Exposure.cxx
     @brief Implementation of class Exposure
 
-   $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Exposure.cxx,v 1.26 2005/08/01 00:16:34 mcenery Exp $
+   $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Exposure.cxx,v 1.27 2006/02/08 16:46:58 peachey Exp $
 */
 #include "map_tools/Exposure.h"
 #include "map_tools/HealpixArrayIO.h"
@@ -50,21 +50,21 @@ void Exposure::fill(const astro::SkyDir& dirz, double deltat)
     SkyBinner::iterator is = data().begin();
     for( ; is != data().end(); ++is){ // loop over all pixels
         CosineBinner & pixeldata= *is; // get the contents of this pixel
-        astro::SkyDir pdir = data().dir(is); // dir() is defined in HealpixArray.h
-        double costh = pdir().dot(dirz());
+        double costh = data().dot(is, dirz); 
 	pixeldata.fill(costh, deltat); // fill() is defined in CosineBinner.h
     }
     addtotal(deltat);
 }
 
+
+//! Todo: this is duplicated code! ugh!
 void Exposure::fill(const astro::SkyDir& dirz, const astro::SkyDir& dirzenith, double deltat)
 {
     SkyBinner::iterator is = data().begin();
     for( ; is != data().end(); ++is){ // loop over all pixels
         CosineBinner & pixeldata= *is; // get the contents of this pixel
-        astro::SkyDir pdir = data().dir(is); // dir() is defined in HealpixArray.h
-        double costh = pdir().dot(dirz());
-	double costhzen = pdir().dot(dirzenith());
+        double costh = data().dot(is, dirz);
+	double costhzen = data().dot(is, dirzenith);
 	if(costhzen>-0.4){
 	  pixeldata.fill(costh, deltat); // fill() is defined in CosineBinner.h
 	}
