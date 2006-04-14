@@ -1,7 +1,7 @@
 /** @file PhotonMap.h
 @brief definition of class PhotonMap
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/PhotonMap.h,v 1.3 2006/03/24 17:23:15 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/PhotonMap.h,v 1.4 2006/03/25 16:46:39 burnett Exp $
 
 */
 #ifndef map_tools_PhotonMap_h
@@ -66,8 +66,15 @@ public:
         @param vec the vector to fill with (count, distance(rad) ) pairs
         @return the total number of photons (sum of count)
     */
+
     int extract(int level,const astro::SkyDir& dir, double radius, std::vector<std::pair<int, float> >& vec)const;
     
+    /** @brief extract a subset around a given direction
+        @param radius The maximum radius (deg)
+        @param vec the vector to fill with (healpixel, count ) pairs
+        @return the total number of photons (sum of count)
+    */
+    int extract(int level,const astro::SkyDir& dir, double radius, std::vector<std::pair<astro::HealPixel, int> >& vec)const;
    
     int photonCount()const { return m_photons;} ///< current number of photons
     int pixelCount()const { return m_pixels; } ///< current nubmer of pixesl
