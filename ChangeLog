@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Fri Apr 14 12:30:53 PDT 2006
+map_tools/map_tools
+
+Modified Files:
+	PhotonMap.h 
+Log Message:
+add extract method that returns vector of pixels and weights
+    *
+------------------------------------------------------------
 User: burnett  Sat Mar 25 13:45:30 PST 2006
 map_tools/src
 
