@@ -2,7 +2,7 @@
     @brief definition of the class Exposure
 
     @author T.Burnett
-    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Exposure.h,v 1.18 2005/07/30 19:04:00 mcenery Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Exposure.h,v 1.19 2005/08/01 00:16:34 mcenery Exp $
 */
 #ifndef MAP_TOOLS_EXPOSURE_H
 #define MAP_TOOLS_EXPOSURE_H
@@ -33,7 +33,7 @@ public:
     virtual ~BasicExposure(){}
 
     virtual void fill(const astro::SkyDir& dirz, double deltat)=0;
-    virtual void fill(const astro::SkyDir& dirz, const astro::SkyDir& dirzenith, double deltat)=0;
+    virtual void fill(const astro::SkyDir& dirz, const astro::SkyDir& dirzenith, double deltat, double zcut)=0;
 
     template<class F>
         double operator()(const astro::SkyDir& dir, const F& fun)const
@@ -75,7 +75,14 @@ public:
 
     //! add a time interval at the given position
     virtual void fill(const astro::SkyDir& dirz, double deltat);
-    virtual void fill(const astro::SkyDir& dirz, const astro::SkyDir& dirzenith, double deltat);
+
+    /** @brief this was added by Julie, to allow horizon cut, possible if FOV includes horizon
+        @param dirz direction of z-axis of instrument
+        @param dirzenith direction of local zenith
+        @param deltat time interval
+        @param zcut (default acos(-0.4) = 113.6 degrees)
+    */
+    virtual void fill(const astro::SkyDir& dirz, const astro::SkyDir& dirzenith, double deltat, double zcut=-0.4);
 
     //! create object from the data file (FITS for now)
     Exposure(const std::string& inputfile, const std::string& tablename="Exposure");
@@ -92,6 +99,13 @@ public:
 
 private:
     bool processEntry(const tip::ConstTableRecord & row, const GTIvector& gti);
+
+    /** @brief set up the cache of vectors associated with cosine histograms
+
+    */
+    void create_cache();
+    std::vector< std::pair<CosineBinner* ,  CLHEP::Hep3Vector> > m_dir_cache;
+    class Filler ; ///< class used to fill a CosineBinner object with a value
 };
 
 
