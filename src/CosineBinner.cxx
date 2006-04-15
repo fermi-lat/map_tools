@@ -3,7 +3,7 @@
 
 @author T. Burnett
 
-$Header$
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/CosineBinner.cxx,v 1.1 2005/02/06 04:16:07 burnett Exp $
 */
 
 
@@ -23,7 +23,7 @@ CosineBinner::CosineBinner()
 /// the binning function: add value to the selected bin
 void CosineBinner::fill(double costheta, double value)
 {
-    if( costheta<s_cosmin ) return;
+    if( costheta<=s_cosmin ) return;
     (*this)[costheta] += value;
 }
 
