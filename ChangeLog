@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Sat Apr 15 08:12:55 PDT 2006
+map_tools/src
+
+Modified Files:
+	CosineBinner.cxx Exposure.cxx 
+Log Message:
+implement cache of pixel directions to use in fill process.
+    *
+------------------------------------------------------------
+User: burnett  Sat Apr 15 08:12:55 PDT 2006
 map_tools/map_tools
 
 Modified Files:
