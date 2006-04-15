@@ -2,7 +2,7 @@
     @brief definition of the class Exposure
 
     @author T.Burnett
-    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Exposure.h,v 1.19 2005/08/01 00:16:34 mcenery Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Exposure.h,v 1.20 2006/04/15 15:12:55 burnett Exp $
 */
 #ifndef MAP_TOOLS_EXPOSURE_H
 #define MAP_TOOLS_EXPOSURE_H
@@ -104,7 +104,19 @@ private:
 
     */
     void create_cache();
-    std::vector< std::pair<CosineBinner* ,  CLHEP::Hep3Vector> > m_dir_cache;
+
+    /** @class Simple3Vector 
+    @brief replacement for Hep3Vector for speed of dot product
+
+    */
+    class Simple3Vector {
+    public: 
+        Simple3Vector(const CLHEP::Hep3Vector& v=CLHEP::Hep3Vector())
+            : x(v.x()),y(v.y()),z(v.z()){};
+        double dot(const Simple3Vector& u)const{return x*u.x+y*u.y+z*u.z;}
+        double x,y,z;
+    };
+    std::vector< std::pair<CosineBinner* ,  Simple3Vector> > m_dir_cache;
     class Filler ; ///< class used to fill a CosineBinner object with a value
 };
 
