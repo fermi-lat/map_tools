@@ -1,22 +1,4 @@
 ------------------------------------------------------------
-User: burnett  Sat Apr 15 14:20:13 PDT 2006
-map_tools/src
-
-Modified Files:
-	Exposure.cxx 
-Log Message:
-replace Hep3Vector for speed.
-    *
-------------------------------------------------------------
-User: burnett  Sat Apr 15 14:20:13 PDT 2006
-map_tools/map_tools
-
-Modified Files:
-	Exposure.h 
-Log Message:
-replace Hep3Vector for speed.
-    *
-------------------------------------------------------------
 User: burnett  Sat Apr 15 08:12:55 PDT 2006
 map_tools/src
 
