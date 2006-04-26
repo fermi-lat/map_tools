@@ -5,7 +5,7 @@
 
 See the <a href="exposure_map_guide.html"> user's guide </a>.
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.29 2006/03/25 18:40:15 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.30 2006/04/14 19:39:09 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -133,6 +133,14 @@ public:
                 return value;
             }
             virtual IAeff * clone(){throw std::runtime_error("clone?"); return 0;};
+
+            virtual double upperLimit() const {
+               double total(0);
+               for( unsigned int i = 1; i < m_aeff.size(); ++i){
+                  total+=m_aeff[i]->upperLimit();
+               }
+               return total;
+            }
 
         private:
             std::vector<const irfInterface::IAeff*> m_aeff;
