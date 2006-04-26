@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Tue Apr 25 18:14:18 PDT 2006
+map_tools/src/exposure_map
+
+Modified Files:
+	exposure_map.cxx 
+Log Message:
+irfInterface::IAeff change; tagging v6r4p2
+    *
+------------------------------------------------------------
+User: jchiang  Tue Apr 25 18:14:18 PDT 2006
 map_tools/doc
 
 Modified Files:
