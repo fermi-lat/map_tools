@@ -1,7 +1,7 @@
 /** @file PhotonMap.cxx
 @brief implementation of PhotonMap
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/PhotonMap.cxx,v 1.5 2006/03/25 18:40:14 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/PhotonMap.cxx,v 1.6 2006/04/14 19:30:54 burnett Exp $
 */
 
 #include "map_tools/PhotonMap.h"
@@ -141,9 +141,10 @@ double PhotonMap::photonCount(const astro::HealPixel & px, bool includeChildren,
     }else{ // Include children
     
         double count = 0;
-        astro::HealPixel boundary(px.index() + 1, px.level());
+        int maxLevel = m_minlevel + m_levels - 1;
+        astro::HealPixel boundary(px.lastChildIndex(maxLevel), maxLevel);
         for (PhotonMap::const_iterator it =lower_bound(px);
-            it != end() && it->first < boundary; ++it)
+            it != end() && it->first <= boundary; ++it)
         {
            double weight = 1 << 2*(it->first.level() - m_minlevel);
 
