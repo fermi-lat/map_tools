@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Mon May 15 08:49:41 PDT 2006
+map_tools/src
+
+Modified Files:
+	PhotonMap.cxx 
+Log Message:
+change interface for extract a bit: more documenation
+    *
+------------------------------------------------------------
+User: burnett  Mon May 15 08:49:41 PDT 2006
 map_tools/map_tools
 
 Modified Files:
