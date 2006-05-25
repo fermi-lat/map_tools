@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Wed May 24 18:24:41 PDT 2006
+map_tools/src
+
+Modified Files:
+	PhotonMap.cxx 
+Log Message:
+new functionality for selection, estimating direction of possible source
+    *
+------------------------------------------------------------
+User: burnett  Wed May 24 18:24:41 PDT 2006
 map_tools/map_tools
 
 Modified Files:
