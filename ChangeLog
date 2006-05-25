@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Wed May 24 18:24:41 PDT 2006
+map_tools/map_tools
+
+Modified Files:
+	PhotonMap.h 
+Log Message:
+new functionality for selection, estimating direction of possible source
+    *
+------------------------------------------------------------
 TAG
 Tag name: v6r5, operation: add
 Package: map_tools
