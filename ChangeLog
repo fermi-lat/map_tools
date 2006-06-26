@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Mon Jun 26 14:11:22 PDT 2006
+map_tools/pfiles
+
+Modified Files:
+	exposure_cube.par 
+Log Message:
+add zmin parameter to exposure calculation
+    *
+------------------------------------------------------------
 User: burnett  Wed May 24 18:24:41 PDT 2006
 map_tools/src
 
