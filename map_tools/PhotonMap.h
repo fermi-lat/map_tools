@@ -1,7 +1,7 @@
 /** @file PhotonMap.h
 @brief definition of class PhotonMap
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/PhotonMap.h,v 1.7 2006/05/15 15:49:41 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/PhotonMap.h,v 1.8 2006/05/25 01:24:41 burnett Exp $
 
 */
 #ifndef map_tools_PhotonMap_h
@@ -90,6 +90,10 @@ public:
 
     int minLevel()const { return m_minlevel;} ///< minimum Healpixel level
     int levels()const {return m_levels;};  ///< number of energy bins
+
+    /// @return a vector if the left edges of the energy bins
+    std::vector<double> energyBins()const;
+
 
 private:
     double m_emin;     ///< minimum energy for first bin
