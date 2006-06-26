@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Mon Jun 26 14:11:46 PDT 2006
+map_tools/map_tools
+
+Modified Files:
+	PhotonMap.h 
+Log Message:
+return table of energy bin edges
+    *
+------------------------------------------------------------
 User: burnett  Mon Jun 26 14:11:22 PDT 2006
 map_tools/src/exposure_cube
 
