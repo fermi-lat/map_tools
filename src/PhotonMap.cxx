@@ -1,7 +1,7 @@
 /** @file PhotonMap.cxx
 @brief implementation of PhotonMap
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/PhotonMap.cxx,v 1.9 2006/05/15 15:49:41 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/PhotonMap.cxx,v 1.10 2006/05/25 01:24:41 burnett Exp $
 */
 
 #include "map_tools/PhotonMap.h"
@@ -196,5 +196,13 @@ double PhotonMap::photonCount(const astro::HealPixel & px, astro::SkyDir & NewDi
 
 	NewDir = astro::SkyDir(v);
 	return count;
+}
+
+std::vector<double> PhotonMap::energyBins()const
+{
+    std::vector<double> result; result.push_back(m_emin);
+    double eratio(exp(m_logeratio));
+    for(int i = 1; i< m_levels; ++i) result.push_back(result.back()*eratio);
+    return result;
 }
 
