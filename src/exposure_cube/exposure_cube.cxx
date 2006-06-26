@@ -2,7 +2,7 @@
 @brief build the exposure_cube application
 
 @author Toby Burnett
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.31 2005/07/30 19:26:56 mcenery Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.32 2006/02/08 16:46:59 peachey Exp $
 */
 
 #include "map_tools/Parameters.h"
@@ -81,6 +81,7 @@ public:
         //double endtime = (--(history.end()))->first;
 
         double deltat = (++next)->first-begintime; 
+        double zmin = m_pars["zmin"];
 
         int added=0, total=0;
         for( ; mit!=history.end(); ++mit) {
@@ -92,7 +93,7 @@ public:
 //            if( avoid_saa && astro::EarthCoordinate(pt.lat, pt.lon).insideSAA()) continue;
             added++;
 	    astro::SkyDir dirZenith(pt.position.unit());
-            exp.fill( pt.dirZ, dirZenith, deltat);
+            exp.fill( pt.dirZ, dirZenith, deltat, zmin); // zcut of -1: no cut.
         }
 
         m_f.info() << "Number of steps added: " << added << ", rejected: "<< (total-added) << std::endl;
