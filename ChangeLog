@@ -1,4 +1,31 @@
 ------------------------------------------------------------
+User: jchiang  Mon Aug 14 21:47:14 PDT 2006
+map_tools/src/exposure_map
+
+Modified Files:
+	exposure_map.cxx 
+Log Message:
+irfInterface change; tagging v6r6p1
+    *
+------------------------------------------------------------
+User: jchiang  Mon Aug 14 21:47:14 PDT 2006
+map_tools/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+irfInterface change; tagging v6r6p1
+    *
+------------------------------------------------------------
+User: jchiang  Mon Aug 14 21:47:14 PDT 2006
+map_tools/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+irfInterface change; tagging v6r6p1
+    *
+------------------------------------------------------------
 TAG
 Tag name: v6r6, operation: add
 Package: map_tools
