@@ -3,10 +3,10 @@ package map_tools
 version v6r6p1
 
 author T. Burnett <tburnett@u.washington.edu>
-# $Id: requirements,v 1.77 2006/06/26 21:13:18 burnett Exp $
+# $Id: requirements,v 1.78 2006/08/15 04:47:13 jchiang Exp $
 
 use STpolicy *
-use astro v1*
+use astro v*
 use hoops * 
 use tip  *
 use st_app *
