@@ -2,7 +2,7 @@
 @brief build the exposure_cube application
 
 @author Toby Burnett
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.33 2006/06/26 21:11:22 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.34 2006/11/06 01:15:41 burnett Exp $
 */
 
 #include "map_tools/Parameters.h"
@@ -27,7 +27,6 @@ $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.
 using namespace map_tools;
 
 
-#endif
 
 class ExposureCubeApp : public st_app::StApp {
 public:
