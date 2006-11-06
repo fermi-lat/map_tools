@@ -1,13 +1,4 @@
 ------------------------------------------------------------
-User: burnett  Sun Nov  5 17:15:41 PST 2006
-map_tools/src/exposure_cube
-
-Modified Files:
-	exposure_cube.cxx 
-Log Message:
-remove code depending on old GPS interface to extract pointing, for now.
-    *
-------------------------------------------------------------
 TAG
 Tag name: v6r6p2, operation: add
 Package: map_tools
