@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Mon Nov  6 06:21:12 PST 2006
+map_tools/src/exposure_cube
+
+Modified Files:
+	exposure_cube.cxx 
+Log Message:
+remove missed #endif
+    *
+------------------------------------------------------------
+User: burnett  Mon Nov  6 06:21:12 PST 2006
 map_tools/doc
 
 Modified Files:
