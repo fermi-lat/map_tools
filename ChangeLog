@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Mon Nov  6 06:21:12 PST 2006
+map_tools/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+remove missed #endif
+    *
+------------------------------------------------------------
 TAG
 Tag name: v6r6p3, operation: add
 Package: map_tools
