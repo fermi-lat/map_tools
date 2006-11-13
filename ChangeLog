@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Mon Nov 13 10:12:46 PST 2006
+map_tools/src/exposure_map
+
+Modified Files:
+	exposure_map.cxx 
+Log Message:
+add function to write energies to ENERGIES extension for exposure_maps (needed for use with binned likelihood)
+    *
+------------------------------------------------------------
 TAG
 Tag name: v6r6p4, operation: add
 Package: map_tools
