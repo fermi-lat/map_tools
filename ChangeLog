@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Tue Dec  5 19:56:18 PST 2006
+map_tools/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+added PhotonMap to support FITS I/O
+    *
+------------------------------------------------------------
 TAG
 Tag name: v6r6p5, operation: add
 Package: map_tools
