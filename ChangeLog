@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Tue Dec  5 19:56:18 PST 2006
+map_tools/map_tools
+
+Modified Files:
+	PhotonMap.h 
+Log Message:
+added PhotonMap to support FITS I/O
+    *
+------------------------------------------------------------
+User: burnett  Tue Dec  5 19:56:18 PST 2006
 map_tools/doc
 
 Modified Files:
