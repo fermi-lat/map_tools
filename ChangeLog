@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Fri Dec  8 20:08:39 PST 2006
+map_tools/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+Linux fix
+    *
+------------------------------------------------------------
 TAG
 Tag name: v6r7, operation: add
 Package: map_tools
