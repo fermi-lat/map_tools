@@ -2,10 +2,10 @@
     @brief tools definition
     @author Toby Burnett
 
-$Id: release.notes,v 1.71 2006/11/13 18:13:59 jchiang Exp $
+$Id: release.notes,v 1.72 2006/12/06 03:56:18 burnett Exp $
 @verbatim
  --------- -----  --- -----------------------------------------------------------------------
- 04-dec-06 v6r7   THB  update PhotonMap to support FITS file I/O
+ 08-dec-06 v6r7p1 THB  update PhotonMap to support FITS file I/O
  13-nov-06 v6r6p5  JC  write ENERGIES extension for exposure_map output (needed by
                        binned likelihood calculations)
  06-nov-06 v6r6p4 THB  remove explicit astro v1*, other small fixes
