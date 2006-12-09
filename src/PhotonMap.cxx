@@ -1,16 +1,18 @@
 /** @file PhotonMap.cxx
 @brief implementation of PhotonMap
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/PhotonMap.cxx,v 1.11 2006/06/26 21:11:46 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/PhotonMap.cxx,v 1.12 2006/12/06 03:56:18 burnett Exp $
 */
 
 #include "map_tools/PhotonMap.h"
 
-#include <cmath>
-#include <utility>
 #include "CLHEP/Vector/ThreeVector.h"
 #include "tip/IFileSvc.h"
 #include "tip/Table.h"
+
+#include <cmath>
+#include <utility>
+#include <stdexcept>
 
 using namespace map_tools;
 using astro::HealPixel;
