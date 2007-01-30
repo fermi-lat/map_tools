@@ -1,7 +1,7 @@
 /** @file PhotonMap.cxx
 @brief implementation of PhotonMap
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/PhotonMap.cxx,v 1.12 2006/12/06 03:56:18 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/PhotonMap.cxx,v 1.13 2006/12/09 04:08:39 burnett Exp $
 */
 
 #include "map_tools/PhotonMap.h"
@@ -13,6 +13,7 @@ $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/PhotonMap.cxx,v 1.12 2006/12
 #include <cmath>
 #include <utility>
 #include <stdexcept>
+#include <errno.h>
 
 using namespace map_tools;
 using astro::HealPixel;
