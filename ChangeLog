@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Tue Jan 30 08:21:11 PST 2007
+map_tools/src
+
+Modified Files:
+	PhotonMap.cxx 
+Log Message:
+needed include for rhel4
+    *
+------------------------------------------------------------
 TAG
 Tag name: v6r7p1, operation: add
 Package: map_tools
