@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: peachey  Mon Feb 12 08:20:35 PST 2007
+map_tools/src
+
+Modified Files:
+	SkyImage.cxx 
+Log Message:
+Use bincalc parameter to determine how to compute the energy bins when
+generating an exposure map without a referent count map.
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: v6r7p2, operation: add
 Package: map_tools
