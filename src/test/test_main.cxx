@@ -1,12 +1,13 @@
 /** @file test_main.cxx
 @brief test various classes
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/test/test_main.cxx,v 1.31 2006/02/19 20:41:10 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/test/test_main.cxx,v 1.32 2006/03/06 21:45:11 jchiang Exp $
 
 */
 #include "map_tools/Exposure.h"
-#include "map_tools/MapParameters.h"
 #include "map_tools/SkyImage.h"
+#include "facilities/Util.h"
+#include "hoops/hoops_prompt_group.h"
 
 #include "TestCosineBinner.h"
 
@@ -36,7 +37,7 @@ int main(int argc, char** argv ){
     try{
     
         // read a pil file--and make sure that a few simple things work
-        MapParameters par(argc, argv);
+		hoops::ParPromptGroup par(argc, argv);
         double xref = par["xref"] ;
         if(  xref !=0 ) {
             std::cerr << "Read wrong value for parameter xref" << std::endl;
@@ -80,14 +81,17 @@ int main(int argc, char** argv ){
             return 1;
         }
 
-//         // Write out the cube...delete any existing file first.
-//         e.write( par.inputFile());
- 
-//         // Check the Exposure(fitsfile) constructor.
-//         Exposure e2(par.inputFile());
+        // Write out the cube...delete any existing file first.
+		std::string infile(par["infile"]), outfile(par["outfile"]);
+		facilities::Util::expandEnvVar(&infile);
+		facilities::Util::expandEnvVar(&outfile);
+        e.write( infile);
 
-//         // Write this out as a separate file for an external diff.
-//         e2.write( par.outputFile());
+        // Check the Exposure(fitsfile) constructor.
+        Exposure e2(infile);
+
+        // Write this out as a separate file for an external diff.
+        e2.write(outfile);
 
         // now test cos
         TestCosineBinner();
