@@ -3,7 +3,7 @@
     @brief declare  the class SkyImage
 
     @author Toby Burnett <tburnett@u.washington.edu>
-    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/SkyImage.h,v 1.30 2006/03/03 20:06:21 burnett Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/SkyImage.h,v 1.31 2006/03/24 17:24:11 burnett Exp $
 
 */
 
@@ -138,6 +138,9 @@ public:
     /// @param s the direction
     /// note that if there are multiple layers, it will choose the selected layer, see setLayer.
     double operator()(const astro::SkyDir& s)const;
+
+    /// @brief access to number of layers
+    int layers()const{return m_naxis3;}
 
 private:
     void setupImage(const std::string& outputFile,  bool clobber=true);
