@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sun Mar 11 21:27:56 PDT 2007
+map_tools/pfiles
+
+Modified Files:
+	read_map.par 
+Log Message:
+new application to generate displays of layers in exposure cubes
+    *
+------------------------------------------------------------
 User: burnett  Sun Mar 11 21:26:40 PDT 2007
 map_tools/src/cube_display
 
