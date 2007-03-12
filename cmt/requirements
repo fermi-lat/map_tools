@@ -3,7 +3,7 @@ package map_tools
 version v6r7p2
 
 author T. Burnett <tburnett@u.washington.edu>
-# $Id: requirements,v 1.85 2007/01/30 16:27:25 burnett Exp $
+# $Id: requirements,v 1.86 2007/03/11 20:59:50 burnett Exp $
 
 use STpolicy * -no_auto_imports
 use astro v*
@@ -37,6 +37,14 @@ apply_pattern ST_app name=exposure_map
 
 # these are not standard science tools applications: 
 # uncomment them to build for development, testing
+#---- make a count map from a list of ra,dec, energy---
 #apply_pattern ST_app name=count_map
+#
+#---- makes a copy of an imagewith new projection------
 #apply_pattern ST_app name=read_map
+#
+#----- generate a layered image of a cube -------------
+#apply_pattern ST_app name=cube_display
+#
+#----- analyze an image for mean and variance ---------
 #apply_pattern ST_app name=map_stats
