@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sun Mar 11 21:25:56 PDT 2007
+map_tools/map_tools
+
+Modified Files:
+	SkyImage.h 
+Log Message:
+add access function for number of image layers
+    *
+------------------------------------------------------------
 User: burnett  Sun Mar 11 21:25:05 PDT 2007
 map_tools/src/read_map
 
