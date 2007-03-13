@@ -2,10 +2,10 @@
     @brief tools definition
     @author Toby Burnett
 
-$Id: release.notes,v 1.75 2007/02/12 16:21:24 peachey Exp $
+$Id: release.notes,v 1.76 2007/03/12 17:44:17 burnett Exp $
 @verbatim
  --------- -----  --- -----------------------------------------------------------------------
- 12-mar-07 v6r9   THB  Add application to generate layered images from exposure cubes
+ 13-mar-07 v6r9p1  THB  Add application to generate layered images from exposure cubes
  12-feb-07 v6r8    JP  Use bincalc parameter to determine how to compute the energy bins when
                        generating an exposure map without a referent count map.
  30-jan-07 v6r7p2 THB  needed an include for rhel4_gcc34
