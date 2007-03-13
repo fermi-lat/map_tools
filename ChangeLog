@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Tue Mar 13 08:45:10 PDT 2007
+map_tools/src/cube_display
+
+Modified Files:
+	cube_display.cxx 
+Log Message:
+hoops kluge for linux
+    *
+------------------------------------------------------------
 User: burnett  Tue Mar 13 08:45:09 PDT 2007
 map_tools/doc
 
