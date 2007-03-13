@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Tue Mar 13 08:45:09 PDT 2007
+map_tools/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+hoops kluge for linux
+    *
+------------------------------------------------------------
 TAG
 Tag name: v6r9, operation: add
 Package: map_tools
