@@ -5,7 +5,7 @@
 
 See the <a href="cube_display_guide.html"> user's guide </a>.
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/cube_display/cube_display.cxx,v 1.1 2007/03/12 04:27:56 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/cube_display/cube_display.cxx,v 1.2 2007/03/12 17:40:17 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -92,9 +92,9 @@ public:
 
         m_f.setMethod("run()");
 
-        std::string infile(m_pars["infile"])
-            , outfile(m_pars["outfile"])
-            , table( m_pars["table"]);
+        std::string infile(m_pars["infile"].Value())
+            , outfile(m_pars["outfile"].Value())
+            , table( m_pars["table"].Value());
 
         // create the exposure, read it in from the FITS input file
         facilities::Util::expandEnvVar(&infile);
@@ -123,7 +123,7 @@ public:
         double xref(m_pars["xref"]), 
                yref(m_pars["yref"]), 
                pixscale(m_pars["pixscale"]); 
-        std::string coordsys(m_pars["coordsys"]), proj(m_pars["proj"]);
+        std::string coordsys(m_pars["coordsys"].Value()), proj(m_pars["proj"].Value());
         bool galactic (coordsys=="GAL");
         int numxpix(m_pars["numxpix"]), 
             numypix(m_pars["numypix"]);
