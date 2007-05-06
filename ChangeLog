@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sun May  6 12:08:22 PDT 2007
+map_tools/src/exposure_map
+
+Modified Files:
+	exposure_map.cxx 
+Log Message:
+accept name of single IRF: provide more info on accessible irf names.
+    *
+------------------------------------------------------------
 TAG
 Tag name: v6r9p1, operation: add
 Package: map_tools
