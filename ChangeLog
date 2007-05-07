@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Mon May  7 11:31:59 PDT 2007
+map_tools/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+add new DiffuseFunction to interpolate diffuse map
+    *
+------------------------------------------------------------
 TAG
 Tag name: v6r10, operation: add
 Package: map_tools
