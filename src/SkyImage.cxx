@@ -1,7 +1,7 @@
 /** @file SkyImage.cxx
 
 @brief implement the class SkyImage
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/SkyImage.cxx,v 1.53 2006/03/24 17:24:13 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/SkyImage.cxx,v 1.54 2007/02/12 16:20:35 peachey Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -401,7 +401,11 @@ unsigned int SkyImage::pixel_index(const astro::SkyDir& pos, int layer) const
         i = static_cast<unsigned int>(p.first),
         j = static_cast<unsigned int>(p.second),
         k = i+m_naxis1*(j + layer*m_naxis2);
+#if 0
     if( k >= m_pixelCount ) {
+#else // not sure how this seemed to be needed
+     if( k > m_pixelCount+1 ) {
+#endif
         throw std::range_error("SkyImage::pixel_index -- outside image hyper cube");
     }
     return k;
