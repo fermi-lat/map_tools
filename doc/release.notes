@@ -2,10 +2,10 @@
     @brief tools definition
     @author Toby Burnett
 
-$Id: release.notes,v 1.77 2007/03/13 15:45:09 burnett Exp $
+$Id: release.notes,v 1.78 2007/05/06 19:15:50 burnett Exp $
 @verbatim
  --------- -----  --- -----------------------------------------------------------------------
- 06-may-07 v6r9p2 THB  Allow the exposure_map application to accept name of individual IRF
+ 07-may-07 v6r10  THB  Allow the exposure_map application to accept name of individual IRF
  13-mar-07 v6r9p1 THB  Add application to generate layered images from exposure cubes
  12-feb-07 v6r8    JP  Use bincalc parameter to determine how to compute the energy bins when
                        generating an exposure map without a referent count map.

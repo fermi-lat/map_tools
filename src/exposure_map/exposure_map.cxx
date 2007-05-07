@@ -5,7 +5,7 @@
 
 See the <a href="exposure_map_guide.html"> user's guide </a>.
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.33 2006/11/13 18:12:46 jchiang Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.34 2007/05/06 19:08:22 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -199,9 +199,14 @@ public:
                 std::ostream_iterator<std::string>(std::cerr, "\n\t "));
             std::cerr <<std::endl;
 
-            std::cerr<< "Names for exclusive groups of irfs:\n\t";
-            std::copy(irfLoader::Loader::irfsNames().begin(), irfLoader::Loader::irfsNames().end(),
-                std::ostream_iterator<std::string>(std::cerr, "\n\t"));
+            std::cerr<< "Names for groups of irfs:\n \t";
+            for( std::map<std::string, std::vector<std::string> >::const_iterator it = irfLoader::Loader::respIds().begin();
+                it != irfLoader::Loader::respIds().end() ; ++it)
+            {
+                std::cerr << "\n\t" << it->first << "\t ";
+                std::copy(it->second.begin(), it->second.end(), std::ostream_iterator<std::string>(std::cerr, " "));
+            }
+            std::cerr << std::endl;
 
             throw std::invalid_argument(
                 std::string("Response function not recognized: "+rspfunc));
