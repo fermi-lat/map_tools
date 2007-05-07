@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Mon May  7 11:29:40 PDT 2007
+map_tools/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+tag after fix for changed Loader interface
+    *
+------------------------------------------------------------
 TAG
 Tag name: v6r9p2, operation: add
 Package: map_tools
