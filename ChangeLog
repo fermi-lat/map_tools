@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Mon May  7 11:29:40 PDT 2007
+map_tools/src
+
+Modified Files:
+	SkyImage.cxx 
+Log Message:
+tag after fix for changed Loader interface
+    *
+------------------------------------------------------------
+User: burnett  Mon May  7 11:29:40 PDT 2007
 map_tools/doc
 
 Modified Files:
