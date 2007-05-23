@@ -1,7 +1,7 @@
 /** @file PhotonMap.cxx
 @brief implementation of PhotonMap
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/PhotonMap.cxx,v 1.13 2006/12/09 04:08:39 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/PhotonMap.cxx,v 1.14 2007/01/30 16:21:10 burnett Exp $
 */
 
 #include "map_tools/PhotonMap.h"
@@ -86,6 +86,14 @@ void PhotonMap::addPhoton(const astro::Photon& gamma)
     }
     ++m_photons;
 }
+
+void PhotonMap::addPixel(const astro::HealPixel & px, int count)
+{
+    this->insert( value_type(px, count) );
+    m_pixels ++;
+    m_photons += count;
+}
+
 
 HealPixel PhotonMap::pixel(const astro::Photon& gamma)
 {
