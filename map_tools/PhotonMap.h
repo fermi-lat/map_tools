@@ -1,7 +1,7 @@
 /** @file PhotonMap.h
 @brief definition of class PhotonMap
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/PhotonMap.h,v 1.9 2006/06/26 21:11:46 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/PhotonMap.h,v 1.10 2006/12/06 03:56:18 burnett Exp $
 
 */
 #ifndef map_tools_PhotonMap_h
@@ -51,6 +51,9 @@ namespace map_tools {
 
         /// add a photon to the map with the given energy and direction
         void addPhoton(const astro::Photon& gamma);
+
+        /// add a healpixel to the map with an associated count
+        void addPixel(const astro::HealPixel & px, int count);
 
         /// @return density for a given direction, in photons/area of the base pixel.
         double density (const astro::SkyDir & sd) const;
