@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Wed May 23 14:29:00 PDT 2007
+map_tools/src
+
+Modified Files:
+	PhotonMap.cxx 
+Log Message:
+new function member addPixel
+    *
+------------------------------------------------------------
+User: burnett  Wed May 23 14:29:00 PDT 2007
 map_tools/map_tools
 
 Modified Files:
