@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Tue May 29 13:55:55 PDT 2007
+map_tools/src
+
+Modified Files:
+	PhotonMap.cxx 
+Log Message:
+provide defaults for non-existent header items
+    *
+------------------------------------------------------------
 TAG
 Tag name: v6r10p1, operation: add
 Package: map_tools
