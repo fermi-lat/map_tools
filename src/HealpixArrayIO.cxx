@@ -3,7 +3,7 @@
 
 @author T. Burnett
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/HealpixArrayIO.cxx,v 1.6 2005/11/30 21:39:57 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/HealpixArrayIO.cxx,v 1.7 2006/02/02 19:13:10 peachey Exp $
 */
 
 #include "map_tools/HealpixArrayIO.h"
@@ -85,6 +85,7 @@ std::auto_ptr<tip::Table> HealpixArrayIO::write(const astro::HealpixArray<Cosine
     #endif
     hdr["PIXTYPE"].set("HEALPIX"); 
     hdr["ORDERING"].set("NESTED"); 
+    hdr["COORDTYPE"].set( ha.healpix().galactic()? "GAL" : "EQU");
     hdr["NSIDE"].set(ha.healpix().nside()); 
     hdr["FIRSTPIX"].set(0); 
     hdr["LASTPIX"].set(ha.size()-1); 
