@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Wed May 30 13:35:39 PDT 2007
+map_tools/src/cube_display
+
+Modified Files:
+	cube_display.cxx 
+Log Message:
+rename applications
+    *
+------------------------------------------------------------
 User: burnett  Wed May 30 13:35:38 PDT 2007
 map_tools/src
 
