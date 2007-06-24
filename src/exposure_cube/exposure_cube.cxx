@@ -2,7 +2,7 @@
 @brief build the exposure_cube application
 
 @author Toby Burnett
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.36 2007/03/11 20:59:50 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.37 2007/03/13 15:45:10 burnett Exp $
 */
 
 #include "hoops/hoops_prompt_group.h"
@@ -88,7 +88,7 @@ public:
         m_f.setMethod("run()");
 
         // create the differential exposure object
-		int pixelsize(m_pars["pixelsize"]), binsize(m_pars["binsize"]);
+	double pixelsize(m_pars["pixelsize"]), binsize(m_pars["binsize"]);
         Exposure ex( pixelsize, binsize );
         Exposure::GTIvector gti; 
 		

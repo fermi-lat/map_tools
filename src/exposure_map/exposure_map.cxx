@@ -5,7 +5,7 @@
 
 See the <a href="exposure_map_guide.html"> user's guide </a>.
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.34 2007/05/06 19:08:22 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.35 2007/05/07 18:29:41 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -122,7 +122,7 @@ public:
     ExposureMapApp()
         : st_app::StApp()
         , m_f("ExposureMapApp", "", 2)
-        , m_pars(st_app::StApp::getParGroup("exposure_map")) 
+        , m_pars(st_app::StApp::getParGroup("gtexpcube")) 
     {
     }
         ~ExposureMapApp() throw() {} // required by StApp with gcc
@@ -296,7 +296,7 @@ private:
     st_app::AppParGroup& m_pars;
 };
 // Factory which can create an instance of the class above.
-st_app::StAppFactory<ExposureMapApp> g_factory("exposure_map");
+st_app::StAppFactory<ExposureMapApp> g_factory("gtexpcube");
 
 /** @page exposure_map_guide exposure_map users's Guide
 
