@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sat Jun 23 17:25:39 PDT 2007
+map_tools/pfiles
+
+Modified Files:
+	gtdispcube.par gtexpcube.par 
+Log Message:
+finish changes required by gt names. clean up par files
+    *
+------------------------------------------------------------
 TAG
 Tag name: v6r11, operation: add
 Package: map_tools
