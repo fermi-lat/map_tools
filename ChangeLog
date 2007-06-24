@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Sat Jun 23 17:25:39 PDT 2007
+map_tools/src/exposure_map
+
+Modified Files:
+	exposure_map.cxx 
+Log Message:
+finish changes required by gt names. clean up par files
+    *
+------------------------------------------------------------
+User: burnett  Sat Jun 23 17:25:39 PDT 2007
 map_tools/src/exposure_cube
 
 Modified Files:
