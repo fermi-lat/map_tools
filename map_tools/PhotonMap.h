@@ -1,7 +1,7 @@
 /** @file PhotonMap.h
 @brief definition of class PhotonMap
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/PhotonMap.h,v 1.10 2006/12/06 03:56:18 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/PhotonMap.h,v 1.11 2007/05/23 21:29:00 burnett Exp $
 
 */
 #ifndef map_tools_PhotonMap_h
@@ -90,7 +90,8 @@ namespace map_tools {
         @param include_all [false] True: return all possible select_level pixels within radius.  False: return only pixels found in current PhotonMap.
         @return the total number of photons (sum of count)
         */
-        int extract(const astro::SkyDir& dir, double radius,
+
+        int extract_level(const astro::SkyDir& dir, double radius,
             std::vector<std::pair<astro::HealPixel, int> >& vec,
             int select_level = -1, bool include_all = false) const;
 
@@ -108,9 +109,9 @@ namespace map_tools {
         @param outputFile Fully qualified fits output file name
         @param tablename Fits secondary extension name
         @param clobber Whether to delete an existing file first 
-        @return an auto pointer to the TIP table used to generate the fits outFile
         */
-        std::auto_ptr<tip::Table> PhotonMap::write(const std::string & outputFile,
+        void
+            PhotonMap::write(const std::string & outputFile,
             const std::string & tablename="PHOTONMAP",
             bool clobber = true) const;
 
