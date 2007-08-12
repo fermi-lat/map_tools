@@ -1,7 +1,7 @@
 /** @file PhotonMap.cxx
 @brief implementation of PhotonMap
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/PhotonMap.cxx,v 1.16 2007/05/29 20:55:55 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/PhotonMap.cxx,v 1.17 2007/05/30 20:35:38 burnett Exp $
 */
 
 #include "map_tools/PhotonMap.h"
@@ -168,7 +168,7 @@ int PhotonMap::extract(const astro::SkyDir& dir, double radius,
     return total;
 }
 
-int PhotonMap::extract(const astro::SkyDir& dir, double radius,
+int PhotonMap::extract_level(const astro::SkyDir& dir, double radius,
                        std::vector<std::pair<astro::HealPixel, int> >& vec,
                        int select_level, bool include_all) const
 {
@@ -266,8 +266,12 @@ std::vector<double> PhotonMap::energyBins()const
     for(int i = 1; i< m_levels; ++i) result.push_back(result.back()*eratio);
     return result;
 }
-
-std::auto_ptr<tip::Table> PhotonMap::write(const std::string & outputFile,
+#if 0
+std::auto_ptr<tip::Table>
+#else
+void
+#endif
+PhotonMap::write(const std::string & outputFile,
                                            const std::string & tablename,
                                            bool clobber) const
 {
@@ -309,7 +313,12 @@ std::auto_ptr<tip::Table> PhotonMap::write(const std::string & outputFile,
     hdr["PHOTONS"].set(m_photons); 
     hdr["PIXELS"].set(m_pixels);
 
+#if 0
     // need to do this to ensure file is closed when pointer goes out of scope
     return std::auto_ptr<tip::Table>(&table); 
+#else
+    // close it?
+    delete &table;
+#endif
 }
 
