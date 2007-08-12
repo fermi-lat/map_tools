@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sun Aug 12 10:58:03 PDT 2007
+map_tools/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+rename function member for SWIG
+    *
+------------------------------------------------------------
 TAG
 Tag name: v6r11p1, operation: add
 Package: map_tools
