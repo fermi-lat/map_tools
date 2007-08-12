@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sun Aug 12 10:58:04 PDT 2007
+map_tools/map_tools
+
+Modified Files:
+	PhotonMap.h 
+Log Message:
+rename function member for SWIG
+    *
+------------------------------------------------------------
 User: burnett  Sun Aug 12 10:58:03 PDT 2007
 map_tools/doc
 
