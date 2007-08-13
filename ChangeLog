@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Mon Aug 13 07:02:15 PDT 2007
+map_tools/src
+
+Modified Files:
+	Exposure.cxx 
+Log Message:
+updates to properly support zcut with FT2 files
+    *
+------------------------------------------------------------
+User: burnett  Mon Aug 13 07:02:15 PDT 2007
 map_tools/map_tools
 
 Modified Files:
