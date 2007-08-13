@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Mon Aug 13 07:02:15 PDT 2007
+map_tools/map_tools
+
+Modified Files:
+	Exposure.h 
+Log Message:
+updates to properly support zcut with FT2 files
+    *
+------------------------------------------------------------
 TAG
 Tag name: v6r11p2, operation: add
 Package: map_tools
