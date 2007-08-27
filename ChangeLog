@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Mon Aug 27 16:30:14 PDT 2007
+map_tools/pfiles
+
+Modified Files:
+	exposure_cube.par gtexpcube.par 
+Log Message:
+fix (I think) interactive mode for exposure_cube
+    *
+------------------------------------------------------------
 User: burnett  Mon Aug 13 07:25:20 PDT 2007
 map_tools/pfiles
 
