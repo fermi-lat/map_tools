@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Mon Aug 27 16:30:14 PDT 2007
+map_tools/src/exposure_cube
+
+Modified Files:
+	exposure_cube.cxx 
+Log Message:
+fix (I think) interactive mode for exposure_cube
+    *
+------------------------------------------------------------
+User: burnett  Mon Aug 27 16:30:14 PDT 2007
 map_tools/pfiles
 
 Modified Files:
