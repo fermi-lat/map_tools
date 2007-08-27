@@ -2,7 +2,7 @@
 @brief build the exposure_cube application
 
 @author Toby Burnett
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.38 2007/06/24 00:25:39 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.39 2007/08/13 14:02:15 burnett Exp $
 */
 
 #include "hoops/hoops_prompt_group.h"
@@ -87,6 +87,9 @@ public:
     {
         m_f.setMethod("run()");
 
+        prompt();
+
+
         // create the differential exposure object
 	double pixelsize(m_pars["pixelsize"]), binsize(m_pars["binsize"]);
 		
@@ -132,6 +135,23 @@ public:
 
  
     }
+    void prompt() {
+        m_pars.Prompt("infile");
+        m_pars.Prompt("outfile");
+        m_pars.Prompt("tstart");
+        m_pars.Prompt("tstop");
+        m_pars.Prompt("zmin");
+
+
+        m_pars.Prompt("filter");
+        m_pars.Prompt("table");
+        m_pars.Prompt("chatter");
+        m_pars.Prompt("clobber");
+        m_pars.Prompt("debug");
+        m_pars.Prompt("gui");
+        m_pars.Save();
+    }
+
 private:
 	hoops::ParPromptGroup m_pars;
     st_stream::StreamFormatter m_f;
