@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Mon Dec 10 21:06:58 PST 2007
+map_tools/src/test
+
+Modified Files:
+	TestCosineBinner.h 
+Log Message:
+refactorong healpix to the healpix package
+    *
+------------------------------------------------------------
+User: burnett  Mon Dec 10 21:06:58 PST 2007
 map_tools/src/exposure_cube
 
 Modified Files:
