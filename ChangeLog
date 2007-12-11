@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Mon Dec 10 21:06:57 PST 2007
+map_tools/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+refactorong healpix to the healpix package
+    *
+------------------------------------------------------------
 User: golpa  Mon Dec 10 13:30:46 PST 2007
 map_tools
 
