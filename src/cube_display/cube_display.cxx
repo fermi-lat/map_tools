@@ -5,12 +5,12 @@
 
 See the <a href="gtdispcube_guide.html"> user's guide </a>.
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/cube_display/cube_display.cxx,v 1.3 2007/03/13 15:45:10 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/cube_display/cube_display.cxx,v 1.4 2007/05/30 20:35:39 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
 #include "map_tools/Exposure.h"
-#include "map_tools/CosineBinner.h"
+#include "healpix/CosineBinner.h"
 
 #include "astro/SkyDir.h"
 
@@ -34,7 +34,7 @@ namespace {
 }
 
 using namespace map_tools;
-
+using healpix::CosineBinner;
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 /** @class RequestExposure 
