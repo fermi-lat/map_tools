@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Mon Dec 10 21:06:58 PST 2007
+map_tools/src/exposure_cube
+
+Modified Files:
+	exposure_cube.cxx 
+Log Message:
+refactorong healpix to the healpix package
+    *
+------------------------------------------------------------
+User: burnett  Mon Dec 10 21:06:58 PST 2007
 map_tools/src/cube_display
 
 Modified Files:
