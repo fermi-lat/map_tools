@@ -2,10 +2,11 @@
     @brief tools definition
     @author Toby Burnett
 
-$Id: release.notes,v 1.84 2007/08/12 17:58:03 burnett Exp $
+$Id: release.notes,v 1.85 2007/08/27 23:31:55 burnett Exp $
 @verbatim
  --------- -----  --- -----------------------------------------------------------------------
 
+ 10-dec-07 v7r0   THB  refactor healpix stuff to healpix package
  27-aug-07 v6r11p3THB  Fix exposure_cube to be interactive
  12-aug-07 v6r11p2THB  Changed a name in PhotonMap to avoid SWIG problem 
  23-jun-07 v6r11p1THB  Missed gtdispcube names for par file

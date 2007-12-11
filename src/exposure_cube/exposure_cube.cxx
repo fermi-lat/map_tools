@@ -2,12 +2,12 @@
 @brief build the exposure_cube application
 
 @author Toby Burnett
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.39 2007/08/13 14:02:15 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.40 2007/08/27 23:30:14 burnett Exp $
 */
 
 #include "hoops/hoops_prompt_group.h"
 #include "map_tools/Exposure.h"
-#include "map_tools/HealpixArrayIO.h"
+#include "healpix/HealpixArrayIO.h"
 
 #include "astro/SkyDir.h"
 #include "astro/GPS.h"
@@ -25,7 +25,7 @@ $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.
 #include <iostream>
 #include <stdexcept>
 using namespace map_tools;
-
+using healpix::HealpixArrayIO;
 
 
 class ExposureCubeApp : public st_app::StApp {
@@ -131,7 +131,7 @@ public:
         if( zmin>-1){
             m_f.info() << " lost " << ex.lost() << " seconds from zcut" << std::endl;
         }
-        map_tools::HealpixArrayIO::instance().write(ex.data(), outfile, outtable);
+       HealpixArrayIO::instance().write(ex.data(), outfile, outtable);
 
  
     }
