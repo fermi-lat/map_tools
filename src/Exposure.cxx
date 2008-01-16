@@ -1,7 +1,7 @@
 /** @file Exposure.cxx
     @brief Implementation of class Exposure
 
-   $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Exposure.cxx,v 1.31 2007/08/13 14:02:15 burnett Exp $
+   $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Exposure.cxx,v 1.32 2007/12/11 05:06:57 burnett Exp $
 */
 #include "map_tools/Exposure.h"
 #include "healpix/HealpixArrayIO.h"
@@ -14,6 +14,7 @@
 using namespace map_tools;
 using healpix::HealpixArrayIO;
 using healpix::CosineBinner;
+using healpix::Healpix;
 
 
 Exposure::Exposure(const std::string& inputfile, const std::string& tablename)
@@ -34,7 +35,12 @@ inline int side_from_degrees(double pixelsize){
 } 
 
 Exposure::Exposure(double pixelsize, double cosbinsize, double zcut)
-: SkyExposure(SkyBinner(side_from_degrees(pixelsize)))
+: SkyExposure(
+    SkyBinner(Healpix(
+      side_from_degrees(pixelsize),  // nside
+      Healpix::NESTED, 
+      astro::SkyDir::EQUATORIAL) )
+  )
 , m_zcut(zcut), m_lost(0)
 {
     unsigned int cosbins = static_cast<unsigned int>(1./cosbinsize);
