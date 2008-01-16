@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Wed Jan 16 13:33:59 PST 2008
+map_tools/src
+
+Modified Files:
+	Exposure.cxx 
+Log Message:
+force use of equatorial coordinates for HEALpix binning in exposure.
+    *
+------------------------------------------------------------
 TAG
 Tag name: v7r0, operation: add
 Package: map_tools
