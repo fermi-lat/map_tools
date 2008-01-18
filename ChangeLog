@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Jan 17 16:26:20 PST 2008
+map_tools/pfiles
+
+Modified Files:
+	gtdispcube.par gtexpcube.par 
+Log Message:
+fix various issues with par file parameters
+    *
+------------------------------------------------------------
 TAG
 Tag name: v7r0p1, operation: add
 Package: map_tools
