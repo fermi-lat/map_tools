@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Thu Jan 17 16:26:20 PST 2008
+map_tools/src/exposure_map
+
+Modified Files:
+	exposure_map.cxx 
+Log Message:
+fix various issues with par file parameters
+    *
+------------------------------------------------------------
+User: burnett  Thu Jan 17 16:26:20 PST 2008
 map_tools/src
 
 Modified Files:
