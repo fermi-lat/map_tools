@@ -1,7 +1,7 @@
 /** @file SkyImage.cxx
 
 @brief implement the class SkyImage
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/SkyImage.cxx,v 1.54 2007/02/12 16:20:35 peachey Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/SkyImage.cxx,v 1.55 2007/05/07 18:29:40 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -143,8 +143,8 @@ SkyImage::SkyImage(const hoops::IParGroup& pars)
         //
         // the input is a livetime cube: get display from par file parameters
         //
-        m_naxis1 = pars["numxpix"];
-        m_naxis2 = pars["numypix"];
+        m_naxis1 = pars["nxpix"];
+        m_naxis2 = pars["nypix"];
         int enumbins = pars["enumbins"];
         std::string ptype = pars["proj"];
         double pixelsize = pars["pixscale"];
