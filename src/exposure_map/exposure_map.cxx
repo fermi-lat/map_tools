@@ -5,7 +5,7 @@
 
 See the <a href="exposure_map_guide.html"> user's guide </a>.
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.36 2007/06/24 00:25:39 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.37 2008/01/18 00:26:20 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -279,6 +279,8 @@ public:
             m_pars.Prompt("emin");
             m_pars.Prompt("emax");
             m_pars.Prompt("enumbins");
+        }else{
+            std::clog << "Image properties copied from file " << m_pars["cmfile"].Value() << std::endl;
         }
     
         m_pars.Prompt("bincalc");

@@ -5,7 +5,7 @@
 
 See the <a href="gtdispcube_guide.html"> user's guide </a>.
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/cube_display/cube_display.cxx,v 1.4 2007/05/30 20:35:39 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/cube_display/cube_display.cxx,v 1.5 2007/12/11 05:06:58 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -125,8 +125,8 @@ public:
                pixscale(m_pars["pixscale"]); 
         std::string coordsys(m_pars["coordsys"].Value()), proj(m_pars["proj"].Value());
         bool galactic (coordsys=="GAL");
-        int numxpix(m_pars["numxpix"]), 
-            numypix(m_pars["numypix"]);
+        int numxpix(m_pars["nxpix"]), 
+            numypix(m_pars["nypix"]);
         double fov = numxpix==1? 180. : numxpix*pixscale;
 
         astro::SkyDir center(xref, yref, galactic?  astro::SkyDir::GALACTIC : astro::SkyDir::EQUATORIAL);
