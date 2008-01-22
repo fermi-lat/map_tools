@@ -1,5 +1,15 @@
 ------------------------------------------------------------
 User: burnett  Mon Jan 21 17:19:31 PST 2008
+map_tools/src/cube_display
+
+Modified Files:
+	cube_display.cxx 
+Log Message:
+add new output when using count map
+clean up SkyImage a little, fixing 1/2-pixel offset problem
+    *
+------------------------------------------------------------
+User: burnett  Mon Jan 21 17:19:31 PST 2008
 map_tools/src
 
 Modified Files:
