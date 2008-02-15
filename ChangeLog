@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: gudlaugu  Fri Feb 15 10:17:20 PST 2008
+map_tools/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+Read in theta cuts from FT1 file(s) in exposure_map
+    *
+------------------------------------------------------------
 TAG
 Tag name: v7r0p2, operation: add
 Package: map_tools
