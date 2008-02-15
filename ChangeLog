@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: gudlaugu  Fri Feb 15 10:17:21 PST 2008
+map_tools/src/exposure_map
+
+Modified Files:
+	exposure_map.cxx 
+Log Message:
+Read in theta cuts from FT1 file(s) in exposure_map
+    *
+------------------------------------------------------------
+User: gudlaugu  Fri Feb 15 10:17:21 PST 2008
 map_tools/pfiles
 
 Modified Files:
