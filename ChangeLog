@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Wed Feb 20 11:04:24 PST 2008
+map_tools/src/exposure_map
+
+Modified Files:
+	exposure_map.cxx 
+Log Message:
+tagging for scons update, and new theta cut
+    *
+------------------------------------------------------------
+User: burnett  Wed Feb 20 11:04:24 PST 2008
 map_tools/doc
 
 Modified Files:
