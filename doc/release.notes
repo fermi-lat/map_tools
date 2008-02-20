@@ -2,10 +2,11 @@
     @brief tools definition
     @author Toby Burnett
 
-$Id: release.notes,v 1.86 2007/12/11 05:06:57 burnett Exp $
+$Id: release.notes,v 1.87 2008/01/16 21:36:57 burnett Exp $
 @verbatim
  --------- -----  --- -----------------------------------------------------------------------
 
+ 20-feb-08 v7r1   THB  (Gulli) Implement theta cut for gtexpcube
  16-jan-08 v7r0p1 THB  Force use of equatorial coordinates in exposure map
  10-dec-07 v7r0   THB  refactor healpix stuff to healpix package
  27-aug-07 v6r11p3THB  Fix exposure_cube to be interactive
