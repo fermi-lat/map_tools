@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Wed Feb 20 11:04:24 PST 2008
+map_tools/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+tagging for scons update, and new theta cut
+    *
+------------------------------------------------------------
+User: burnett  Wed Feb 20 11:04:24 PST 2008
 map_tools/cmt
 
 Modified Files:
