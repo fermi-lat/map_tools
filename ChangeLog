@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: golpa  Wed Feb 20 09:08:46 PST 2008
+map_tools
+
+Modified Files:
+	SConscript map_toolsLib.py 
+Log Message:
+Include healpix in library dependency, cosmetic changes
+    *
+------------------------------------------------------------
 User: gudlaugu  Fri Feb 15 10:17:21 PST 2008
 map_tools/src/exposure_map
 
