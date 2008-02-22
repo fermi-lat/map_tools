@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+TAG
+Tag name: v7r1, operation: mov
+Package: map_tools
+User: glast  Thu Feb 21 17:23:58 2008
+Files:
+  map_tools/SConscript  1.3
+
+    *
+------------------------------------------------------------
 User: golpa  Thu Feb 21 17:19:12 PST 2008
 map_tools
 
