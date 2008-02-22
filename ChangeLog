@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: golpa  Thu Feb 21 17:19:12 PST 2008
+map_tools
+
+Modified Files:
+	SConscript 
+Log Message:
+Added missing binaries in SCons
+    *
+------------------------------------------------------------
 TAG
 Tag name: map_tools-07-01-00, operation: add
 Package: map_tools
