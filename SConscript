@@ -1,4 +1,4 @@
-#$Id: SConscript,v 1.2 2008/02/20 17:08:46 golpa Exp $
+#$Id: SConscript,v 1.3 2008/02/22 01:19:12 golpa Exp $
 
 Import('baseEnv')
 Import('listFiles')
@@ -8,6 +8,7 @@ libEnv = baseEnv.Clone()
 map_toolsLib = libEnv.StaticLibrary('map_tools', listFiles(['src/*.cxx']))
 
 progEnv.Tool('map_toolsLib')
+progEnv.Tool('dataSubselectorLib')
 gtexpcube = progEnv.Program('gtexpcube', listFiles(['src/exposure_map/*.cxx']))
 gtdispcube = progEnv.Program('gtdispcube', listFiles(['src/cube_display/*.cxx']))
 exposure_cube = progEnv.Program('exposure_cube', listFiles(['src/exposure_cube/*.cxx']))
