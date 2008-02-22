@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: golpa  Fri Feb 22 14:09:34 PST 2008
+map_tools
+
+Modified Files:
+	SConscript 
+Log Message:
+Added dataSubselector as a dependency of the applications
+    *
+------------------------------------------------------------
 TAG
 Tag name: map_tools-07-01-00, operation: mov
 Package: map_tools
