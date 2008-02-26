@@ -1,10 +1,10 @@
-#$Id: SConscript,v 1.3 2008/02/22 01:19:12 golpa Exp $
-
+#$Id: SConscript,v 1.4 2008/02/22 22:09:34 golpa Exp $
 Import('baseEnv')
 Import('listFiles')
 progEnv = baseEnv.Clone()
 libEnv = baseEnv.Clone()
 
+libEnv.Tool('map_toolsLib', depsOnly = 1)
 map_toolsLib = libEnv.StaticLibrary('map_tools', listFiles(['src/*.cxx']))
 
 progEnv.Tool('map_toolsLib')
