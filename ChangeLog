@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: glastrm  Mon Feb 25 21:12:30 PST 2008
+ScienceTools-scons/map_tools
+
+Modified Files:
+	map_toolsLib.py SConscript 
+Log Message:
+Set lib dependencies up for when building libraries
+    *
+------------------------------------------------------------
 TAG
 Tag name: map_tools-07-01-00, operation: mov
 Package: map_tools
