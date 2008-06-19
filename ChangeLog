@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: glastrm  Thu Jun 19 16:26:07 PDT 2008
+ScienceTools-scons/map_tools
+
+Modified Files:
+	SConscript 
+Log Message:
+Added Author and Version fields
+    *
+------------------------------------------------------------
 TAG
 Tag name: map_tools-07-01-00, operation: mov
 Package: map_tools
