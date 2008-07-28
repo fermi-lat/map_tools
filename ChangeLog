@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sun Jul 27 18:58:08 PDT 2008
+map_tools/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+enable building read_map application
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceTools-09-07-00, operation: add
 Package: map_tools
