@@ -2,10 +2,11 @@
     @brief tools definition
     @author Toby Burnett
 
-$Id: release.notes,v 1.87 2008/01/16 21:36:57 burnett Exp $
+$Id: release.notes,v 1.88 2008/02/20 19:04:24 burnett Exp $
 @verbatim
  --------- -----  --- -----------------------------------------------------------------------
 
+ 27-jul-08 v7r2   THB  Turn on the read_map application, allowing changing projections 
  20-feb-08 v7r1   THB  (Gulli) Implement theta cut for gtexpcube
  16-jan-08 v7r0p1 THB  Force use of equatorial coordinates in exposure map
  10-dec-07 v7r0   THB  refactor healpix stuff to healpix package
