@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Tue Jul 29 07:19:37 PDT 2008
+map_tools/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+tagging after hopeful use of Value()
+    *
+------------------------------------------------------------
+User: burnett  Tue Jul 29 07:19:37 PDT 2008
 map_tools/cmt
 
 Modified Files:
