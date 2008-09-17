@@ -1,5 +1,13 @@
 ------------------------------------------------------------
 TAG
+Tag name: ScienceTools-09-07-00, operation: del
+Package: map_tools
+User: glastrm  Wed Sep 17 13:12:07 2008
+Files:
+
+    *
+------------------------------------------------------------
+TAG
 Tag name: map_tools-07-01-01, operation: add
 Package: map_tools
 User: glastrm  Tue Jul 29 07:30:40 2008
