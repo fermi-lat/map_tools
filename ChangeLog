@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: vernaleo  Wed Jan 28 09:59:43 PST 2009
+map_tools/pfiles
+
+Modified Files:
+	test_map_tools.par 
+Log Message:
+Modified path in test_map_tools.par so test code will also work in FSSC builds.
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceTools-09-09-00, operation: add
 Package: map_tools
