@@ -2,10 +2,12 @@
     @brief tools definition
     @author Toby Burnett
 
-$Id: release.notes,v 1.90 2008/07/29 14:19:37 burnett Exp $
+$Id: release.notes,v 1.91 2009/01/28 18:05:06 vernaleo Exp $
 @verbatim
  --------- -----  --- -----------------------------------------------------------------------
 
+ 14-feb-09 v7r1p3  JC  remove lower limit for pixscale in gtexpmap.par 
+                       (I. Grenier request)
  28-jan-09 v7r1p2 JCV  Change paths in test code pfile 
  29-jul-08 v7r2p1 THB  Try to fix gcc issue
  27-jul-08 v7r2   THB  Turn on the read_map application, allowing changing projections 
