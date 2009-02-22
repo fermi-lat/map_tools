@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sun Feb 22 14:38:37 PST 2009
+map_tools/map_tools
+
+Modified Files:
+	Exposure.h 
+Log Message:
+mods to implement phi dependence in exposure calculation
+    *
+------------------------------------------------------------
 TAG
 Tag name: map_tools-07-01-03, operation: add
 Package: map_tools
