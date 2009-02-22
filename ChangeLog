@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Sun Feb 22 14:38:37 PST 2009
+map_tools/src
+
+Modified Files:
+	Exposure.cxx 
+Log Message:
+mods to implement phi dependence in exposure calculation
+    *
+------------------------------------------------------------
+User: burnett  Sun Feb 22 14:38:37 PST 2009
 map_tools/pfiles
 
 Modified Files:
