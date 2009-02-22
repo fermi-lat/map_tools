@@ -2,7 +2,7 @@
 @brief build the exposure_cube application
 
 @author Toby Burnett
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.41 2007/12/11 05:06:58 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.42 2009/02/22 22:38:37 burnett Exp $
 */
 
 #include "hoops/hoops_prompt_group.h"
@@ -140,8 +140,8 @@ public:
  
     }
     void prompt() {
-        m_pars.Prompt("outfile");
         m_pars.Prompt("infile");
+        m_pars.Prompt("outfile");
         m_pars.Prompt("tstart");
         m_pars.Prompt("tstop");
         m_pars.Prompt("zmin");
