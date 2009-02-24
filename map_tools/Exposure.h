@@ -2,7 +2,7 @@
     @brief definition of the class Exposure
 
     @author T.Burnett
-    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Exposure.h,v 1.23 2007/12/11 05:06:57 burnett Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Exposure.h,v 1.24 2009/02/22 22:38:37 burnett Exp $
 */
 #ifndef MAP_TOOLS_EXPOSURE_H
 #define MAP_TOOLS_EXPOSURE_H
@@ -40,6 +40,13 @@ public:
     {
         const C& binner = m_sky[dir];
         return binner(fun);
+    }
+    //! version for fun to be function of costh and phi
+    template<class F>
+        double integral(const astro::SkyDir& dir, const F& fun)const
+    {
+        const C& binner = m_sky[dir];
+        return binner.integral(fun);
     }
     const S& data()const{return m_sky;}
     S& data(){return m_sky;}
@@ -99,6 +106,14 @@ public:
     double lost()const{return m_lost;}
 private:
     bool processEntry(const tip::ConstTableRecord & row, const GTIvector& gti);
+
+    /** @brief  allow horizon cut, possible if FOV includes horizon
+        @param dirz direction of z-axis of instrument
+        @param dirx direction of x-axis of instrument
+        @param dirzenith direction of local zenith
+        @param deltat time interval
+    */
+    virtual void fill_zenith(const astro::SkyDir& dirz,const astro::SkyDir& dirx, const astro::SkyDir& dirzenith, double deltat);
 
     /** @brief set up the cache of vectors associated with cosine histograms
 
