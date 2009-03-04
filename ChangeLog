@@ -1,4 +1,12 @@
 ------------------------------------------------------------
+TAG
+Tag name: v7r2, operation: add
+Package: map_tools
+User: burnett  Tue Mar  3 23:13:47 2009
+Files:
+
+    *
+------------------------------------------------------------
 User: burnett  Tue Mar  3 23:12:48 PST 2009
 map_tools/src/exposure_map
 
