@@ -2,10 +2,10 @@
     @brief tools definition
     @author Toby Burnett
 
-$Id: release.notes,v 1.91 2009/01/28 18:05:06 vernaleo Exp $
+$Id: release.notes,v 1.92 2009/02/14 18:01:41 jchiang Exp $
 @verbatim
  --------- -----  --- -----------------------------------------------------------------------
-
+ 03-mar-09 v7r2   THB  Code for phi dependent-IRF
  14-feb-09 v7r1p3  JC  remove lower limit for pixscale in gtexpmap.par 
                        (I. Grenier request)
  28-jan-09 v7r1p2 JCV  Change paths in test code pfile 
