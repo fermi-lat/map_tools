@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Tue Mar  3 23:12:48 PST 2009
+map_tools/src/exposure_map
+
+Modified Files:
+	exposure_map.cxx 
+Log Message:
+update and tag for phi stuff
+    *
+------------------------------------------------------------
+User: burnett  Tue Mar  3 23:12:48 PST 2009
 map_tools/pfiles
 
 Modified Files:
