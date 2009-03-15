@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Sun Mar 15 11:30:54 PDT 2009
+map_tools/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+fix to case when number of cos bins is different from expected.
+    *
+------------------------------------------------------------
 User: burnett  Sun Mar 15 11:30:53 PDT 2009
 map_tools/cmt
 
