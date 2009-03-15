@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Sun Mar 15 11:30:54 PDT 2009
+map_tools/src
+
+Modified Files:
+	Exposure.cxx 
+Log Message:
+fix to case when number of cos bins is different from expected.
+    *
+------------------------------------------------------------
+User: burnett  Sun Mar 15 11:30:54 PDT 2009
 map_tools/doc
 
 Modified Files:
