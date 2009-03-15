@@ -1,7 +1,7 @@
 /** @file Exposure.cxx
     @brief Implementation of class Exposure
 
-   $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Exposure.cxx,v 1.34 2009/02/22 22:38:37 burnett Exp $
+   $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Exposure.cxx,v 1.35 2009/02/24 17:17:53 burnett Exp $
 */
 #include "map_tools/Exposure.h"
 #include "healpix/HealpixArrayIO.h"
@@ -46,10 +46,17 @@ Exposure::Exposure(double pixelsize, double cosbinsize, double zcut)
 {
     unsigned int cosbins = static_cast<unsigned int>(1./cosbinsize);
     if( cosbins != CosineBinner::nbins() ) {
+        // bins per pixel: depends on phi or not
+        unsigned int allbins(cosbins);
+        if( CosineBinner::nphibins() > 0 ){
+            // add size for extra phi bins.
+            allbins += cosbins * healpix::CosineBinner::nphibins();
+        }
+        
         SkyBinner::iterator is = data().begin();
         for( ; is != data().end(); ++is){ // loop over all pixels
             CosineBinner & pixeldata= *is; // get the contents of this pixel
-            pixeldata.resize(cosbins);
+            pixeldata.resize(allbins);
             CLHEP::Hep3Vector pixdir = data().dir(is)();
         }
         CosineBinner::setBinning(0, cosbins);
