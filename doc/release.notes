@@ -2,9 +2,10 @@
     @brief tools definition
     @author Toby Burnett
 
-$Id: release.notes,v 1.94 2009/03/04 07:14:45 burnett Exp $
+$Id: release.notes,v 1.95 2009/03/15 18:30:53 burnett Exp $
 @verbatim
  --------- -----  --- -----------------------------------------------------------------------
+ 16-mar-09 v7r3p3  JC  make Exposure::fill_zenith accessible to subclasses
  15-mar-09 v7r3   THB  fix to code for phi dependent-IRF
  03-mar-09 v7r3   THB  Code for phi dependent-IRF
  14-feb-09 v7r1p3  JC  remove lower limit for pixscale in gtexpmap.par 
