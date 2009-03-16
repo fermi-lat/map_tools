@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: jchiang  Mon Mar 16 13:47:31 PDT 2009
+map_tools/map_tools
+
+Modified Files:
+	Exposure.h 
+Log Message:
+make fill_zenith accessible to subclasses
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: map_tools-07-03-02, operation: add
 Package: map_tools
