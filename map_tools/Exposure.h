@@ -2,7 +2,7 @@
     @brief definition of the class Exposure
 
     @author T.Burnett
-    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Exposure.h,v 1.24 2009/02/22 22:38:37 burnett Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Exposure.h,v 1.25 2009/02/24 17:17:53 burnett Exp $
 */
 #ifndef MAP_TOOLS_EXPOSURE_H
 #define MAP_TOOLS_EXPOSURE_H
@@ -104,9 +104,8 @@ public:
                     bool verbose=true);
 
     double lost()const{return m_lost;}
-private:
-    bool processEntry(const tip::ConstTableRecord & row, const GTIvector& gti);
 
+protected:
     /** @brief  allow horizon cut, possible if FOV includes horizon
         @param dirz direction of z-axis of instrument
         @param dirx direction of x-axis of instrument
@@ -114,6 +113,9 @@ private:
         @param deltat time interval
     */
     virtual void fill_zenith(const astro::SkyDir& dirz,const astro::SkyDir& dirx, const astro::SkyDir& dirzenith, double deltat);
+
+private:
+    bool processEntry(const tip::ConstTableRecord & row, const GTIvector& gti);
 
     /** @brief set up the cache of vectors associated with cosine histograms
 
