@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Fri Apr 17 07:05:55 PDT 2009
+map_tools/pfiles
+
+Modified Files:
+	gtexpcube.par 
+Log Message:
+fix par file to conform to general use expectation.
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceTools-09-11-00, operation: add
 Package: map_tools
