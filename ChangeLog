@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Tue May 19 17:40:14 PDT 2009
+map_tools/src
+
+Modified Files:
+	Exposure.cxx 
+Log Message:
+changes to allow accumulation of weighted livetime
+    *
+------------------------------------------------------------
 User: burnett  Tue May 19 17:40:13 PDT 2009
 map_tools/map_tools
 
