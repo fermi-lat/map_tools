@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Tue May 19 17:40:13 PDT 2009
+map_tools/map_tools
+
+Modified Files:
+	Exposure.h 
+Log Message:
+changes to allow accumulation of weighted livetime
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceTools-09-12-00, operation: add
 Package: map_tools
