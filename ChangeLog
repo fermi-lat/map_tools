@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Mon Jun  1 12:50:49 PDT 2009
+map_tools/pfiles
+
+Modified Files:
+	exposure_cube.par 
+Log Message:
+add outtable2 to exposure_cube.par; make sure second extension does not overwrite the first one; make Exposure::fill_zenith public
+    *
+------------------------------------------------------------
+User: jchiang  Mon Jun  1 12:50:49 PDT 2009
 map_tools/map_tools
 
 Modified Files:
