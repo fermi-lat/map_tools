@@ -2,7 +2,7 @@
 @brief build the exposure_cube application
 
 @author Toby Burnett
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.43 2009/02/22 22:46:04 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_cube/exposure_cube.cxx,v 1.44 2009/05/20 00:40:14 burnett Exp $
 */
 
 #include "hoops/hoops_prompt_group.h"
@@ -140,7 +140,7 @@ public:
             m_f.info() << " lost " << ex.lost() << " seconds from zcut" << std::endl;
         }
        HealpixArrayIO::instance().write(ex.data(), outfile, outtable);
-       HealpixArrayIO::instance().write(ex2.data(), outfile, outtable2);
+       HealpixArrayIO::instance().write(ex2.data(), outfile, outtable2, false);
 
  
     }
