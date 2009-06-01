@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: jchiang  Mon Jun  1 12:50:49 PDT 2009
+map_tools/map_tools
+
+Modified Files:
+	Exposure.h 
+Log Message:
+add outtable2 to exposure_cube.par; make sure second extension does not overwrite the first one; make Exposure::fill_zenith public
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceTools-09-14-00, operation: add
 Package: map_tools
