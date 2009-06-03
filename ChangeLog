@@ -1,4 +1,12 @@
 ------------------------------------------------------------
+User: glastrm  Wed Jun  3 15:30:36 PDT 2009
+map_tools
+
+Modified Files:
+	SConscript 
+Log Message:
+    *
+------------------------------------------------------------
 TAG
 Tag name: v7r4p1, operation: add
 Package: map_tools
