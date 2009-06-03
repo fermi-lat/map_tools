@@ -1,4 +1,50 @@
 ------------------------------------------------------------
+TAG
+Tag name: v7r4p1, operation: add
+Package: map_tools
+User: jchiang  Wed Jun  3 14:52:52 2009
+Files:
+  map_tools/.cvsignore  1.1.1.1
+  map_tools/map_toolsLib.py  1.3
+  map_tools/ChangeLog  1.1.1.837
+  map_tools/SConscript  1.15
+  map_tools/Templates/ExposureCube.txt  1.1.1.1
+  map_tools/Templates/CountMap  1.2
+  map_tools/cmt/.cvsignore  1.2
+  map_tools/cmt/requirements  1.111
+  map_tools/doc/release.notes  1.99
+  map_tools/doc/Doxyfile  1.1
+  map_tools/map_tools/Parameters.h  1.15
+  map_tools/map_tools/DiffuseFunction.h  1.1
+  map_tools/map_tools/MapParameters.h  1.9
+  map_tools/map_tools/Exposure.h  1.28
+  map_tools/map_tools/SkyImage.h  1.32
+  map_tools/pfiles/test_map_tools.par  1.10
+  map_tools/pfiles/map_stats.par  1.1
+  map_tools/pfiles/cube_display.par  1.1
+  map_tools/pfiles/exposure_map.par  1.17
+  map_tools/pfiles/read_map.par  1.10
+  map_tools/pfiles/count_map.par  1.18
+  map_tools/pfiles/exposure_cube.par  1.22
+  map_tools/pfiles/gtdispcube.par  1.3
+  map_tools/pfiles/gtexpcube.par  1.8
+  map_tools/src/mainpage.h  1.9
+  map_tools/src/Parameters.cxx  1.21
+  map_tools/src/Exposure.cxx  1.37
+  map_tools/src/DiffuseFunction.cxx  1.1
+  map_tools/src/SkyImage.cxx  1.57
+  map_tools/src/MapParameters.cxx  1.14
+  map_tools/src/count_map/count_map.cxx  1.19
+  map_tools/src/cube_display/cube_display.cxx  1.7
+  map_tools/src/exposure_cube/exposure_cube.cxx  1.45
+  map_tools/src/exposure_map/exposure_map.cxx  1.41
+  map_tools/src/map_stats/map_stats.cxx  1.4
+  map_tools/src/read_map/read_map.cxx  1.11
+  map_tools/src/test/TestCosineBinner.h  1.3
+  map_tools/src/test/test_main.cxx  1.34
+
+    *
+------------------------------------------------------------
 User: jchiang  Mon Jun  1 12:52:22 PDT 2009
 map_tools/doc
 
