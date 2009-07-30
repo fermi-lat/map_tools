@@ -2,6 +2,14 @@
 TAG
 Tag name: ScienceTools-09-15-04, operation: add
 Package: map_tools
+User: glastrm  Thu Jul 30 16:24:45 2009
+Files:
+
+    *
+------------------------------------------------------------
+TAG
+Tag name: ScienceTools-09-15-04, operation: add
+Package: map_tools
 User: glastrm  Thu Jul 30 15:55:53 2009
 Files:
   map_tools/.cvsignore  1.1.1.1
