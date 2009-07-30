@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: elwinter  Thu Jul 30 10:05:40 PDT 2009
+map_tools/pfiles
+
+Modified Files:
+      Tag: ScienceToolsv9r15p2
+	gtdispcube.par gtexpcube.par 
+Log Message:
+Imported changes from FSSC.
+    *
+------------------------------------------------------------
 TAG
 Tag name: map_tools-07-04-02, operation: add
 Package: map_tools
