@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: elwinter  Wed Dec 16 15:06:08 PST 2009
+map_tools/pfiles
+
+Modified Files:
+	gtexpcube.par 
+Log Message:
+Changed default output filename to something generic, and changed the
+default value of the irfs parameter to P6_V3_DIFFUSE.
+
+    *
+------------------------------------------------------------
 User: elwinter  Wed Dec 16 15:04:41 PST 2009
 map_tools/pfiles
 
