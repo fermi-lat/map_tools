@@ -1,4 +1,15 @@
 ------------------------------------------------------------
+User: elwinter  Wed Dec 16 15:04:41 PST 2009
+map_tools/pfiles
+
+Modified Files:
+	gtdispcube.par 
+Log Message:
+Removed minimum value of pixscale parameter. Removed extra comma in
+line for chatter parameter.
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceTools-09-15-06, operation: add
 Package: map_tools
