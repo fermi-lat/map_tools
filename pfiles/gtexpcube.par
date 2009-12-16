@@ -1,11 +1,11 @@
-# $Header: /nfs/slac/g/glast/ground/cvs/map_tools/pfiles/gtexpcube.par,v 1.7 2009/03/04 07:12:48 burnett Exp $
+# $Header: /nfs/slac/g/glast/ground/cvs/map_tools/pfiles/gtexpcube.par,v 1.8 2009/04/17 14:05:55 burnett Exp $
 #---------------------------------------------------------------------------------------
 # General parameters.
 infile,f,a,"",,,"Exposure cube input file name"
 evfile,f,a,"NONE",,,"FT1 events input file name"
 cmfile,f,a,"NONE",,,"Count map input file name (NONE for manual input of map geometry)"
-outfile,f,a,"earth_expmap_P6_r0_diffuse.fits",,,"Exposure map output file name"
-irfs,s,a,"P6_V1_DIFFUSE",,,"Response function to use. Run gtirfs for a list"
+outfile,f,a,"expmap.fits",,,"Exposure map output file name"
+irfs,s,a,"P6_V3_DIFFUSE",,,"Response function to use. Run gtirfs for a list"
 #---------------------------------------------------------------------------------------
 
 #---------------------------------------------------------------------------------------
