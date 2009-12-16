@@ -1,7 +1,7 @@
 /** @file test_main.cxx
 @brief test various classes
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/test/test_main.cxx,v 1.33 2007/03/11 20:59:50 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/test/test_main.cxx,v 1.34 2007/03/13 15:45:10 burnett Exp $
 
 */
 #include "map_tools/Exposure.h"
@@ -17,6 +17,7 @@ $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/test/test_main.cxx,v 1.33 20
 #include <cstdio>
 #include <cassert>
 #include <stdexcept>
+#include <typeinfo>
 using namespace map_tools;
 
 class TestAeff { 
