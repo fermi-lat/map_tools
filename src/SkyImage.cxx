@@ -1,7 +1,7 @@
 /** @file SkyImage.cxx
 
 @brief implement the class SkyImage
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/SkyImage.cxx,v 1.56 2008/01/18 00:26:20 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/SkyImage.cxx,v 1.57 2008/01/22 01:19:31 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -14,6 +14,7 @@ $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/SkyImage.cxx,v 1.56 2008/01/
 
 #include <cctype>
 #include <cmath>
+#include <memory>
 #include <stdexcept>
 #include <sstream>
 #include <errno.h> // to test result of std::remove()
