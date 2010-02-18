@@ -1,5 +1,5 @@
 # -*- python -*-
-# $Id: SConscript,v 1.17 2009/07/15 23:14:23 jrb Exp $
+# $Id: SConscript,v 1.18 2009/07/16 00:30:39 glastrm Exp $
 # Authors: T. Burnett <tburnett@u.washington.edu>
 # Version: map_tools-07-04-02
 Import('baseEnv')
@@ -7,7 +7,6 @@ Import('listFiles')
 progEnv = baseEnv.Clone()
 libEnv = baseEnv.Clone()
 
-libEnv.Tool('map_toolsLib', depsOnly = 1)
 map_toolsLib = libEnv.StaticLibrary('map_tools', listFiles(['src/*.cxx']))
 
 progEnv.Tool('map_toolsLib')
