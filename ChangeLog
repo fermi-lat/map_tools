@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Tue Mar 30 16:16:11 PDT 2010
+map_tools/src/exposure_map
+
+Modified Files:
+	exposure_map.cxx 
+Log Message:
+Modify to use phi dependence of aeff
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceTools-09-16-00, operation: add
 Package: map_tools
