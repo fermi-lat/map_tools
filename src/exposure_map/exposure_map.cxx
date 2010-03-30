@@ -5,7 +5,7 @@
 
 See the <a href="exposure_map_guide.html"> user's guide </a>.
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.40 2008/02/20 19:04:24 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.41 2009/03/04 07:12:48 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -78,13 +78,18 @@ public:
         :m_aeff(aeff),m_energy(energy), m_cutoff(cutoff)
     {}
 
-    double operator()(double costh) const
+ 
+    double integral(double costh, double phi) const
     {
         if( m_aeff==0 ){
             return costh<m_cutoff? 0 : (costh-m_cutoff)/(1.-m_cutoff);
         }
-
-        return costh<m_cutoff? 0 : m_aeff->value(m_energy, acos(costh)*180/M_PI, 0);
+        if (costh<m_cutoff) return 0;
+        double theta(acos(costh)*180/M_PI);
+        double ret(0), phibin(3.);
+        int n(0);
+        return m_aeff->value(m_energy, theta, phi);
+        
     }
     const irfInterface::IAeff* m_aeff;
     double m_energy;
@@ -104,7 +109,7 @@ public:
         , m_norm(norm)
     {}
     double operator()(const astro::SkyDir& s)const{
-        return m_norm*m_exp(s, m_aeff);
+        return m_norm*m_exp.integral(s, m_aeff);
     }
 private:
     const Exposure& m_exp;
