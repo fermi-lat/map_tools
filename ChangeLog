@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Wed Mar 31 14:46:02 PDT 2010
+map_tools/src/exposure_map
+
+Modified Files:
+	exposure_map.cxx 
+Log Message:
+detect phi dependence in livetime cube, use it if there.
+    *
+------------------------------------------------------------
 User: burnett  Tue Mar 30 16:16:11 PDT 2010
 map_tools/src/exposure_map
 
