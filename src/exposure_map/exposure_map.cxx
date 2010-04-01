@@ -5,7 +5,7 @@
 
 See the <a href="exposure_map_guide.html"> user's guide </a>.
 
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.42 2010/03/30 23:16:11 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.43 2010/03/31 21:46:02 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -31,6 +31,7 @@ $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cx
 #include "tip/Table.h"
 
 #include <sstream>
+#include <iomanip>
 #include <iterator> // for ostream_iterator
 #include <algorithm>
 #include <iomanip>
