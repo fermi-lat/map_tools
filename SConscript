@@ -1,7 +1,7 @@
 # -*- python -*-
-# $Id: SConscript,v 1.19 2010/02/18 00:57:18 jrb Exp $
+# $Id: SConscript,v 1.20 2010/02/22 20:49:57 jrb Exp $
 # Authors: T. Burnett <tburnett@u.washington.edu>
-# Version: map_tools-07-04-03
+# Version: map_tools-07-05-00
 Import('baseEnv')
 Import('listFiles')
 progEnv = baseEnv.Clone()
