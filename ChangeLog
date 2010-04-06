@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Tue Apr  6 06:05:01 PDT 2010
+map_tools/src/exposure_map
+
+Modified Files:
+	exposure_map.cxx 
+Log Message:
+more tweaks, for formattted output, and averaging over phi
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceTools-09-16-01, operation: add
 Package: map_tools
