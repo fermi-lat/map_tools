@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Tue Apr  6 06:09:30 PDT 2010
+map_tools/pfiles
+
+Modified Files:
+	gtexpcube.par 
+Log Message:
+add deltaphi parameter
+    *
+------------------------------------------------------------
 User: burnett  Tue Apr  6 06:05:01 PDT 2010
 map_tools/src/exposure_map
 
