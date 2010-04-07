@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Wed Apr  7 11:38:03 PDT 2010
+map_tools/src
+
+Modified Files:
+	SkyImage.cxx 
+Log Message:
+fix lower limit detection
+    *
+------------------------------------------------------------
 TAG
 Tag name: map_tools-07-05-01, operation: add
 Package: map_tools
