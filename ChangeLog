@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: burnett  Wed Apr  7 11:39:11 PDT 2010
+map_tools/src/exposure_map
+
+Modified Files:
+	exposure_map.cxx 
+Log Message:
+implement ignorephi option; print etendue instead of aeff
+    *
+------------------------------------------------------------
+User: burnett  Wed Apr  7 11:39:11 PDT 2010
 map_tools/pfiles
 
 Modified Files:
