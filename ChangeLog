@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Wed Nov  3 11:05:34 PDT 2010
+map_tools/src/exposure_map
+
+Modified Files:
+	exposure_map.cxx 
+Log Message:
+modify phi average code to assume possible to set flag in IAeff.
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceTools-09-18-06, operation: add
 Package: map_tools
