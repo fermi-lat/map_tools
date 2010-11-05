@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: burnett  Thu Nov  4 19:10:03 PDT 2010
+map_tools/src/exposure_map
+
+Modified Files:
+	exposure_map.cxx 
+Log Message:
+implement disabling of phi dependence
+    *
+------------------------------------------------------------
 TAG
 Tag name: map_tools-07-05-04, operation: add
 Package: map_tools
