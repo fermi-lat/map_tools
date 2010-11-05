@@ -4,7 +4,7 @@
 @author Toby Burnett
 
 See the <a href="exposure_map_guide.html"> user's guide </a>.
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.46 2010/04/07 18:39:11 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.47 2010/11/03 18:05:34 burnett Exp $
 */
 #define CAN_IGNORE_PHI // as of version 1.6 of irfInterface::IAeff an undocumented entry was added avoid phi dependence
 
@@ -190,6 +190,9 @@ public:
             AeffSum(const std::vector<std::string>& irflist){
                 for(std::vector<std::string>::const_iterator sit= irflist.begin(); sit!=irflist.end(); ++sit){
                     irfInterface::Irfs* irf=IrfsFactory::instance()->create(*sit);
+                    // this line means that phi dependence is never used
+                    // attempts to do so have been a disaster.
+                    irf->aeff()->setPhiDependence(false);
                     m_aeff.push_back(irf->aeff());
                 }
             }
