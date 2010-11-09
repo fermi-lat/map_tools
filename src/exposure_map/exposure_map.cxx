@@ -4,7 +4,7 @@
 @author Toby Burnett
 
 See the <a href="exposure_map_guide.html"> user's guide </a>.
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.47 2010/11/03 18:05:34 burnett Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/exposure_map/exposure_map.cxx,v 1.48 2010/11/05 02:10:03 burnett Exp $
 */
 #define CAN_IGNORE_PHI // as of version 1.6 of irfInterface::IAeff an undocumented entry was added avoid phi dependence
 
@@ -113,8 +113,6 @@ public:
         }
         if (costh<m_cutoff) return 0;
         double theta(acos(costh)*180/M_PI);
-        double ret(0), phibin(3.);
-        int n(0);
         return m_aeff->value(m_energy, theta, phi);
         
     }
@@ -337,7 +335,7 @@ public:
         }
         double ctcutoff = cos(thetaCut.maxVal()*M_PI/180);
 
-        m_f.info() << "cos theta cutoff used: " << (abs(ctcutoff)< 1e-6? 0: ctcutoff) << std::endl;
+        m_f.info() << "cos theta cutoff used: " << (std::abs(ctcutoff)< 1e-6? 0: ctcutoff) << std::endl;
 
 
         // create the image object, fill it from the exposure, write out
