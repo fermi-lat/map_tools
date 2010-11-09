@@ -1,4 +1,13 @@
 ------------------------------------------------------------
+User: cohen  Tue Nov  9 12:01:33 PST 2010
+map_tools/src/exposure_map
+
+Modified Files:
+	exposure_map.cxx 
+Log Message:
+fix a couple of inocuous compilation warnings
+    *
+------------------------------------------------------------
 TAG
 Tag name: ScienceTools-09-19-00, operation: add
 Package: map_tools
