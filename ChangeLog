@@ -2,6 +2,16 @@
 TAG
 Tag name: map_tools-07-05-06, operation: add
 Package: map_tools
+User: cohen  Mon Dec 20 11:41:58 2010
+Files:
+  map_tools/doc/release.notes  1.109
+  map_tools/doc/Doxyfile  1.1
+
+    *
+------------------------------------------------------------
+TAG
+Tag name: map_tools-07-05-06, operation: add
+Package: map_tools
 User: cohen  Mon Dec 20 11:41:48 2010
 Files:
   map_tools/cmt/.cvsignore  1.2
