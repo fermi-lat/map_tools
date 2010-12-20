@@ -2,6 +2,16 @@
 TAG
 Tag name: map_tools-07-05-06, operation: add
 Package: map_tools
+User: cohen  Mon Dec 20 11:42:44 2010
+Files:
+  map_tools/Templates/ExposureCube.txt  1.1.1.1
+  map_tools/Templates/CountMap  1.2
+
+    *
+------------------------------------------------------------
+TAG
+Tag name: map_tools-07-05-06, operation: add
+Package: map_tools
 User: cohen  Mon Dec 20 11:42:34 2010
 Files:
   map_tools/src/mainpage.h  1.9
