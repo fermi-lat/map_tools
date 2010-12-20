@@ -2,6 +2,16 @@
 TAG
 Tag name: map_tools-07-05-06, operation: add
 Package: map_tools
+User: cohen  Mon Dec 20 11:41:48 2010
+Files:
+  map_tools/cmt/.cvsignore  1.2
+  map_tools/cmt/requirements  1.116
+
+    *
+------------------------------------------------------------
+TAG
+Tag name: map_tools-07-05-06, operation: add
+Package: map_tools
 User: cohen  Mon Dec 20 11:41:39 2010
 Files:
   map_tools/.cvsignore  1.2
