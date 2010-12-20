@@ -1,4 +1,22 @@
 ------------------------------------------------------------
+User: cohen  Mon Dec 20 11:41:29 PST 2010
+map_tools/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+GoGui_auto-tag
+    *
+------------------------------------------------------------
+User: cohen  Mon Dec 20 11:41:29 PST 2010
+map_tools
+
+Modified Files:
+	SConscript 
+Log Message:
+GoGui_auto-tag
+    *
+------------------------------------------------------------
 User: cohen  Mon Dec 20 11:30:15 PST 2010
 ScienceTools-scons/map_tools/src
 
