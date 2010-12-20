@@ -1,7 +1,7 @@
 /** @file SkyImage.cxx
 
 @brief implement the class SkyImage
-$Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/SkyImage.cxx,v 1.58 2009/12/16 23:07:03 elwinter Exp $
+$Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/map_tools/src/SkyImage.cxx,v 1.59 2010/04/07 18:38:03 burnett Exp $
 */
 
 #include "map_tools/SkyImage.h"
@@ -12,6 +12,7 @@ $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/SkyImage.cxx,v 1.58 2009/12/
 #include "tip/Image.h"
 #include "tip/Table.h"
 
+#include <cstdio>
 #include <cctype>
 #include <cmath>
 #include <memory>
