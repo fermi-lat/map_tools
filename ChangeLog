@@ -2,6 +2,19 @@
 TAG
 Tag name: map_tools-07-05-06, operation: add
 Package: map_tools
+User: cohen  Mon Dec 20 11:42:07 2010
+Files:
+  map_tools/map_tools/Parameters.h  1.15
+  map_tools/map_tools/DiffuseFunction.h  1.1
+  map_tools/map_tools/MapParameters.h  1.9
+  map_tools/map_tools/Exposure.h  1.28
+  map_tools/map_tools/SkyImage.h  1.32
+
+    *
+------------------------------------------------------------
+TAG
+Tag name: map_tools-07-05-06, operation: add
+Package: map_tools
 User: cohen  Mon Dec 20 11:41:58 2010
 Files:
   map_tools/doc/release.notes  1.109
