@@ -1,4 +1,14 @@
 ------------------------------------------------------------
+User: jchiang  Wed Jan  5 09:26:40 PST 2011
+ScienceTools-scons/map_tools/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+tagging v7r5p7 (patch tag to trigger old RM builds with tagged src files)
+
+    *
+------------------------------------------------------------
 TAG
 Tag name: map_tools-07-05-06, operation: add
 Package: map_tools
