@@ -2,11 +2,12 @@
     @brief tools definition
     @author Toby Burnett
 
-$Id: release.notes,v 1.108 2010/11/05 02:11:22 burnett Exp $
+$Id: release.notes,v 1.109 2010/12/20 19:41:29 cohen Exp $
 @verbatim
  --------- -----  --- -----------------------------------------------------------------------
         * EOH *
 
+ map_tools-07-05-07 05-Jan-2011 jchiang patch tag to apply current CMT-style tag to files in src subdirectory
  map_tools-07-05-06 20-Dec-2010  cohen fix gcc 4.4 builds
  map_tools-07-05-05 04-Nov-2010 burnett update to phi averaging in gtexpcube: disable it
  map_tools-07-05-04 03-Nov-2010 burnett change phi averaging in gtexpcube to use IAeff flag
