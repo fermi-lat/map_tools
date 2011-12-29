@@ -1,5 +1,5 @@
 # -*- python -*-
-# $Id: SConscript,v 1.27 2010/12/20 19:41:29 cohen Exp $
+# $Id: SConscript,v 1.28 2011/01/05 17:28:04 jchiang Exp $
 # Authors: T. Burnett <tburnett@u.washington.edu>
 # Version: map_tools-07-05-07
 Import('baseEnv')
@@ -11,13 +11,12 @@ map_toolsLib = libEnv.StaticLibrary('map_tools', listFiles(['src/*.cxx']))
 
 progEnv.Tool('map_toolsLib')
 progEnv.Tool('dataSubselectorLib')
-gtexpcube = progEnv.Program('gtexpcube', listFiles(['src/exposure_map/*.cxx']))
 gtdispcube = progEnv.Program('gtdispcube', listFiles(['src/cube_display/*.cxx']))
 exposure_cube = progEnv.Program('exposure_cube', listFiles(['src/exposure_cube/*.cxx']))
 test_map_tools = progEnv.Program('test_map_tools', listFiles(['src/test/*.cxx']))
 
 progEnv.Tool('registerTargets', package = 'map_tools',
              staticLibraryCxts = [[map_toolsLib, libEnv]],
-             binaryCxts = [[gtexpcube,progEnv], [gtdispcube,progEnv], [exposure_cube,progEnv]],
+             binaryCxts = [[gtdispcube,progEnv], [exposure_cube,progEnv]],
              includes = listFiles(['map_tools/*.h']),
              testAppCxts = [[test_map_tools,progEnv]], pfiles = listFiles(['pfiles/*.par']))
