@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Thu Dec 29 07:36:54 PST 2011
+ScienceTools-scons/map_tools/pfiles
+
+Removed Files:
+	gtexpcube.par 
+Log Message:
+remove gtexpcube application
+    *
+------------------------------------------------------------
+User: jchiang  Thu Dec 29 07:36:54 PST 2011
 ScienceTools-scons/map_tools
 
 Modified Files:
