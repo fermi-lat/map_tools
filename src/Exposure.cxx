@@ -1,7 +1,7 @@
 /** @file Exposure.cxx
     @brief Implementation of class Exposure
 
-   $Header: /nfs/slac/g/glast/ground/cvs/map_tools/src/Exposure.cxx,v 1.36 2009/03/15 18:30:54 burnett Exp $
+   $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/map_tools/src/Exposure.cxx,v 1.37 2009/05/20 00:40:14 burnett Exp $
 */
 #include "map_tools/Exposure.h"
 #include "healpix/HealpixArrayIO.h"
@@ -35,14 +35,14 @@ inline int side_from_degrees(double pixelsize){
     return n; 
 } 
 
-Exposure::Exposure(double pixelsize, double cosbinsize, double zcut, bool weighted)
+Exposure::Exposure(double pixelsize, double cosbinsize, double zcut, bool weighted, double zmaxcut)
 : SkyExposure(
     SkyBinner(Healpix(
       side_from_degrees(pixelsize),  // nside
       Healpix::NESTED, 
       astro::SkyDir::EQUATORIAL) )
   )
-, m_zcut(zcut), m_lost(0)
+, m_zcut(zcut), m_zmaxcut(zmaxcut), m_lost(0)
 , m_weighted(weighted)
 {
     unsigned int cosbins = static_cast<unsigned int>(1./cosbinsize);
@@ -90,30 +90,32 @@ public:
         @param zenith optional zenith direction for potential cut
         @param zcut optional cut: if -1, ignore
     */
-    Filler( double deltat, const astro::SkyDir& dirz, const astro::SkyDir& dirx, astro::SkyDir zenith=astro::SkyDir(), double zcut=-1)
+   Filler( double deltat, const astro::SkyDir& dirz, const astro::SkyDir& dirx, astro::SkyDir zenith=astro::SkyDir(), double zcut=-1, double zmaxcut=1)
         : m_dirz(dirz())
         , m_rot(astro::PointingTransform(dirz,dirx).localToCelestial().inverse())
         , m_zenith(zenith())
         , m_deltat(deltat)
         , m_zcut(zcut)
+        , m_zmaxcut(zmaxcut)
         , m_total(0), m_lost(0)
         , m_use_phi(CosineBinner::nphibins()>0)
     {}
-    Filler( double deltat, const astro::SkyDir& dirz, astro::SkyDir zenith=astro::SkyDir(), double zcut=-1)
+   Filler( double deltat, const astro::SkyDir& dirz, astro::SkyDir zenith=astro::SkyDir(), double zcut=-1, double zmaxcut=1)
         : m_dirz(dirz())
         , m_zenith(zenith())
         , m_deltat(deltat)
         , m_zcut(zcut)
+        , m_zmaxcut(zmaxcut)
         , m_total(0), m_lost(0)
         , m_use_phi(false)
     {}
     void operator()( const std::pair<CosineBinner*, Simple3Vector> & x)
     {
         // check if we are making a horizon cut:
-        bool ok( m_zcut==-1);
+        bool ok( m_zcut==-1 && m_zmaxcut==1);
         if( ! ok) {
             double z(x.second.dot(m_zenith));
-            ok = z > m_zcut;
+            ok = z > m_zcut && z < m_zmaxcut;
         }
         if( ok) {
             // if ok, add to the angle histogram
@@ -137,7 +139,7 @@ private:
     Simple3Vector m_dirz;
     CLHEP::HepRotation m_rot;
     Simple3Vector m_zenith;
-    double m_deltat, m_zcut;
+   double m_deltat, m_zcut, m_zmaxcut;
     mutable double m_total, m_lost;
     bool m_use_phi;
 };
@@ -152,7 +154,7 @@ void Exposure::fill(const astro::SkyDir& dirz, double deltat)
 
 void Exposure::fill(const astro::SkyDir& dirz, const astro::SkyDir& zenith, double deltat)
 {
-    Filler sum = for_each(m_dir_cache.begin(), m_dir_cache.end(), Filler(deltat, dirz, zenith, m_zcut));
+   Filler sum = for_each(m_dir_cache.begin(), m_dir_cache.end(), Filler(deltat, dirz, zenith, m_zcut, m_zmaxcut));
     double total(sum.total());
     addtotal(total);
     m_lost += sum.lost();
@@ -163,7 +165,7 @@ void Exposure::fill_zenith(const astro::SkyDir& dirz,const astro::SkyDir& dirx,
                            double deltat)
 {
     Filler sum = for_each(m_dir_cache.begin(), m_dir_cache.end(), 
-        Filler(deltat, dirz, dirx, zenith, m_zcut));
+                          Filler(deltat, dirz, dirx, zenith, m_zcut, m_zmaxcut));
     double total(sum.total());
     addtotal(total);
     m_lost += sum.lost();
