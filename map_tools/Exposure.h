@@ -2,7 +2,7 @@
     @brief definition of the class Exposure
 
     @author T.Burnett
-    $Header: /nfs/slac/g/glast/ground/cvs/map_tools/map_tools/Exposure.h,v 1.27 2009/05/20 00:40:13 burnett Exp $
+    $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/map_tools/map_tools/Exposure.h,v 1.28 2009/06/01 19:50:49 jchiang Exp $
 */
 #ifndef MAP_TOOLS_EXPOSURE_H
 #define MAP_TOOLS_EXPOSURE_H
@@ -81,7 +81,8 @@ public:
     //! @param weighted [false] set true to make a weighted table
     Exposure(double pixelsize=1., double cosbinsize=1./healpix::CosineBinner::nbins(), 
         double zcut=-1.0,
-        bool   weighted=false
+        bool   weighted=false,
+        double zmaxcut=1
         );
 
     //! add a time interval at the given position
@@ -149,6 +150,7 @@ private:
     class Filler ; ///< class used to fill a CosineBinner object with a value
 
     double m_zcut; ///< value for zenith angle cut
+   double m_zmaxcut;
     double m_lost; ///< keep track of lost
     bool   m_weighted; ///< true if accumulating weighted livetime
 };
