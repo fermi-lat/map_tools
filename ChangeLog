@@ -1,5 +1,14 @@
 ------------------------------------------------------------
 User: jchiang  Tue Oct  2 15:01:24 PDT 2012
+ScienceTools-scons/map_tools/src
+
+Modified Files:
+	Exposure.cxx 
+Log Message:
+add zmaxcut to Exposure constructor and filler functions
+    *
+------------------------------------------------------------
+User: jchiang  Tue Oct  2 15:01:24 PDT 2012
 ScienceTools-scons/map_tools/map_tools
 
 Modified Files:
