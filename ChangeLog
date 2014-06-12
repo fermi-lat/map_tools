@@ -1,4 +1,31 @@
 ------------------------------------------------------------
+User: jchiang  Thu Jun 12 14:37:58 PDT 2014
+map_tools/cmt
+
+Modified Files:
+	requirements 
+Log Message:
+stag/GoGui_auto-tag
+    *
+------------------------------------------------------------
+User: jchiang  Thu Jun 12 14:37:58 PDT 2014
+map_tools/doc
+
+Modified Files:
+	release.notes 
+Log Message:
+stag/GoGui_auto-tag
+    *
+------------------------------------------------------------
+User: jchiang  Thu Jun 12 14:37:58 PDT 2014
+map_tools
+
+Modified Files:
+	SConscript 
+Log Message:
+stag/GoGui_auto-tag
+    *
+------------------------------------------------------------
 User: jchiang  Thu Jun 12 14:37:22 PDT 2014
 ScienceTools-scons/map_tools/pfiles
 
