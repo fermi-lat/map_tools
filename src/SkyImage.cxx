@@ -102,7 +102,7 @@ SkyImage::SkyImage(const hoops::IParGroup& pars)
         m_wcs = new astro::SkyProj(cm_file,1);
 
         // read the count map
-        std::auto_ptr<const tip::Image> count_map(tip::IFileSvc::instance().readImage(cm_file, ""));
+        std::unique_ptr<const tip::Image> count_map(tip::IFileSvc::instance().readImage(cm_file, ""));
         const tip::Header& header = count_map->getHeader();
 
         // first two dimensions come from count map image
@@ -110,7 +110,7 @@ SkyImage::SkyImage(const hoops::IParGroup& pars)
         header["NAXIS2"].get(m_naxis2);
 
         // read energies associated with layers from ebounds extension of count map.
-        std::auto_ptr<const tip::Table> ebounds(tip::IFileSvc::instance().readTable(cm_file, "EBOUNDS"));
+        std::unique_ptr<const tip::Table> ebounds(tip::IFileSvc::instance().readTable(cm_file, "EBOUNDS"));
 
         static double s_MeV_per_keV = .001;
 
