@@ -21,3 +21,18 @@ add_executable(gtdispcube src/cube_display/cube_display.cxx)
 add_executable(exposure_cube src/exposure_cube/exposure_cube.cxx)
 target_link_libraries(gtdispcube PRIVATE map_tools)
 target_link_libraries(exposure_cube PRIVATE map_tools)
+
+###############################################################
+# Installation
+###############################################################
+install(DIRECTORY map_tools DESTINATION ${FERMI_INSTALL_INCLUDEDIR})
+install(DIRECTORY pfiles/ DESTINATION ${FERMI_INSTALL_PFILESDIR})
+
+install(
+  TARGETS map_tools gtdispcube exposure_cube
+  # EXPORT fermiTargets
+  RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+  LIBRARY DESTINATION lib
+  ARCHIVE DESTINATION lib
+  INCLUDES DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+)
