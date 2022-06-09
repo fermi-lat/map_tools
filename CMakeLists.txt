@@ -1,6 +1,6 @@
 ###### Library ######
 add_library(
-  map_tools STATIC
+  map_tools 
   src/DiffuseFunction.cxx
   src/Exposure.cxx
   src/MapParameters.cxx
