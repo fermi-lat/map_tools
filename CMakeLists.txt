@@ -14,7 +14,7 @@ target_include_directories(
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
   $<INSTALL_INTERFACE:>
 )
-target_link_libraries(map_tools PUBLIC healpix astro hoops tip st_app st_stream irfLoader cfitsio)
+target_link_libraries(map_tools PUBLIC healpix astro hoops tip st_app st_stream irfLoader)
 
 ###### Executables ######
 add_executable(gtdispcube src/cube_display/cube_display.cxx)
