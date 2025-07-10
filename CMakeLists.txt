@@ -17,6 +17,8 @@ target_include_directories(
 target_link_libraries(map_tools PUBLIC healpix astro hoops tip st_app st_stream irfLoader)
 
 ###### Executables ######
+set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
+
 add_executable(gtdispcube src/cube_display/cube_display.cxx)
 add_executable(exposure_cube src/exposure_cube/exposure_cube.cxx)
 target_link_libraries(gtdispcube PRIVATE map_tools)
