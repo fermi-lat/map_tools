@@ -22,6 +22,6 @@ INSTRUME =                  LAT / Name of instrument generating data
 DATE-OBS =                      / Start Date and Time of the observation (UTC)
 DATE-END =                      / End Date and Time of the observation (UTC)
 EQUINOX  =               2000.0 / Equinox of RA & DEC specifications
-CREATOR  =                      / Software and version creating file
+CREATOR  = 'APP_NAME Fermitools 2.4.1' / Software and version creating file
 HISTORY                   $Id: CountMap,v 1.1.1.1 2004/02/21 21:47:26 burnett Exp $ 
 END
