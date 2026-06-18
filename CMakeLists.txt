@@ -1,6 +1,6 @@
 ###### Library ######
 add_library(
-  map_tools SHARED
+  map_tools STATIC
   src/DiffuseFunction.cxx
   src/Exposure.cxx
   src/MapParameters.cxx
@@ -14,7 +14,7 @@ target_include_directories(
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
   $<INSTALL_INTERFACE:>
 )
-target_link_libraries(map_tools PUBLIC healpix astro hoops tip st_app st_stream irfLoader)
+target_link_libraries(map_tools PUBLIC tip healpix astro hoops st_app st_stream irfLoader)
 
 ###### Executables ######
 set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
