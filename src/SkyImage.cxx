@@ -18,7 +18,7 @@ $Header: /nfs/slac/g/glast/ground/cvs/ScienceTools-scons/map_tools/src/SkyImage.
 #include <memory>
 #include <stdexcept>
 #include <sstream>
-#include <errno.h> // to test result of std::remove()
+#include <cerrno> // to test result of std::remove()
 
 namespace {
     static unsigned long lnan[2]={0xffffffff, 0x7fffffff};
@@ -262,7 +262,7 @@ SkyImage::SkyImage(const std::string& fits_file, const std::string& extension)
 
 }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-unsigned int SkyImage::setLayer(unsigned int newlayer)
+auto SkyImage::setLayer(unsigned int newlayer) -> unsigned int
 {
     checkLayer(newlayer);
     unsigned int t = m_layer;
@@ -270,7 +270,7 @@ unsigned int SkyImage::setLayer(unsigned int newlayer)
     return t;
 }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-bool SkyImage::addPoint(const astro::SkyDir& dir, double delta, unsigned int layer)
+auto SkyImage::addPoint(const astro::SkyDir& dir, double delta, unsigned int layer) -> bool
 {
     std::pair<double,double> p= dir.project(*m_wcs);
     // ignore if not in the image.
@@ -342,28 +342,28 @@ SkyImage::~SkyImage()
     delete m_wcs;
 }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-double SkyImage::pixelValue(const astro::SkyDir& pos,unsigned  int layer)const
+auto SkyImage::pixelValue(const astro::SkyDir& pos,unsigned  int layer)const -> double
 {
     checkLayer(layer); 
     unsigned int k = pixel_index(pos,layer);
     return m_imageData[k];        
 }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-float &  SkyImage::operator[](const astro::SkyDir&  pixel)
+auto  SkyImage::operator[](const astro::SkyDir&  pixel) -> float &
 {
     unsigned int k = pixel_index(pixel);
     return m_imageData[k];        
 
 }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-const float &  SkyImage::operator[](const astro::SkyDir&  pixel)const
+auto  SkyImage::operator[](const astro::SkyDir&  pixel)const -> const float &
 {
     unsigned int k = pixel_index(pixel);
     return m_imageData[k];        
 
 }
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-double SkyImage::operator()(const astro::SkyDir& s)const
+auto SkyImage::operator()(const astro::SkyDir& s)const -> double
 {
     return pixelValue(s, m_layer);        
 }
@@ -386,7 +386,7 @@ void SkyImage::getNeighbors(const astro::SkyDir& pos, std::vector<double>&neighb
 }
 
 // internal routine to convert a SkyDir to a pixel index
-unsigned int SkyImage::pixel_index(const astro::SkyDir& pos, int layer) const
+auto SkyImage::pixel_index(const astro::SkyDir& pos, int layer) const -> unsigned int
 {
     // if not specified, use the data member
     if( layer<0 ) layer = m_layer;

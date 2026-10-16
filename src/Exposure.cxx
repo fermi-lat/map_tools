@@ -27,7 +27,7 @@ Exposure::Exposure(const std::string& inputfile, const std::string& tablename)
 /// return the closest power of 2 for the side parameter
 /// 41252 square degrees for the sphere
 /// nside=64 is about one degee: 49152 pixels
-inline int side_from_degrees(double pixelsize){ 
+inline auto side_from_degrees(double pixelsize) -> int{ 
     int n = 1;
     while( 12*n*n < 41252/(pixelsize*pixelsize) && n < 512){
         n *=2;
@@ -133,8 +133,8 @@ public:
             m_lost += m_deltat;
         }
     }
-    double total()const{return m_total;}
-    double lost()const{return m_lost;}
+    auto total()const -> double{return m_total;}
+    auto lost()const -> double{return m_lost;}
 private:
     Simple3Vector m_dirz;
     CLHEP::HepRotation m_rot;
@@ -193,7 +193,7 @@ void Exposure::load(const tip::Table * scData,
 }
 
 
-bool Exposure::processEntry(const tip::ConstTableRecord & row, const GTIvector& gti)
+auto Exposure::processEntry(const tip::ConstTableRecord & row, const GTIvector& gti) -> bool
 {
     using astro::SkyDir;
 

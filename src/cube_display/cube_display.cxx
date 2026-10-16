@@ -50,7 +50,7 @@ public:
         , m_aeff(aeff)
         , m_norm(norm)
     {}
-    double operator()(const astro::SkyDir& s)const{
+    auto operator()(const astro::SkyDir& s)const -> double{
         return m_norm*m_exp(s, m_aeff);
     }
 private:
@@ -63,7 +63,7 @@ class SelectAngle {
 public:
     SelectAngle(double costh): m_costh(costh){}
     
-    double operator()(double z)const{
+    auto operator()(double z)const -> double{
         return ( fabs(z-m_costh)<0.0001 )? 1 : 0;
     }
 private:
@@ -75,7 +75,7 @@ class SelectAngles {
 public:
     SelectAngles(double costh, double phi): m_costh(costh), m_phi(phi){}
     
-    double integral(double z, double phi)const{
+    auto integral(double z, double phi)const -> double{
         return ( fabs(z-m_costh)<0.0001&& fabs(phi-m_phi)<0.1 )? 1 : 0;
     }
 private:

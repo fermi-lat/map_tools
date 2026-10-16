@@ -10,19 +10,19 @@ using namespace map_tools;
 
 double DiffuseFunction::s_emin(10.);
 
-double DiffuseFunction::energy_bin(int k)
+auto DiffuseFunction::energy_bin(int k) -> double
 {
     return s_emin*pow(2., k);
 }
 
-double DiffuseFunction::extraGal(double energy)const
+auto DiffuseFunction::extraGal(double energy)const -> double
 {
     static double E0(100); // flux(1.5E-5), alpha(1.1);
     double flux(m_egal_flux), alpha(m_egal_index-1);
     return flux*alpha*pow(E0/energy, alpha)/energy;
 }
 
-int DiffuseFunction::layer(double e)const
+auto DiffuseFunction::layer(double e)const -> int
 {
     static double log2(log(2.0));
     double step ( log(e/s_emin)/log2 );
@@ -44,12 +44,12 @@ void DiffuseFunction::setEnergy(double e)
     }
 }
 
-double DiffuseFunction::h(double r, double alpha)
+auto DiffuseFunction::h(double r, double alpha) -> double
 {
     return (1.-pow(r,-alpha))/alpha;
 }
 
-double DiffuseFunction::operator()(const astro::SkyDir& dir) const
+auto DiffuseFunction::operator()(const astro::SkyDir& dir) const -> double
 {
     double a ( m_data.pixelValue(dir, m_layer) );
     if( m_fract==0) return a;
@@ -57,12 +57,12 @@ double DiffuseFunction::operator()(const astro::SkyDir& dir) const
     return b*m_fract + a*(1-m_fract) 
         + extraGal(m_energy);
 }
-double DiffuseFunction::operator ()(double energy){
+auto DiffuseFunction::operator ()(double energy) -> double{
     this->setEnergy(energy);
     return operator()(m_dir);
 }
 
-double DiffuseFunction::integral(const astro::SkyDir& dir, double a, double b)const
+auto DiffuseFunction::integral(const astro::SkyDir& dir, double a, double b)const -> double
 {
     static double log2(log(2.));
     ///@todo: generalize this for intervals larger than a factor of 3 
@@ -80,7 +80,7 @@ double DiffuseFunction::integral(const astro::SkyDir& dir, double a, double b)co
 }
 
 
-std::vector<double> DiffuseFunction::integral(const astro::SkyDir& dir, const std::vector<double>&energies)const
+auto DiffuseFunction::integral(const astro::SkyDir& dir, const std::vector<double>&energies)const -> std::vector<double>
 {
     std::vector<double> result;
     static double infinity (300000);

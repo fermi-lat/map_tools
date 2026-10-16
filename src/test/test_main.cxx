@@ -23,7 +23,7 @@ using namespace map_tools;
 class TestAeff { 
 public:
     TestAeff(double slope=0): m_slope(slope){}
-    double operator()(double ct)const{
+    auto operator()(double ct)const -> double{
         //        std::cout << " theta = " << acos(ct)*180/M_PI << std::endl;
         return 1.-(1-ct)*m_slope;
     }
@@ -33,7 +33,7 @@ public:
 
 
 
-int main(int argc, char** argv ){
+auto main(int argc, char** argv ) -> int{
     int rc=0;
     try{
 
