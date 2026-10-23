@@ -273,8 +273,8 @@ names and in Likelihood's `ExposureCube`.
   `--bit64` (not used by the CI invocation `-w -d -v`) it compares against
   `testCube_64bit.fits` and `testCube2_64bit.fits` instead. This package
   has no `outref` data of its own: the reference files ship in the
-  `fermitools-test-scripts-data` conda package, sourced from
-  `outrefFiles/map_tools/` in `fermitools-data`. See "Testing" in
+  runtime `fermitools-data` conda package, sourced from
+  `outrefFiles/map_tools/` in the `fermitools-data` repository. See "Testing" in
   ScienceTools' `docs/architecture/README.md`.
 - **Legacy:** `SConscript`, `map_toolsLib.py` and `doc/Doxyfile` belong to
   the SCons/CMT era. `azure-pipelines.yml` is old CI.
