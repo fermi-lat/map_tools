@@ -239,6 +239,8 @@ npix × nbins × 4 bytes per call.
 None are read directly (`grep getenv` finds nothing).
 `facilities::Util::expandEnvVar` expands `$(VAR)` in `gtdispcube` file
 names and in Likelihood's `ExposureCube`.
+`PFILES` (see "Runtime environment" in ScienceTools'
+`docs/architecture/README.md`) must find the tools' par files.
 
 ## Build and test
 
@@ -263,10 +265,17 @@ names and in Likelihood's `ExposureCube`.
     integrals and **changes the static binning**.
   - **All numerical checks of `Exposure` are inside `#if 0`.** Apart
     from `TestCosineBinner`, the test only checks that nothing throws.
-  - The external `recipe/tests/ST-unit-test` (`check_test_map_tools_output`)
-    checks that both files exist. With its `bit64` option it also runs
-    `ftdiff` against `$CONDA_PREFIX/share/fermitools/data/map_tools/outref/testCube_64bit.fits`,
-    but this package has no `outref` data and installs none.
+- **ST-unit-test:** the default run of ScienceTools'
+  `recipe/tests/ST-unit-test` (`unitTestsWithoutRoot`) runs
+  `test_map_tools`, then `check_test_map_tools_output`. That checks that
+  both files exist and `ftdiff`s `testCube.fits` and `testCube2.fits`
+  against `$CONDA_PREFIX/share/fermitools/data/map_tools/outref/`; with
+  `--bit64` (not used by the CI invocation `-w -d -v`) it compares against
+  `testCube_64bit.fits` and `testCube2_64bit.fits` instead. This package
+  has no `outref` data of its own: the reference files ship in the
+  `fermitools-test-scripts-data` conda package, sourced from
+  `outrefFiles/map_tools/` in `fermitools-data`. See "Testing" in
+  ScienceTools' `docs/architecture/README.md`.
 - **Legacy:** `SConscript`, `map_toolsLib.py` and `doc/Doxyfile` belong to
   the SCons/CMT era. `azure-pipelines.yml` is old CI.
 - **Branches:** `origin/f26-cpp17-compliance` has small C++17 fixes to
