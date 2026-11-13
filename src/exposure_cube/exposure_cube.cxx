@@ -39,7 +39,7 @@ public:
         , m_f("ExposureCubeApp", "", 2)
 
     {}
-    ~ExposureCubeApp() throw() {} // required by StApp with gcc
+    ~ExposureCubeApp() throw() = default; // required by StApp with gcc
 
     //--------------------------------------------------------------------------
     void loadExposureWithGPS(Exposure& exp, const std::string& inputFile, const Exposure::GTIvector& gti )

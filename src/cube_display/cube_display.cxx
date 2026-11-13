@@ -75,7 +75,7 @@ class SelectAngles {
 public:
     SelectAngles(double costh, double phi): m_costh(costh), m_phi(phi){}
     
-    auto integral(double z, double phi)const -> double{
+    [[nodiscard]] auto integral(double z, double phi)const -> double{
         return ( fabs(z-m_costh)<0.0001&& fabs(phi-m_phi)<0.1 )? 1 : 0;
     }
 private:
@@ -98,7 +98,7 @@ public:
         , m_pars(st_app::StApp::getParGroup("gtdispcube")) 
     {
     }
-        ~CubeDisplayApp() throw() {} // required by StApp with gcc
+        ~CubeDisplayApp() throw() = default; // required by StApp with gcc
 
 
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -125,7 +125,7 @@ public:
         // parameters were set when the Exposure object was read in
         CosineBinner bins;
         std::vector<float> costhbins;
-        for( CosineBinner::iterator it = bins.begin(); it<bins.end_costh(); ++it){
+        for( auto it = bins.begin(); it<bins.end_costh(); ++it){
             costhbins.push_back( bins.costheta(it));
         }
         int layers(costhbins.size()); 

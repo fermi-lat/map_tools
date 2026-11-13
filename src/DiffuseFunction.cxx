@@ -85,8 +85,8 @@ auto DiffuseFunction::integral(const astro::SkyDir& dir, const std::vector<doubl
     std::vector<double> result;
     static double infinity (300000);
 
-    for( std::vector<double>::const_iterator it = energies.begin(); it!=energies.end(); ++it){
-        std::vector<double>::const_iterator next(it+1);
+    for( auto it = energies.begin(); it!=energies.end(); ++it){
+        auto next(it+1);
         double a = *it;
         double b = next!=energies.end()? *next : infinity;
         result.push_back(integral(dir,a,b));

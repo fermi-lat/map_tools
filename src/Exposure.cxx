@@ -45,7 +45,7 @@ Exposure::Exposure(double pixelsize, double cosbinsize, double zcut, bool weight
 , m_zcut(zcut), m_zmaxcut(zmaxcut), m_lost(0)
 , m_weighted(weighted)
 {
-    unsigned int cosbins = static_cast<unsigned int>(1./cosbinsize);
+    auto cosbins = static_cast<unsigned int>(1./cosbinsize);
     if( cosbins != CosineBinner::nbins() ) {
         // bins per pixel: depends on phi or not
         unsigned int allbins(cosbins);
@@ -54,7 +54,7 @@ Exposure::Exposure(double pixelsize, double cosbinsize, double zcut, bool weight
             allbins += cosbins * healpix::CosineBinner::nphibins();
         }
         
-        SkyBinner::iterator is = data().begin();
+        auto is = data().begin();
         for( ; is != data().end(); ++is){ // loop over all pixels
             CosineBinner & pixeldata= *is; // get the contents of this pixel
             pixeldata.resize(allbins);
@@ -70,7 +70,7 @@ void Exposure::create_cache()
     size_t datasize(data().size());
     m_dir_cache.reserve(datasize);
 
-    SkyBinner::iterator is = data().begin();
+    auto is = data().begin();
     for( ; is != data().end(); ++is){ // loop over all pixels
         Simple3Vector pixdir(data().dir(is)());
         m_dir_cache.push_back(std::make_pair(&*is, pixdir));
@@ -210,7 +210,7 @@ auto Exposure::processEntry(const tip::ConstTableRecord & row, const GTIvector& 
     if( !gti.empty() ) {
         fraction = 0;
 
-        GTIvector::const_iterator it  = gti.begin();
+        auto it  = gti.begin();
         for ( ; it != gti.end(); ++it) {
             double first = it->first,
                 second=it->second;

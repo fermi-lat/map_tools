@@ -33,7 +33,7 @@ SkyImage::SkyImage(const astro::SkyDir& center,
                    const std::string& ptype,
                    bool galactic)
 : m_naxis3(layers)  
-, m_image(0)
+, m_image(nullptr)
 , m_save(true)
 , m_layer(0)
 {
@@ -79,11 +79,11 @@ SkyImage::SkyImage(const hoops::IParGroup& pars)
 , m_naxis2(1)
 , m_naxis3(1)
 , m_total(0)
-, m_image(0)
+, m_image(nullptr)
 , m_imageData()
 , m_save(true)
 , m_layer(0)
-, m_wcs(0)
+, m_wcs(nullptr)
 {
     using namespace astro;
 
@@ -118,7 +118,7 @@ SkyImage::SkyImage(const hoops::IParGroup& pars)
             // compute energies using N central bin values from ebounds
             m_naxis3 = ebounds->getNumRecords();
             m_energy.resize(m_naxis3);
-            std::vector<double>::iterator out_itor = m_energy.begin();
+            auto out_itor = m_energy.begin();
             for ( tip::Table::ConstIterator in_itor = ebounds->begin(); in_itor != ebounds->end(); ++in_itor, ++out_itor){
                 double e_min = (*in_itor)["E_MIN"].get();
                 double e_max = (*in_itor)["E_MAX"].get();
@@ -129,7 +129,7 @@ SkyImage::SkyImage(const hoops::IParGroup& pars)
             m_naxis3 = ebounds->getNumRecords() + 1;
             m_energy.resize(m_naxis3);
             tip::Table::ConstIterator last_in = ebounds->begin();
-            std::vector<double>::iterator out_itor = m_energy.begin();
+            auto out_itor = m_energy.begin();
             for ( tip::Table::ConstIterator in_itor = ebounds->begin(); in_itor != ebounds->end(); ++in_itor, ++out_itor){
                 *out_itor = (*in_itor)["E_MIN"].get() * s_MeV_per_keV;
                 last_in = in_itor;
@@ -244,7 +244,7 @@ void SkyImage::setupImage(const std::string& outputFile,  bool clobber)
 SkyImage::SkyImage(const std::string& fits_file, const std::string& extension)
 : m_save(false)
 , m_layer(0)
-, m_wcs(0)
+, m_wcs(nullptr)
 {
     // note expect the image to be float
     m_image = tip::IFileSvc::instance().editImageFlt(fits_file, extension);
