@@ -11,6 +11,11 @@
 
 #include <memory>
 #include <algorithm>
+#include <exception>
+
+#ifdef _OPENMP
+#include <omp.h>
+#endif
 
 using namespace map_tools;
 using healpix::HealpixArrayIO;
@@ -20,6 +25,7 @@ using healpix::Healpix;
 
 Exposure::Exposure(const std::string& inputfile, const std::string& tablename)
 : SkyExposure(SkyBinner(2))
+, m_nthreads(1)
 {
    setData( HealpixArrayIO::instance().read(inputfile, tablename));
 }
@@ -44,6 +50,7 @@ Exposure::Exposure(double pixelsize, double cosbinsize, double zcut, bool weight
   )
 , m_zcut(zcut), m_zmaxcut(zmaxcut), m_lost(0)
 , m_weighted(weighted)
+, m_nthreads(1)
 {
     unsigned int cosbins = static_cast<unsigned int>(1./cosbinsize);
     if( cosbins != CosineBinner::nbins() ) {
@@ -145,30 +152,98 @@ private:
 };
 
 
+namespace {
+    /** @brief Apply one row's Filler to every pixel, splitting the pixels
+        across OpenMP threads.
+
+        Each thread works on its own copy of the Filler (the row's
+        geometry is read-only; the copy holds that thread's total/lost),
+        and each pixel's CosineBinner is touched by exactly one thread, so
+        no locking is needed. Every bin gets the same additions in the
+        same order as the serial loop, so the cube is bit-identical for
+        any thread count. Only total and lost, sums over pixels, can
+        differ in the last bits.
+
+        With nthreads <= 1 this is the original serial loop and the OpenMP
+        region is skipped: running the region on one thread made the
+        serial run 7-10% slower on the cheap (phibins=0) configurations,
+        while this path times the same as a build without OpenMP.
+    */
+    template <class Cache, class F>
+    void parallel_fill(Cache & cache, const F & proto, int nthreads,
+                       double & total, double & lost)
+    {
+        if (nthreads <= 1) {
+            F filler = std::for_each(cache.begin(), cache.end(), proto);
+            total = filler.total();
+            lost = filler.lost();
+            return;
+        }
+        const long npix(static_cast<long>(cache.size()));
+        double my_total(0), my_lost(0);
+        std::exception_ptr error;
+#pragma omp parallel num_threads(nthreads) \
+                     reduction(+:my_total, my_lost)
+        {
+            F filler(proto);
+#pragma omp for schedule(static)
+            for (long i = 0; i < npix; ++i) {
+                try {
+                    filler(cache[i]);
+                } catch (...) {
+                    // An exception must not leave the parallel region
+                    // (that calls std::terminate). Keep the first one and
+                    // rethrow it on the calling thread.
+#pragma omp critical(exposure_fill_error)
+                    if (!error) error = std::current_exception();
+                }
+            }
+            my_total += filler.total();
+            my_lost += filler.lost();
+        }
+        if (error) std::rethrow_exception(error);
+        total = my_total;
+        lost = my_lost;
+    }
+}
+
+int Exposure::numThreads()const
+{
+#ifdef _OPENMP
+    if (m_nthreads <= 0) return omp_get_max_threads();
+    return m_nthreads;
+#else
+    return 1;
+#endif
+}
+
 void Exposure::fill(const astro::SkyDir& dirz, double deltat)
 {
-    Filler sum = for_each(m_dir_cache.begin(), m_dir_cache.end(), Filler(deltat, dirz));
+    // As before, the total is deltat whatever the Filler adds up.
+    double total, lost;
+    parallel_fill(m_dir_cache, Filler(deltat, dirz), numThreads(), total, lost);
     addtotal(deltat);
 }
 
 
 void Exposure::fill(const astro::SkyDir& dirz, const astro::SkyDir& zenith, double deltat)
 {
-   Filler sum = for_each(m_dir_cache.begin(), m_dir_cache.end(), Filler(deltat, dirz, zenith, m_zcut, m_zmaxcut));
-    double total(sum.total());
+    double total, lost;
+    parallel_fill(m_dir_cache, Filler(deltat, dirz, zenith, m_zcut, m_zmaxcut),
+                  numThreads(), total, lost);
     addtotal(total);
-    m_lost += sum.lost();
+    m_lost += lost;
 }
 
 void Exposure::fill_zenith(const astro::SkyDir& dirz,const astro::SkyDir& dirx, 
                            const astro::SkyDir& zenith, 
                            double deltat)
 {
-    Filler sum = for_each(m_dir_cache.begin(), m_dir_cache.end(), 
-                          Filler(deltat, dirz, dirx, zenith, m_zcut, m_zmaxcut));
-    double total(sum.total());
+    double total, lost;
+    parallel_fill(m_dir_cache, Filler(deltat, dirz, dirx, zenith, m_zcut, m_zmaxcut),
+                  numThreads(), total, lost);
     addtotal(total);
-    m_lost += sum.lost();
+    m_lost += lost;
 }
 
 

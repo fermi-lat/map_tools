@@ -14,7 +14,10 @@ target_include_directories(
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
   $<INSTALL_INTERFACE:>
 )
-target_link_libraries(map_tools PUBLIC tip healpix astro hoops st_app st_stream irfLoader)
+# OpenMP: Exposure::fill* split their pixel loop across threads
+# (Exposure::setNumThreads; the default is 1 thread).
+target_link_libraries(map_tools PUBLIC tip healpix astro hoops st_app st_stream irfLoader
+                      OpenMP::OpenMP_CXX)
 
 ###### Executables ######
 set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)

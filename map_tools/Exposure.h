@@ -110,6 +110,16 @@ public:
 
     double lost()const{return m_lost;}
 
+    /// Threads used by fill() and fill_zenith(). The default is 1
+    /// (serial), whatever OMP_NUM_THREADS says. 0 means the OpenMP
+    /// default (OMP_NUM_THREADS, otherwise every core). The count
+    /// belongs to this object; nothing calls omp_set_num_threads.
+    void setNumThreads(int n){ m_nthreads = n; }
+
+    /// The thread count fill() will use: 0 (or less) becomes
+    /// omp_get_max_threads(), and 1 in a build without OpenMP.
+    int numThreads()const;
+
     /** @brief  allow horizon cut, possible if FOV includes horizon
         @param dirz direction of z-axis of instrument
         @param dirx direction of x-axis of instrument
@@ -153,6 +163,7 @@ private:
    double m_zmaxcut;
     double m_lost; ///< keep track of lost
     bool   m_weighted; ///< true if accumulating weighted livetime
+    int    m_nthreads; ///< see setNumThreads; 1 in every constructor
 };
 
 
