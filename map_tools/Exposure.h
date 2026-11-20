@@ -130,6 +130,30 @@ public:
     virtual void fill_zenith(const astro::SkyDir& dirz,const astro::SkyDir& dirx, 
         const astro::SkyDir& dirzenith, double deltat);
 
+    /// One accepted FT2 interval, ready to be binned by fill_block().
+    struct Interval {
+        astro::SkyDir dirz, dirx, zenith;
+        double deltat;          ///< added to *this
+        double weighted_deltat; ///< added to the weighted cube, if any
+    };
+
+    /** @brief Bin a block of intervals into this cube and, if weighted is
+        not null, into a second cube, in one pass over the pixels.
+
+        The result is bit-identical to calling, for each row in order,
+        fill_zenith(dirz, dirx, zenith, deltat) (use_phi true) or
+        fill(dirz, zenith, deltat) (use_phi false) on this cube, and the
+        same with weighted_deltat on weighted. The pixels are split across
+        numThreads() threads; each thread applies every row of the block
+        to its pixels, so a pixel's bins stay in cache for the whole
+        block.
+
+        @param weighted must have the same pixel size, cos-theta binning
+        and zenith cuts as this cube (std::invalid_argument otherwise).
+    */
+    void fill_block(const std::vector<Interval>& rows, bool use_phi,
+                    Exposure* weighted = 0);
+
 private:
     bool processEntry(const tip::ConstTableRecord & row, const GTIvector& gti);
 

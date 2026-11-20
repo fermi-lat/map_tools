@@ -12,6 +12,9 @@
 #include <memory>
 #include <algorithm>
 #include <exception>
+#include <stdexcept>
+#include <cstdlib>
+#include <string>
 
 #ifdef _OPENMP
 #include <omp.h>
@@ -142,6 +145,35 @@ public:
     }
     double total()const{return m_total;}
     double lost()const{return m_lost;}
+    double deltat()const{return m_deltat;}
+
+    /** @brief The same test and binning as operator(), for fill_block:
+        add m_deltat to b and, if wb isn't null, wdeltat to wb, using one
+        geometry calculation for both. Returns false (nothing added) if
+        the pixel fails the zenith cut. Doesn't touch m_total/m_lost, so
+        one Filler can be shared by several threads.
+    */
+    bool fill_pixel(const Simple3Vector& pixeldir, CosineBinner& b,
+                    CosineBinner* wb, double wdeltat) const
+    {
+        bool ok( m_zcut==-1 && m_zmaxcut==1);
+        if( ! ok) {
+            double z(pixeldir.dot(m_zenith));
+            ok = z > m_zcut && z < m_zmaxcut;
+        }
+        if( ! ok) return false;
+        if( m_use_phi) {
+            CLHEP::Hep3Vector instrument_dir( pixeldir.transform(m_rot) );
+            double costheta(instrument_dir.z()), phi(instrument_dir.phi());
+            b.fill( costheta, phi, m_deltat);
+            if( wb) wb->fill( costheta, phi, wdeltat);
+        }else{
+            double costheta(pixeldir.dot(m_dirz));
+            b.fill( costheta, m_deltat);
+            if( wb) wb->fill( costheta, wdeltat);
+        }
+        return true;
+    }
 private:
     Simple3Vector m_dirz;
     CLHEP::HepRotation m_rot;
@@ -153,6 +185,57 @@ private:
 
 
 namespace {
+#ifdef _OPENMP
+    /** @brief The schedule of the threaded pixel loops, for benchmarking.
+
+        MAP_TOOLS_EXPOSURE_SCHEDULE selects it: "static" (the default,
+        also when the variable is unset or not understood), "dynamic,N"
+        or "guided,N" (N optional). Read once. The schedule can't change
+        the cubes: each pixel is still binned by one thread, rows in
+        order. See doc/proposals/ltcube-pixel-threading.md (hybrid CPUs).
+    */
+    void loop_schedule(omp_sched_t & kind, int & chunk) {
+        static omp_sched_t s_kind(omp_sched_static);
+        static int s_chunk(0);
+        static bool s_read(false);
+#pragma omp critical(exposure_schedule)
+        if (!s_read) {
+            const char * env(std::getenv("MAP_TOOLS_EXPOSURE_SCHEDULE"));
+            if (env) {
+                std::string v(env);
+                std::string::size_type comma(v.find(','));
+                std::string name(v.substr(0, comma));
+                if (name == "dynamic") s_kind = omp_sched_dynamic;
+                else if (name == "guided") s_kind = omp_sched_guided;
+                if (comma != std::string::npos) {
+                    s_chunk = std::atoi(v.c_str() + comma + 1);
+                }
+            }
+            s_read = true;
+        }
+        kind = s_kind;
+        chunk = s_chunk;
+    }
+
+    /// Sets the calling thread's runtime schedule (used by the
+    /// schedule(runtime) loops below) and restores it on destruction, so
+    /// other OpenMP code in the process isn't affected.
+    class ScheduleGuard {
+    public:
+        ScheduleGuard() {
+            omp_get_schedule(&m_kind, &m_chunk);
+            omp_sched_t kind;
+            int chunk;
+            loop_schedule(kind, chunk);
+            omp_set_schedule(kind, chunk);
+        }
+        ~ScheduleGuard() { omp_set_schedule(m_kind, m_chunk); }
+    private:
+        omp_sched_t m_kind;
+        int m_chunk;
+    };
+#endif
+
     /** @brief Apply one row's Filler to every pixel, splitting the pixels
         across OpenMP threads.
 
@@ -182,11 +265,14 @@ namespace {
         const long npix(static_cast<long>(cache.size()));
         double my_total(0), my_lost(0);
         std::exception_ptr error;
+#ifdef _OPENMP
+        ScheduleGuard schedule;
+#endif
 #pragma omp parallel num_threads(nthreads) \
                      reduction(+:my_total, my_lost)
         {
             F filler(proto);
-#pragma omp for schedule(static)
+#pragma omp for schedule(runtime)
             for (long i = 0; i < npix; ++i) {
                 try {
                     filler(cache[i]);
@@ -246,6 +332,116 @@ void Exposure::fill_zenith(const astro::SkyDir& dirz,const astro::SkyDir& dirx,
     m_lost += lost;
 }
 
+
+namespace {
+    /// Running totals for fill_block, per cube.
+    struct BlockSums {
+        double total, lost, wtotal, wlost;
+        BlockSums() : total(0), lost(0), wtotal(0), wlost(0) {}
+    };
+
+    /// Apply every row of a block, in order, to one pixel of both cubes
+    /// (x is the pixel's m_dir_cache entry, wb its weighted bins or 0).
+    /// A template for the same reason as parallel_fill: the types are
+    /// private to Exposure.
+    template <class FillerVec, class Pixel>
+    inline void fill_block_pixel(const FillerVec& fillers,
+                                 const std::vector<double>& wdeltat,
+                                 const Pixel& x, CosineBinner* wb,
+                                 BlockSums& sums)
+    {
+        const size_t nrows(fillers.size());
+        for (size_t k = 0; k < nrows; ++k) {
+            if (fillers[k].fill_pixel(x.second, *x.first, wb, wdeltat[k])) {
+                sums.total += fillers[k].deltat();
+                sums.wtotal += wdeltat[k];
+            } else {
+                sums.lost += fillers[k].deltat();
+                sums.wlost += wdeltat[k];
+            }
+        }
+    }
+}
+
+void Exposure::fill_block(const std::vector<Interval>& rows, bool use_phi,
+                          Exposure* weighted)
+{
+    if (rows.empty()) return;
+    if (weighted && (weighted->m_dir_cache.size() != m_dir_cache.size()
+                     || weighted->m_zcut != m_zcut
+                     || weighted->m_zmaxcut != m_zmaxcut)) {
+        throw std::invalid_argument("Exposure::fill_block: the weighted cube "
+                                    "doesn't match this one's binning and cuts");
+    }
+    // Serial pre-pass: the row geometry (astro/CLHEP work) once per row,
+    // built exactly as fill_zenith() and fill(dirz, zenith, deltat) build
+    // it, so every value binned is the same.
+    std::vector<Filler> fillers;
+    std::vector<double> wdeltat;
+    fillers.reserve(rows.size());
+    wdeltat.reserve(rows.size());
+    for (std::vector<Interval>::const_iterator r = rows.begin();
+         r != rows.end(); ++r) {
+        if (use_phi) {
+            fillers.push_back(Filler(r->deltat, r->dirz, r->dirx, r->zenith,
+                                     m_zcut, m_zmaxcut));
+        } else {
+            fillers.push_back(Filler(r->deltat, r->dirz, r->zenith,
+                                     m_zcut, m_zmaxcut));
+        }
+        wdeltat.push_back(r->weighted_deltat);
+    }
+
+    const long npix(static_cast<long>(m_dir_cache.size()));
+    const int nthreads(numThreads());
+    BlockSums sums;
+    if (nthreads <= 1) {
+        // No OpenMP region on one thread (see parallel_fill).
+        for (long i = 0; i < npix; ++i) {
+            fill_block_pixel(fillers, wdeltat, m_dir_cache[i],
+                             weighted ? weighted->m_dir_cache[i].first : 0,
+                             sums);
+        }
+    } else {
+        double total(0), lost(0), wtotal(0), wlost(0);
+        std::exception_ptr error;
+#ifdef _OPENMP
+        ScheduleGuard schedule;
+#endif
+#pragma omp parallel num_threads(nthreads) \
+                     reduction(+:total, lost, wtotal, wlost)
+        {
+            BlockSums my;
+#pragma omp for schedule(runtime)
+            for (long i = 0; i < npix; ++i) {
+                try {
+                    fill_block_pixel(fillers, wdeltat, m_dir_cache[i],
+                                     weighted ? weighted->m_dir_cache[i].first : 0,
+                                     my);
+                } catch (...) {
+                    // See parallel_fill.
+#pragma omp critical(exposure_fill_error)
+                    if (!error) error = std::current_exception();
+                }
+            }
+            total += my.total;
+            lost += my.lost;
+            wtotal += my.wtotal;
+            wlost += my.wlost;
+        }
+        if (error) std::rethrow_exception(error);
+        sums.total = total;
+        sums.lost = lost;
+        sums.wtotal = wtotal;
+        sums.wlost = wlost;
+    }
+    addtotal(sums.total);
+    m_lost += sums.lost;
+    if (weighted) {
+        weighted->addtotal(sums.wtotal);
+        weighted->m_lost += sums.wlost;
+    }
+}
 
 void Exposure::write(const std::string& outputfile, const std::string& tablename)const
 {
